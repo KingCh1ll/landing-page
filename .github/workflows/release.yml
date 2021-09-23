@@ -21,9 +21,6 @@ jobs:
       - name: Compile Sass
         run: npm run sass:c
 
-      - name: Format Code
-        run: npm run format
-
       - name: Correct Code
         run: npm run test:fix
 

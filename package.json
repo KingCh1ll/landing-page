@@ -1,0 +1,39 @@
+{
+  "name": "kingch1ll.github.io",
+  "version": "1.0.0-beta",
+  "description": "The portfolio site for KingCh1ll.",
+  "main": "index.js",
+  "scripts": {
+    "update": "git pull && npm install",
+    "checkPacs": "npx npm-check-updates",
+    "checkPacs:u": "npx npm-check-updates -u && npm install",
+    "test": "eslint . --ignore-path .gitignore",
+    "test:fix": "eslint . --ignore-path .gitignore --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "sass:c": "sass assets/scss:assets/css",
+    "sass:s": "sass --watch assets/scss:assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KingCh1ll/Ch1llBlox.git"
+  },
+  "author": "KingCh1ll",
+  "license": "MIT",
+  "engines": {
+    "node": "16.9.x",
+    "npm": "7.x"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.1.1",
+    "sweetalert2": "^11.1.7"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.24.2",
+    "npm": "^7.24.0",
+    "prettier": "2.4.1",
+    "sass": "^1.42.1"
+  }
+}

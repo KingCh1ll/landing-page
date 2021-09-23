@@ -1,0 +1,27 @@
+@use "../config" as *;
+
+// linear-gradient(to right, rgba($primary, .95), rgba($secondary, .95))
+
+.menu {
+    display: flex;
+    list-style: none;
+    padding: 0 0 0 0;
+    flex-direction: row;
+    margin-bottom: 0;
+    background: $primary;
+
+    li {
+        padding: 0 0.7rem;
+
+        a {
+            color: $white;
+            padding: 0 0.7rem;
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+
+        &:hover {
+            color: $white;
+        }
+    }
+}

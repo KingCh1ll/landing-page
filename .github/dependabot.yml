@@ -1,0 +1,31 @@
+# https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    labels:
+      - "Updates: Github Action"
+    pull-request-branch-name:
+      separator: "/"
+    commit-message:
+      prefix: "Github Actions"
+      include: "scope"
+    reviewers:
+      - KingCh1ll
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    labels:
+      - "Updates Npm Dependency"
+    pull-request-branch-name:
+      separator: "/"
+    commit-message:
+      prefix: "npm"
+      include: "scope"
+    reviewers:
+      - KingCh1ll

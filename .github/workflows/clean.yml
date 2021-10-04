@@ -1,7 +1,5 @@
-name: Release
-on:
-  - workflow_dispatch
-  - push
+name: Clean Code
+on: [ workflow_dispatch ]
 
 jobs:
   build:
@@ -15,11 +13,11 @@ jobs:
         with:
           node-version: 16.8.x
 
-      - name: Install Dependencies
-        run: npm ci
-        
-      - name: Compile Sass
-        run: npm run sass:c
+      - name: Install Npm
+        uses: bahmutov/npm-install@v1
+
+      - name: Format Code
+        run: npm run format
 
       - name: Correct Code
         run: npm run test:fix

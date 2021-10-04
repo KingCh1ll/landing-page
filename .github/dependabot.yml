@@ -7,7 +7,7 @@ updates:
     schedule:
       interval: "daily"
     labels:
-      - "Updates: Github Action"
+      - "Github Action Update"
     pull-request-branch-name:
       separator: "/"
     commit-message:
@@ -21,7 +21,7 @@ updates:
     schedule:
       interval: "daily"
     labels:
-      - "Updates Npm Dependency"
+      - "Dependency Update"
     pull-request-branch-name:
       separator: "/"
     commit-message:

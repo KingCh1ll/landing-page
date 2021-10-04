@@ -90,78 +90,12 @@
           <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
           <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
           <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-
-          <% if (user) { %>
-            <li class="nav-item dropdown">
-              <button class="btn dropdown-toggle px-2 text-white" type="button" id="dropdown_bell"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fas fa-bell fa-lg"></i>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdown_bell"
-                style="left: -80px; top: 50px; background-color: var(--secondary-color)" data-popper-placement="null"
-                data-mdb-popper="none">
-                <li>
-                  <a class="dropdown-item text-wrap disabled" data-notification-date="8/1/2021 at 7:43 AM">
-                    <p class="small text-uppercase mb-2">August 1st, 2021</p>
-                    <p class="text-white mb-0">
-                      <strong>Website Improvements</strong>
-                      Say hello to the new Ch1ll Studio website! Now, it looks fresh and new.
-                      Enjoy,
-                      KingCh1ll
-                    </p>
-                  </a>
-                  <a class="dropdown-item text-wrap disabled" data-notification-date="6/21/2021 at 5:44 PM">
-                    <p class="small text-uppercase mb-2">June 21, 2021</p>
-                    <p class="text-white mb-0">Modern Ui Update!</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <button class="btn dropdown-toggle px-2 text-white" type="button" id="dropdown_user"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <span>
-                  <img src="https://cdn.discordapp.com/avatars/<%- user.id %>/<%- user.avatar %>.png?size=1024"
-                    class="rounded" alt="<%- user.username %>'s Profile Icon" height="36" width="36" />
-                </span>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdown_user"
-                style="left: -80px; top: 50px; background-color: var(--secondary-color)">
-                <span>
-                  <img src="https://cdn.discordapp.com/avatars/<%- user.id %>/<%- user.avatar %>.png?size=1024"
-                    class="rounded mx-auto d-block" alt="<%- user.username %>'s Profile Icon" height="64" width="64" />
-                </span>
-                <div class="dropdown-header">
-                  <h5 class="text-center text-overflow text-white">
-                    <%- user.username %>
-                  </h5>
-                </div>
-                <a href="/users/<%- user.id %>/profile"
-                  class="dropdown-item text-wrap text-white text-center text-wrap fw-bold">
-                  <i class="fas fa-id-card"></i>
-                  <span>Profile</span>
-                </a>
-                <a href="/settings" class="dropdown-item text-wrap text-center text-wrap fw-bold disabled" tabindex="-1"
-                  aria-disabled="true">
-                  <i class="fas fa-cog"></i>
-                  <span>Settings</span>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item text-wrap text-center text-wrap fw-bold" href="/api/logout" style="color: red">
-                  <i class="fas fa-sign-out-alt"></i>
-                  <span>Log Out</span>
-                </a>
-              </ul>
-            </li>
-            <% } %>
         </ul>
 
-        <% if (!user) { %>
-          <a type="button" class="rounded-pill btn-rounded" href="/api/login">
-            Login
-            <span><i class="fas fa-sign-in-alt"></i></span>
-          </a>
-          <% } %>
+        <a type="button" class="rounded-pill btn-rounded" href="/api/login">
+          Login
+          <span><i class="fas fa-sign-in-alt"></i></span>
+        </a>
       </div>
     </div>
     </div>

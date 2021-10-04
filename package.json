@@ -2,7 +2,7 @@
   "name": "kingch1ll.github.io",
   "version": "1.0.0-beta",
   "description": "The portfolio site for KingCh1ll.",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "update": "git pull && npm install",
     "checkPacs": "npx npm-check-updates",

@@ -5,7 +5,7 @@
   padding: 0;
   background: linear-gradient(to right, rgba($primary, 0.95), rgba($secondary, 0.95));
 
-  &__card {
+  &_card {
     background-color: rgba($white, 0.8);
     padding: 2rem 1.25rem;
     border-radius: 0.625rem;
@@ -25,7 +25,7 @@
     }
   }
 
-  &__picture {
+  &_picture {
     width: 6px;
     height: 6px;
     position: absolute;
@@ -37,7 +37,7 @@
     }
   }
 
-  &__name {
+  &_name {
     padding-top: 3rem;
     margin-bottom: 1rem;
     text-align: center;

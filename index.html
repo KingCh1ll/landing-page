@@ -6,14 +6,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
   <meta charset="utf-8" />
 
-  <title>KingCh1ll</title>
-  <meta name="description" content="KingCh1ll is a self-taught coder. He knows html, css, javascript, lua and more!" />
-  <meta name="og:title" content="KingCh1ll" />
+  <title>SparkV - The Powerful Multipurpose Discord Bot</title>
+  <meta name="description"
+    content="SparkV is the most POWERFUL multipurpose Discord bot with NO PAYWALL! Start powering your Discord server without spending a dime." />
+  <meta name="og:title" content="SparkV - The Powerful Multipurpose Discord Bot" />
   <meta name="og:description"
-    content="KingCh1ll is a self-taught coder. He knows html, css, javascript, lua and more!" />
+    content="SparkV is the most POWERFUL multipurpose Discord bot with NO PAYWALL! Start powering your Discord server without spending a dime." />
   <meta name="og:image" content="assets/images/site/favicon.ico" />
   <meta name="og:type" content="website" />
-  <meta name="og:site_name" content="KingCh1ll" />
+  <meta name="og:site_name" content="SparkV - The Powerful Multipurpose Discord Bot" />
 
   <!-- Meta Settings -->
   <meta name="theme-color" content="#008bff" />
@@ -26,15 +27,15 @@
     rel="stylesheet">
 
   <!-- Twitter Data -->
-  <meta name="twitter:title" content="Ch1ll Studios | KingCh1ll" />
+  <meta name="twitter:title" content="SparkV - The Powerful free Multipurpose Discord Bot" />
   <meta name="twitter:description"
-    content="KingCh1ll is a self-taught coder. He knows html, css, javascript, lua and more!" />
+    content="SparkV is the most POWERFUL multipurpose Discord bot with NO PAYWALL! Start powering your Discord server without spending a dime." />
   <meta name="twitter:creator" content="KingCh1ll" />
   <meta name="twitter:image" content="assets/images/site/favicon.ico" />
 
   <!-- Tags -->
   <meta name="keywords"
-    content="KingCh1ll, King, Ch1ll, KingChill, Chill, Discord, Developer, Developer Discord, Discord Developer, Roblox, Roblox Developer, Developer Roblox">
+    content="SparkV, Spark, Powerful, Bot, Multipurpose, Free, Free Bot, Free Discord Bot, King, Ch1ll, KingChill, Chill, Discord, Developer, Developer Discord, Discord Developer, Roblox, Roblox Developer, Developer Roblox">
 
   <!-- Icons -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/site/apple-touch-icon.png">
@@ -52,18 +53,20 @@
   <link href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+  <link href="//cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v6.0.0-beta2/css/all.css" rel="stylesheet" crossorigin="anonymous"
     type="text/css" />
+  <link href="assets/css/sweetalert.css" rel="stylesheet">
+
+  <!-- Plugin Scripts -->
+  <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="assets/js/sweetalert.js"></script>
 
   <!-- Stylesheet -->
   <link href="assets/css/style.css" rel="stylesheet" />
 
   <!-- Google -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-
-  <!-- Sweet Alert -->
-  <script src="assets/js/sweetalert.js"></script>
-  <link href="assets/css/sweetalert.css" rel="stylesheet">
 </head>
 
 <body>
@@ -87,13 +90,80 @@
           <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
           <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
           <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+
+          <% if (user) { %>
+            <li class="nav-item dropdown">
+              <button class="btn dropdown-toggle px-2 text-white" type="button" id="dropdown_bell"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-bell fa-lg"></i>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdown_bell"
+                style="left: -80px; top: 50px; background-color: var(--secondary-color)" data-popper-placement="null"
+                data-mdb-popper="none">
+                <li>
+                  <a class="dropdown-item text-wrap disabled" data-notification-date="8/1/2021 at 7:43 AM">
+                    <p class="small text-uppercase mb-2">August 1st, 2021</p>
+                    <p class="text-white mb-0">
+                      <strong>Website Improvements</strong>
+                      Say hello to the new Ch1ll Studio website! Now, it looks fresh and new.
+                      Enjoy,
+                      KingCh1ll
+                    </p>
+                  </a>
+                  <a class="dropdown-item text-wrap disabled" data-notification-date="6/21/2021 at 5:44 PM">
+                    <p class="small text-uppercase mb-2">June 21, 2021</p>
+                    <p class="text-white mb-0">Modern Ui Update!</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <button class="btn dropdown-toggle px-2 text-white" type="button" id="dropdown_user"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <span>
+                  <img src="https://cdn.discordapp.com/avatars/<%- user.id %>/<%- user.avatar %>.png?size=1024"
+                    class="rounded" alt="<%- user.username %>'s Profile Icon" height="36" width="36" />
+                </span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdown_user"
+                style="left: -80px; top: 50px; background-color: var(--secondary-color)">
+                <span>
+                  <img src="https://cdn.discordapp.com/avatars/<%- user.id %>/<%- user.avatar %>.png?size=1024"
+                    class="rounded mx-auto d-block" alt="<%- user.username %>'s Profile Icon" height="64" width="64" />
+                </span>
+                <div class="dropdown-header">
+                  <h5 class="text-center text-overflow text-white">
+                    <%- user.username %>
+                  </h5>
+                </div>
+                <a href="/users/<%- user.id %>/profile"
+                  class="dropdown-item text-wrap text-white text-center text-wrap fw-bold">
+                  <i class="fas fa-id-card"></i>
+                  <span>Profile</span>
+                </a>
+                <a href="/settings" class="dropdown-item text-wrap text-center text-wrap fw-bold disabled" tabindex="-1"
+                  aria-disabled="true">
+                  <i class="fas fa-cog"></i>
+                  <span>Settings</span>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item text-wrap text-center text-wrap fw-bold" href="/api/logout" style="color: red">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span>Log Out</span>
+                </a>
+              </ul>
+            </li>
+            <% } %>
         </ul>
-        <a type="button" class="rounded-pill btn-rounded" href="/lol">
-          lol
-          <span><i class="fas fa-sign-in-alt"></i></span>
-        </a>
-        
+
+        <% if (!user) { %>
+          <a type="button" class="rounded-pill btn-rounded" href="/api/login">
+            Login
+            <span><i class="fas fa-sign-in-alt"></i></span>
+          </a>
+          <% } %>
       </div>
+    </div>
     </div>
   </nav>
 
@@ -107,20 +177,30 @@
             <span class="display-2 desc lh-base animate__animated animate__slideInUp">Discord Bot Developer - Web
               Developer - Roblox Game Developer</span>
           </h1>
-
           <a type="button" class="rounded-pill btn-rounded animate__animated animate__zoomInUp">Donate
             <span><i class="fas fa-dollar-sign"></i></span>
           </a>
         </div>
-        <div class="col-md-6 heroContainer text-end animate__animated animate__slideInUp">
-          <div class="hero-img">
-            <img src="assets/images/dev.svg" alt="Man sitting in a chair coding with 6 screens."
-              class="img-fluid img-perspective-reverse">
+        <div class="col-md-6 heros text-end">
+          <div class="video-box">
+            <img src="assets/images/dev.svg" alt="Man sitting in a chair coding with 6 screens." class="img-fluid">
+            <a href="#" class="glightbox position-absolute top-50 start-50 translate-middle">
+              <span>
+                <i class="fas fa-play-circle"></i>
+              </span>
+              <span class="border-animation border-animation--border-1"></span>
+              <span class="border-animation border-animation--border-2"></span>
+            </a>
           </div>
+          <!--
+          <div class="col-md-6 heroContainer text-end animate__animated animate__slideInUp">
+          <div class="hero-img">
+          </div>
+        -->
         </div>
       </div>
     </div>
-    <svg xmlns="http:https://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#ffffff" fill-opacity="1"
         d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
       </path>
@@ -132,11 +212,11 @@
     <div class="container">
       <div class="row text-center mt-5">
         <h1 class="display-3 fw-bold text-capitalize" data-aos="fade-up">Trusted By</h1>
-        <hr data-aos="fade-up">
+        <hr data-aos="fade-up"></hr>
       </div>
       <div class="row">
         <div class="col-md-4 col-lg-2">
-          <div class="campanies__logo-box shadow-sm" data-aos="fade-up">
+          <div class="campanies_logo shadow-sm" data-aos="fade-up">
             <img title="Ch1ll Studio" src="assets/images/TransparentCh1llStudios.png" class="img-fluid"
               alt="Ch1ll Studio">
           </div>
@@ -150,149 +230,109 @@
   <section id="about" class="about aos-init">
     <div class="container">
       <div class="row text-center">
-        <h1 class="display-3 fw-bold" data-aos="fade-up">About</h1>
+        <h1 class="display-3 fw-bold" data-aos="fade-up">Hi, I'm KingCh1ll. Nice to meet you.</h1>
         <hr class="mx-auto" data-aos="fade-up">
-        <p class="lead pt-1" data-aos="fade-up">KingCh1ll is a full stack <a href="https://roblox.com"
-            style="color: red;">Roblox</a>, Discord and web developer Work: Founder of Ch1ll Studios</p>
+        <p class="lead pt-1" data-aos="fade-up">
+          I've been a full stack developer for over a year now. I love to code and make things <a
+            style="color: yellow">PERFECT</a>! I currently work for Ch1ll Studio.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio -->
-  <section id="portfolio" class="portfolio aos-init">
-    <svg xmlns="http:https://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#fff" fill-opacity="1"
-        d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
-      </path>
-    </svg>
+  <!-- Services -->
+  <section id="services" class="services">
     <div class="container">
-      <div class="row text-center mt-5 text-white">
-        <h1 class="display-3 fw-bold text-capitalize" data-aos="fade-up">Portfolio</h1>
-        <hr class="mx-auto" data-aos="fade-up">
-
-        <p class="lead" data-aos="fade-up">KingCh1ll's latest creations. Hover your mouse over any card below to see
-          more information.</p>
+      <div class="row text-center">
+        <h1 class="display-3 fw-bold">Our Services</h1>
+        <div class="heading-line mb-1"></div>
       </div>
-
-      <div class="row text-white">
-        <div class="col-lg-4 col-md-6">
-          <div class="portfolio-box shadow" data-aos="fade-up">
-            <img src="assets/images/portfolio.png" alt="portfolio 1 image" title="portfolio 1 picture"
-              class="img-fluid">
-            <div class="portfolio-info">
-              <div class="caption">
-                <h4 data-aos="fade-up">Ch1ll.dev</h4>
-                <p data-aos="fade-up">Web Development</p>
-              </div>
-            </div>
+      <!-- START THE DESCRIPTION CONTENT  -->
+      <div class="row pt-2 pb-2 mt-0 mb-3">
+        <div class="col-md-6 border-right">
+          <div class="bg-white p-3">
+            <h2 class="fw-bold text-capitalize text-center">
+              Our Services Range From Initial Design To Deployment Anywhere Anytime
+            </h2>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="bg-white p-4 text-start">
+            <p class="fw-light">
+              Lorem ipsum dolor sit amet consectetur architecto magni,
+              dicta maxime laborum temporibus dolorem esse doloremque illo quas nisi enim molestias.
+              Tempore ducimus molestiae in dolore enim.
+            </p>
           </div>
         </div>
       </div>
     </div>
-    <svg xmlns="http:https://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#fff" fill-opacity="1"
-        d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-      </path>
-    </svg>
-  </section>
 
-  <!-- Services
-  <section id="services" class="services">
+    <!-- START THE CONTENT FOR THE SERVICES  -->
     <div class="container">
-      <div class="row text-center">
-        <h1 class="display-3 fw-bold">KingCh1ll's Services</h1>
-        <hr class="mb-1">
-        
-      </div>
-    </div>
-
-    <div class="container">
+      <!-- START THE MARKETING CONTENT  -->
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
           <div class="services__content">
             <div class="icon d-block fas fa-paper-plane"></div>
-            <h3 class="display-3 title mt-1">Service 1</h3>
-            <p class="lh-lg">lol</p>
-            <a type="button" class="rounded-pill btn-rounded border-primary">Learn more
+            <h3 class="display-3--title mt-1">Marketing</h3>
+            <p class="lh-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, impedit rem,
+              doloremque autem quibusdam blanditiis harum alias hic accusantium
+              maxime atque ratione magni repellat?
+            </p>
+            <button type="button" class="rounded-pill btn-rounded border-primary">Learn more
               <span><i class="fas fa-arrow-right"></i></span>
-            </a>
+            </button>
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
-          <img src="assets/images/alert.svg" alt="marketing illustration" class="img-fluid">
+          <div class="services__pic">
+            <img src="images/services/service-1.png" alt="marketing illustration" class="img-fluid">
+          </div>
         </div>
       </div>
+      <!-- START THE WEB DEVELOPMENT CONTENT  -->
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-start">
-          <img src="assets/images/alert.svg" alt="web development illustration" class="img-fluid">
+          <div class="services__pic">
+            <img src="images/services/service-2.png" alt="web development illustration" class="img-fluid">
+          </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
           <div class="services__content">
             <div class="icon d-block fas fa-code"></div>
-            <h3 class="display-3 title mt-1">web development</h3>
+            <h3 class="display-3--title mt-1">web development</h3>
             <p class="lh-lg">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, impedit rem,
               doloremque autem quibusdam blanditiis harum alias hic accusantium
               maxime atque ratione magni repellat?
             </p>
-            <a type="button" class="rounded-pill btn-rounded border-primary">Learn more
+            <button type="button" class="rounded-pill btn-rounded border-primary">Learn more
               <span><i class="fas fa-arrow-right"></i></span>
-            </a>
+            </button>
           </div>
         </div>
       </div>
+      <!-- START THE CLOUD HOSTING CONTENT  -->
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
           <div class="services__content">
             <div class="icon d-block fas fa-cloud-upload-alt"></div>
-            <h3 class="display-3 title mt-1">cloud hosting</h3>
+            <h3 class="display-3--title mt-1">cloud hosting</h3>
             <p class="lh-lg">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, impedit rem,
               doloremque autem quibusdam blanditiis harum alias hic accusantium
               maxime atque ratione magni repellat?
             </p>
-            <a type="button" class="rounded-pill btn-rounded border-primary">Learn more
+            <button type="button" class="rounded-pill btn-rounded border-primary">Learn more
               <span><i class="fas fa-arrow-right"></i></span>
-            </a>
+            </button>
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
-          <img src="assets/images/alert.svg" alt="cloud hosting illustration" class="img-fluid">
-        </div>
-      </div>
-    </div>
-  </section>
-  -->
-
-
-  <!-- FAQ -->
-  <section id="faq" class="faq">
-    <div class="container">
-      <div class="row text-center">
-        <h1 class="display-3 fw-bold">FAQ</h1>
-        <hr>
-
-        <p class="lead">Frequently asked Questions</p>
-      </div>
-
-      <div class="row mt-5">
-        <div class="col-md-12">
-          <div class="accordion" id="contact">
-            <div class="accordion-item shadow mb-3">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                  aria-expanded="true" aria-controls="collapseOne">
-                  How may I contact you?
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                data-bs-parent="#contact">
-                <div class="accordion-body">
-                  You can contact me with any of my socials (preferably Discord). You can find them at the bottom of the
-                  page.
-                </div>
-              </div>
-            </div>
+          <div class="services__pic">
+            <img src="images/services/service-3.png" alt="cloud hosting illustration" class="img-fluid">
           </div>
         </div>
       </div>
@@ -301,7 +341,7 @@
 
   <!-- Reviews -->
   <section id="reviews" class="reviews">
-    <svg xmlns="http:https://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#fff" fill-opacity="1"
         d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
       </path>
@@ -398,32 +438,195 @@
         </div>
       </div>
     </div>
-    <svg xmlns="http:https://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#fff" fill-opacity="1"
         d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
       </path>
     </svg>
   </section>
 
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="row text-center">
+        <h1 class="display-3 fw-bold">FAQ</h1>
+        <hr>
+        </hr>
+        <p class="lead">Frequently asked Questions</p>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <div class="accordion" id="contact">
+            <div class="accordion-item shadow mb-3">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  How may I contact you?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                data-bs-parent="#contact">
+                <div class="accordion-body">
+                  You can contact me with any of my socials (preferably Discord). You can find them at the bottom of the
+                  page.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="portfolio aos-init">
+    <div class="container">
+      <div class="row text-center mt-5">
+        <h1 class="display-3 fw-bold" data-aos="fade-up">Latest Work</h1>
+        <div class="heading-line" data-aos="fade-up"></div>
+        <p class="lead" data-aos="fade-up">KingCh1ll's latest creations. Hover your mouse over any card below to see
+          more information.</p>
+      </div>
+      <div class="row mt-5 mb-4 g-3 text-center">
+        <div class="col-md-12">
+          <button class="btn btn-outline-primary" type="button">All</button>
+          <button class="btn btn-outline-primary" type="button">Websites</button>
+          <button class="btn btn-outline-primary" type="button">Npm Packages</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="portfolio-box shadow" data-aos="fade-up">
+            <img src="assets/images/dev.svg" alt="portfolio 1 image" title="portfolio 1 picture"
+              class="img-fluid">
+            <div class="portfolio-info">
+              <div class="caption">
+                <h4 data-aos="fade-up">Ch1ll.dev</h4>
+                <p data-aos="fade-up">Web Development</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
   <section id="contact" class="contact">
     <div class="container">
       <div class="row text-center">
-        <h1 class="display-3 fw-bold">Contact</h1>
-        <hr class="mx-auto">
-        <p class="lead pt-1">Contact me!</p>
+        <h1 class="display-3 fw-bold text-capitalize">Get started</h1>
+        <div class="heading-line"></div>
+        <p class="lh-lg">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero illum architecto modi.
+        </p>
+      </div>
+  
+      <!-- START THE CTA CONTENT  -->
+      <div class="row text-white">
+        <div class="col-12 col-lg-6 gradient shadow p-3">
+          <div class="cta-info w-100">
+            <h4 class="display-4 fw-bold">100% Satisfaction Guaranteed</h4>
+            <p class="lh-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam alias optio minima, tempore architecto sint ipsam dolore tempora facere laboriosam corrupti!
+            </p>
+            <h3 class="display-3--brief">What will be the next step?</h3>
+            <ul class="cta-info__list">
+              <li>We'll prepare the proposal.</li>
+              <li>we'll discuss it together.</li>
+              <li>let's start the discussion.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 bg-white shadow p-3">
+          <div class="form w-100 pb-2">
+            <h4 class="display-3--title mb-5">start your project</h4>
+            <form action="#" class="row">
+              <div class="col-lg-6 col-md mb-3">
+                <input type="text" placeholder="First Name" id="inputFirstName" class="shadow form-control form-control-lg">
+              </div>
+              <div class="col-lg-6 col-md mb-3">
+                <input type="text" placeholder="Last Name" id="inputLastName" class="shadow form-control form-control-lg">
+              </div>
+              <div class="col-lg-12 mb-3">
+                <input type="email" placeholder="email address" id="inputEmail" class="shadow form-control form-control-lg">
+              </div>
+              <div class="col-lg-12 mb-3">
+                <textarea name="message" placeholder="message" id="message" rows="8" class="shadow form-control form-control-lg"></textarea>
+              </div>
+              <div class="text-center d-grid mt-1">
+                <button type="button" class="btn btn-primary rounded-pill pt-3 pb-3">
+                  submit
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container mt-5">
-      <div class="row text-white justify-content-center mt-3 pb-3">
-        <div class="col-12 col-sm-6 col-lg-6 mx-auto">
-          <h5 class="text-capitalize fw-bold text-center">KingCh1ll</h5>
-          <hr>
-          <div class="col-lg-7 col-md-6 justify-content-center">
+    <div class="container">
+      <div class="row">
+        <!-- Phone Number -->
+        <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+          <div class="contact-box_icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <div class="contact-box_info">
+            <a href="#" class="contact-box_info_title">+1 728365413</a>
+            <p class="contact-box_info_subtitle"> Mon-Fri 9am-6pm</p>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+          <div class="contact-box_icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail-opened" viewBox="0 0 24 24"
+              stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <polyline points="3 9 12 15 21 9 12 3 3 9" />
+              <path d="M21 9v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
+              <line x1="3" y1="19" x2="9" y2="13" />
+              <line x1="15" y1="13" x2="21" y2="19" />
+            </svg>
+          </div>
+          <div class="contact-box_info">
+            <a href="#" class="contact-box_info_title">info@company.com</a>
+            <p class="contact-box_info_subtitle">Online support</p>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+          <div class="contact-box_icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" viewBox="0 0 24 24"
+              stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <line x1="18" y1="6" x2="18" y2="6.01" />
+              <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
+              <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
+              <line x1="9" y1="4" x2="9" y2="17" />
+              <line x1="15" y1="15" x2="15" y2="20" />
+            </svg>
+          </div>
+          <div class="contact-box_info">
+            <a href="#" class="contact-box_info_title">New York, USA</a>
+            <p class="contact-box_info_subtitle">NY 10012, US</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-sm" style="background-color: black;">
+      <div class="container">
+        <div class="row py-4 text-center text-white">
+          <div class="col-lg-5 col-md-6 mb-4 mb-md-0">Connect with us!</div>
+          <div class="col-lg-7 col-md-6">
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-github"></i></a>
@@ -431,11 +634,21 @@
             <a href="#"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row text-white justify-content-center mt-3 pb-3">
+        <div class="col-12 col-sm-6 col-lg-6 mx-auto">
+          <h5 class="text-capitalize fw-bold">KingCh1ll</h5>
+          <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+          <p class="lh-lg">Testing</p>
+        </div>
         <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
           <h5 class="text-capitalize fw-bold">Products</h5>
           <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
           <ul class="list-inline campany-list">
-            <li><a href="#">Ch1llBlox</a></li>
+            <li><a href="#">SparkV</a></li>
           </ul>
         </div>
         <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
@@ -447,6 +660,14 @@
             <li><a href="#">create an account</a></li>
             <li><a href="#">Help</a></li>
           </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom pt-5 pb-5">
+      <div class="container">
+        <div class="row text-center text-white">
+          <div class="footer-bottom_copyright">Copyright 2021 <a href="#">KingCh1ll</a>. All rights reserved.</div>
         </div>
       </div>
     </div>
@@ -521,45 +742,49 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 
   <!-- Plugins -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script>
-  <script src="https://unpkg.com/aos/dist/aos.js"></script>
-  <script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
-
+  <script src="//cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script>
+  <script src="//unpkg.com/aos/dist/aos.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@9/dist/sweetalert2.min.js"></script>
+  
   <!-- Handler -->
   <script src="assets/js/handle.js"></script>
-
+  
+  <script async src="//k040055fpjgg.statuspage.io/embed/script.js"></script>
+  
   <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-performance.js"></script>
-
-  <script>
-    var firebaseConfig = {
-      apiKey: "AIzaSyCJGFpyJXW9LmDNnVuGNHTMWb98_XGPY1c",
-      authDomain: "ch1ll-c1fd6.firebaseapp.com",
-      projectId: "ch1ll-c1fd6",
-      storageBucket: "ch1ll-c1fd6.appspot.com",
-      messagingSenderId: "164676715021",
-      appId: "1:164676715021:web:48e32d8ede13a125d1cb44",
-      measurementId: "G-NQXSX9MD2F"
-    };
-
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-    firebase.performance();
+  <script src="//www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="//www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+  <script src="//www.gstatic.com/firebasejs/8.10.0/firebase-performance.js"></script>
+  
+  <script src="assets/js/glightbox.min.js"></script>
+  
+  <script type="text/javascript">
+    const lightbox = GLightbox({
+      'touchNavigation': true,
+      'href': 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      'type': 'video',
+      'source': 'youtube', //vimeo, youtube or local
+      'width': 900,
+      'autoPlayVideos': 'true',
+  });
   </script>
-<script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:2604704,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+  
+  <script>
+      var firebaseConfig = {
+          apiKey: "AIzaSyCJGFpyJXW9LmDNnVuGNHTMWb98_XGPY1c",
+          authDomain: "ch1ll-c1fd6.firebaseapp.com",
+          projectId: "ch1ll-c1fd6",
+          storageBucket: "ch1ll-c1fd6.appspot.com",
+          messagingSenderId: "164676715021",
+          appId: "1:164676715021:web:48e32d8ede13a125d1cb44",
+          measurementId: "G-NQXSX9MD2F"
+      };
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      firebase.performance();
+  </script>
 </body>
 
 </html>

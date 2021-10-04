@@ -1,44 +1,58 @@
-@use "../config" as *;
-
-// linear-gradient(to right, rgba($primary, .95), rgba($secondary, .95))
+@use '../config' as *;
+@use '../components/mixins' as *;
 
 .hero {
-    background: $primary;
-    padding: 10rem 0 0 0;
-    width: 100%;
-    height: 100%;
+  @include gradient;
+  padding: 10rem 0 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+.heros {
+  .video-box {
+    position: relative;
+
+    a {
+      span {
+        i {
+          font-size: 6rem;
+          color: $secondary;
+        }
+      }
+    }
+  }
 }
 
 .heroContainer {
-    .hero-img {
-        position: relative;
+  .hero-img {
+    position: relative;
 
-        a {
-            span {
-                i {
-                    font-size: 6rem;
-                    color: $secondary;
-                }
-            }
+    a {
+      span {
+        i {
+          font-size: 6rem;
+          color: $secondary;
         }
+      }
     }
+  }
 }
 
 .border-animation {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 6rem;
-    height: 6rem;
-    border: 0.55rem solid $white;
-    border-radius: 50%;
-    animation: pulse-border 1.5s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6rem;
+  height: 6rem;
+  border: 0.55rem solid $white;
+  border-radius: 50%;
+  animation: pulse 1.5s linear infinite;
 
-    &--boarder-1 {
-        animation-delay: 1s;
-    }
+  &--boarder-1 {
+    animation-delay: 1s;
+  }
 
-    &--board-2 {
-        animation-delay: 1.5s;
-    }
+  &--board-2 {
+    animation-delay: 1.5s;
+  }
 }

@@ -12985,7 +12985,7 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-end, body.swal2-toast-shown
   border: 0.1rem solid rgba(255, 255, 255, 0.6);
   color: #fff;
   display: block;
-  margin: 10px 10px 10px 10px;
+  margin: 10px;
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
@@ -13021,44 +13021,6 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-end, body.swal2-toast-shown
   line-height: 40px;
 }
 
-.img-perspective-main {
-  transform: perspective(800px) rotateY(-25deg) scale(0.9) rotateX(10deg);
-  transition: 0.6s;
-  animation-duration: 1.5s;
-  -webkit-animation-duration: 1.5s;
-  animation-fill-mode: both;
-  -webkit-animation-fill-mode: both;
-  animation-name: perspective;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-.img-perspective {
-  transform: perspective(800px) rotateY(25deg) scale(0.9) rotateX(10deg);
-  transition: 0.6s ease all;
-}
-
-.img-perspective:hover {
-  transform: perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
-}
-
-.img-perspective-reverse {
-  transform: perspective(800px) rotateY(-25deg) scale(0.9) rotateX(10deg);
-  transition: 0.6s ease all;
-}
-
-.img-perspective-reverse:hover {
-  transform: perspective(800px) rotateY(15deg) translateY(-50px) rotateX(10deg) scale(1);
-}
-
-@keyframes perspective {
-  0% {
-    transform: perspective(800px) rotateY(-25deg) scale(0.9) rotateX(10deg) translateY(20px);
-  }
-  100% {
-    transform: perspective(800px) rotateY(-25deg) scale(0.9) rotateX(10deg) translateY(-20px);
-  }
-}
 hr {
   color: #009cff;
 }
@@ -13113,9 +13075,8 @@ hr {
 .menu {
   display: flex;
   list-style: none;
-  padding: 0 0 0 0;
+  padding: 1rem 0 0;
   flex-direction: row;
-  margin-bottom: 0;
   background: #009cff;
 }
 .menu li {
@@ -13134,7 +13095,7 @@ hr {
 .campanies {
   padding: 0 0 5rem 0;
 }
-.campanies__logo-box {
+.campanies_logo {
   max-width: 100%;
   height: 3rem;
   margin-bottom: 2rem;
@@ -13142,22 +13103,80 @@ hr {
   text-align: center;
   position: relative;
 }
-.campanies__logo-box img {
+.campanies_logo img {
   height: 100%;
 }
-.campanies__logo-box img:hover {
+.campanies_logo img:hover {
   filter: grayscale(120);
 }
 
 .footer {
   padding-top: 1rem;
-  background-color: #d9f7ff;
+  background-color: #009cff;
+}
+
+.contact-box {
+  position: relative;
+}
+.contact-box_icon {
+  width: 2rem;
+  stroke: #009cff;
+  padding-top: 0.5rem;
+}
+.contact-box_icon i {
+  height: 100%;
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .contact-box_icon {
+    width: 4rem;
+  }
+}
+.contact-box_info {
+  padding: 0.4rem;
+  font-weight: 600;
+}
+.contact-box_info_title {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+@media (min-width: 576px) {
+  .contact-box_info_title {
+    font-size: 1.4rem;
+  }
+}
+.contact-box_info_subtitle {
+  color: lightgrey;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+@media (min-width: 576px) {
+  .contact-box_info_subtitle {
+    font-size: 1rem;
+  }
+}
+
+.footer-sm a {
+  color: #fff;
+}
+.footer-sm a i {
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+@media (min-width: 576px) {
+  .footer-sm a i {
+    font-size: 1.6rem;
+  }
+}
+.footer-sm a:hover {
+  color: #009cff;
 }
 
 .campany-list {
   display: block;
-  list-style-type: none;
   position: relative;
+  list-style-type: none;
 }
 .campany-list li {
   margin-bottom: 0.5rem;
@@ -13174,6 +13193,18 @@ hr {
 .footer-bottom {
   background-color: #000;
 }
+.footer-bottom_copyright {
+  color: lightgrey;
+  font-weight: 400;
+}
+.footer-bottom_copyright a {
+  color: lightgrey;
+  text-decoration: none;
+}
+.footer-bottom_copyright a:hover {
+  color: #009cff;
+  text-decoration: underline;
+}
 
 .back-to-top {
   position: fixed;
@@ -13186,13 +13217,25 @@ hr {
 .back-to-top i {
   color: #fff;
   font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .hero {
-  background: #009cff;
+  background: linear-gradient(to right, rgba(0, 156, 255, 0.95), rgba(217, 247, 255, 0.95));
   padding: 10rem 0 0 0;
   width: 100%;
   height: 100%;
+}
+
+.heros .video-box {
+  position: relative;
+}
+.heros .video-box a span i {
+  font-size: 6rem;
+  color: #d9f7ff;
 }
 
 .heroContainer .hero-img {
@@ -13211,7 +13254,7 @@ hr {
   height: 6rem;
   border: 0.55rem solid #fff;
   border-radius: 50%;
-  animation: pulse-border 1.5s linear infinite;
+  animation: pulse 1.5s linear infinite;
 }
 .border-animation--boarder-1 {
   animation-delay: 1s;
@@ -13220,10 +13263,43 @@ hr {
   animation-delay: 1.5s;
 }
 
-.reviews {
+.services {
   position: relative;
-  padding: 0;
-  background: linear-gradient(to right, rgba(0, 156, 255, 0.95), rgba(217, 247, 255, 0.95));
+  padding: 1rem 0;
+}
+.services_content {
+  padding: 1rem;
+  margin-top: 0;
+}
+.services_content p {
+  font-size: 0.8rem;
+}
+@media (min-width: 992px) {
+  .services_content p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 992px) {
+  .services_content {
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 992px) {
+  .services {
+    margin-top: 5rem;
+  }
+}
+.services .icon {
+  font-size: 1.5rem;
+  color: #009cff;
+}
+@media (min-width: 992px) {
+  .services .icon {
+    font-size: 2.5rem;
+  }
+}
+.services_pic {
+  max-width: 100%;
 }
 
 .reviews {
@@ -13273,9 +13349,7 @@ hr {
 }
 
 .portfolio {
-  position: relative;
-  padding: 0;
-  background: linear-gradient(to right, rgba(0, 156, 255, 0.95), rgba(217, 247, 255, 0.95));
+  padding: 4rem 0;
 }
 .portfolio button {
   text-transform: capitalize;
@@ -13325,6 +13399,45 @@ hr {
   visibility: visible;
   transition-property: all;
   transition-duration: 1s;
+}
+
+.contact {
+  padding: 4rem 0;
+  background-color: #e9ecef;
+}
+
+.cta-info {
+  padding: 3rem;
+  margin: 1rem 0;
+}
+.cta-info__list {
+  position: relative;
+  list-style-type: none;
+  display: block;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+.cta-info__list li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  font-weight: 600;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.form {
+  padding: 3rem;
+}
+.form button {
+  border: none;
+  color: #fff;
+  text-transform: capitalize;
+}
+.form button a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
 }
 
 /*!

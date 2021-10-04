@@ -5,16 +5,16 @@
  */
 
 // Components
-@use "components/buttons";
-@use "components/perspectives";
-@use "components/mixins";
-@use "components/typography";
+@use 'components/buttons';
+@use 'components/mixins';
+@use 'components/typography';
 
 // Sections
-@use "sections/navbar";
-@use "sections/campanies";
-@use "sections/footer";
-@use "sections/hero";
-@use "sections/services";
-@use "sections/reviews";
-@use "sections/portfolio";
+@use 'sections/navbar';
+@use 'sections/campanies';
+@use 'sections/footer';
+@use 'sections/hero';
+@use 'sections/services';
+@use 'sections/reviews';
+@use 'sections/portfolio';
+@use 'sections/contact';

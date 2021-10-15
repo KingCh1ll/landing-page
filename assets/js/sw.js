@@ -3,7 +3,7 @@ self.addEventListener("install", event => {
       (async () => {
         const cache = await caches.open("offline");
   
-        await cache.add(new Request("/assets/offline.html", { cache: "reload" }));
+        await cache.add(new Request("assets/offline.html", { cache: "reload" }));
       })(),
     );
   
@@ -37,7 +37,7 @@ self.addEventListener("install", event => {
           } catch (err) {
             const cache = await caches.open("offline");
   
-            return await cache.match("/assets/offline.html");
+            return await cache.match("assets/offline.html");
           }
         })(),
       );

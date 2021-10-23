@@ -1,8 +1,11 @@
 @use '../config' as *;
-@use  '../components/mixins' as *;
 
 .menu {
-  @include gradient;
+  display: flex;
+  list-style: none;
+  padding: 1rem 0 0;
+  flex-direction: row;
+  background: $primary;
 
   li {
     padding: 0 0.7rem;

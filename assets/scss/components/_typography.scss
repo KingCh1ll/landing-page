@@ -7,17 +7,21 @@ hr {
 
 // Display
 .display-2 {
-  margin-bottom: 1rem;
+  margin: .5rem 0rem .5rem .5rem;
   text-transform: capitalize;
   font-family: 'Poppins', sans-serif;
 
-  & .title {
+  &_title {
     display: inline-block;
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient($secondary, $primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
-  & .desc {
+  &_desc {
     font-size: 1rem;
     display: block;
     margin-top: 1.2rem;
@@ -33,13 +37,34 @@ hr {
 .display-3 {
   font-family: 'Poppins', sans-serif;
 
-  & .title {
+  &_title {
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     text-transform: capitalize;
     font-weight: 600;
     display: inline-block;
-    background-image: linear-gradient(to right, $primary, $secondary);
+    background-image: linear-gradient($secondary, $primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.display-5 {
+  font-family: 'Poppins', sans-serif;
+
+  &_title {
+    font-family: 'Poppins', sans-serif;
+    font-size: calc(1.425rem + 2.1vw);
+    text-transform: capitalize;
+    font-weight: 300;
+    line-height: 1.2;
+    display: inline-block;
+    background-image: linear-gradient($secondary, $primary);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

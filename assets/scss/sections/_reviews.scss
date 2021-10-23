@@ -6,7 +6,7 @@
   background: linear-gradient(to right, rgba($primary, 0.95), rgba($secondary, 0.95));
 
   &_card {
-    background-color: rgba($white, 0.8);
+    background-color: grey;
     padding: 2rem 1.25rem;
     border-radius: 0.625rem;
     height: auto;
@@ -26,8 +26,8 @@
   }
 
   &_picture {
-    width: 6px;
-    height: 6px;
+    width: 6rem;
+    height: 6rem;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);

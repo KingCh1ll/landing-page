@@ -29,7 +29,7 @@
     font-weight: 600;
 
     &_title {
-      color: $white;
+      color: $secondary;
       text-decoration: none;
       font-size: 1rem;
 
@@ -52,7 +52,7 @@
 
 .footer-sm {
   a {
-    color: $white;
+    color: $secondary;
 
     i {
       font-size: 1rem;
@@ -63,8 +63,12 @@
       }
     }
 
+    img {
+      margin-left: 1rem;
+    }
+
     &:hover {
-      color: $primary;
+      color: $secondary;
     }
   }
 }

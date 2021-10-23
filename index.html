@@ -54,8 +54,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
-  <link href="https://use.fontawesome.com/releases/v6.0.0-beta2/css/all.css" rel="stylesheet" crossorigin="anonymous"
-    type="text/css" />
+  <link href="https://use.fontawesome.com/releases/v6.0.0-beta2/css/all.css" rel="stylesheet" />
   <link href="assets/css/sweetalert.css" rel="stylesheet">
 
   <!-- Plugin Scripts -->
@@ -80,7 +79,7 @@
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <i class="fas fa-bars fa-2x"></i>
       </button>
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -98,42 +97,46 @@
         </a>
       </div>
     </div>
-    </div>
   </nav>
 
   <!-- Hero -->
   <section id="home" class="hero aos-init">
-    <div class="container">
+    <div class="container pb-5">
       <div class="row align-items-center text-white">
-        <div class="col-md-6 heroContainer text-start">
+        <div class="col-md-6 text-start">
           <h1 class="display-2">
-            <span class="display-2 title animate_animated animate_slideInUp">KingCh1ll</span>
-            <span class="display-2 desc lh-base animate_animated animate_slideInUp">Discord Bot Developer - Web
+            <span class="display-2_title animate_animated animate_slideInUp">KingCh1ll</span>
+            <span class="display-2_desc lh-base animate_animated animate_slideInUp">Discord Bot Developer - Web
               Developer - Roblox Game Developer</span>
           </h1>
           <a type="button" class="rounded-pill btn-rounded animate_animated animate_zoomInUp">Donate
             <span><i class="fas fa-dollar-sign"></i></span>
           </a>
         </div>
-        <div class="col-md-6 heros text-end">
-          <div class="video-box">
-            <img src="assets/images/dev.svg" alt="Man sitting in a chair coding with 6 screens." class="img-fluid">
-            <a href="#" class="glightbox position-absolute top-50 start-50 translate-middle">
-              <span>
-                <i class="fas fa-play-circle"></i>
-              </span>
-              <span class="border-animation border-animation--border-1"></span>
-              <span class="border-animation border-animation--border-2"></span>
-            </a>
-          </div>
-          <!--
-          <div class="col-md-6 heroContainer text-end animate_animated animate_slideInUp">
+        <div class="col-md-6 text-end animate_animated animate_slideInUp">
           <div class="hero-img">
+            <img src="assets/images/dev.svg" alt="Man sitting in a chair coding with 6 screens." class="img-fluid">
           </div>
-        -->
         </div>
       </div>
     </div>
+
+    <div class="footer-sm" id="companies" style="background-color: #1f2129;">
+      <div class="container">
+        <div class="row py-4 text-center text-white">
+          <h4 class="mb-md-3 text-center">Trusted by</h4>
+          <div class="row py-2 justify-content-center">
+            <div class="col-md-4 col-lg-2">
+              <div data-aos="fade-up" style="border-radius: 0.6rem;">
+                <img src="https://cdn.discordapp.com/icons/763803059876397056/088f693b5b9601a968d098f253626c7f.png"
+                  class="img-fluid" alt="Ch1ll Studio">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#ffffff" fill-opacity="1"
         d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
@@ -141,112 +144,30 @@
     </svg>
   </section>
 
-  <!-- Campanies
-  <section id="campanies" class="campanies aos-init">
-    <div class="container">
-      <div class="row text-center mt-5">
-        <h1 class="display-3 fw-bold text-capitalize" data-aos="fade-up">Trusted By</h1>
-        <hr data-aos="fade-up"></hr>
-      </div>
-      <div class="row">
-        <div class="col-md-4 col-lg-2">
-          <div class="campanies_logo shadow-sm" data-aos="fade-up">
-            <img title="Ch1ll Studio" src="assets/images/TransparentCh1llStudios.png" class="img-fluid"
-              alt="Ch1ll Studio">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  -->
-
-  <!-- About -->
-  <section id="about" class="about aos-init">
-    <div class="container">
-      <div class="row text-center">
-        <h1 class="display-3 fw-bold" data-aos="fade-up">Hi, I'm KingCh1ll. Nice to meet you.</h1>
-        <hr class="mx-auto" data-aos="fade-up">
-        <p class="lead pt-1" data-aos="fade-up">
-          I'm a front-end web developer with over a year of experience. Although my strong suit is using Bootstrap, some of my websites are just HTML5, CSS3 & JavaScript. I love to push myself to improve my code, be a role model and work hard with determination.
-        </p>
-      </div>
-    </div>
-  </section>
-
   <!-- Services -->
-  <section id="services" class="services">
-    <div class="container">
-      <div class="row text-center">
-        <h1 class="display-3 fw-bold">Services</h1>
-        <hr class="mb-1">
-        <p class="lh-lg">
-          What I may offer to you!
-        </p>
+  <section id="services" class="overflow-hidden aos-init aos-animate">
+    <h1 class="display-3 fw-bold aos-init aos-animate text-center">I'm a...</h1>
+    <hr />
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5 px-5">
+      <!-- Web Designer -->
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img data-aos="fade-up" src="assets/images/design.svg" class="d-block mx-lg-auto img-fluid"
+          alt="Designer" width="400" height="300" loading="lazy">
       </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
-          <div class="services_content">
-            <div class="icon d-block fas fa-pencil-ruler"></i></div>
-            <h3 class="display-3_title mt-1">Designer</h3>
-            <p class="lh-lg">
-              I value in creating the most modern and beautiful content. My designs start from sketch.
-            </p>
-            <button type="button" class="rounded-pill btn-rounded border-primary">Learn more
-              <span><i class="fas fa-arrow-right"></i></span>
-            </button>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
-          <div class="services_pic">
-            <img src="assets/images/design.svg" alt="marketing illustration" class="img-fluid">
-          </div>
-        </div>
+      <div class="col-lg-6">
+        <h1 class="display-5_title fw-bold lh-1 mb-3" data-aos="fade-up">Modern Web Designer</h1>
+        <p class="display-5_desc" data-aos="fade-up">I value in creating the most modern and beautiful web content. In most cases,
+          making websites takes me 4-8 hours to ensure the website is PERFECT.</p>
       </div>
-      <!-- START THE WEB DEVELOPMENT CONTENT  -->
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-start">
-          <div class="services_pic">
-            <img src="images/services/service-2.png" alt="web development illustration" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
-          <div class="services_content">
-            <div class="icon d-block fas fa-code"></div>
-            <h3 class="display-3--title mt-1">web development</h3>
-            <p class="lh-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, impedit rem,
-              doloremque autem quibusdam blanditiis harum alias hic accusantium
-              maxime atque ratione magni repellat?
-            </p>
-            <button type="button" class="rounded-pill btn-rounded border-primary">Learn more
-              <span><i class="fas fa-arrow-right"></i></span>
-            </button>
-          </div>
-        </div>
+
+      <!-- Discord Bot Developer -->
+      <div class="col-lg-6">
+        <h1 class="display-5_title fw-bold lh-1 mb-3" data-aos="fade-up">Discord Bot Developer</h1>
+        <p class="display-5_desc" data-aos="fade-up">I love to create bots that will POWER your server.</p>
       </div>
-      <!-- START THE CLOUD HOSTING CONTENT  -->
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
-          <div class="services_content">
-            <div class="icon d-block fas fa-cloud-upload-alt"></div>
-            <h3 class="display-3--title mt-1">cloud hosting</h3>
-            <p class="lh-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, impedit rem,
-              doloremque autem quibusdam blanditiis harum alias hic accusantium
-              maxime atque ratione magni repellat?
-            </p>
-            <button type="button" class="rounded-pill btn-rounded border-primary">Learn more
-              <span><i class="fas fa-arrow-right"></i></span>
-            </button>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
-          <div class="services_pic">
-            <img src="images/services/service-3.png" alt="cloud hosting illustration" class="img-fluid">
-          </div>
-        </div>
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img data-aos="fade-up" src="assets/images/robot.svg" class="d-block mx-lg-auto img-fluid"
+          alt="Robot" width="400" height="300" loading="lazy">
       </div>
     </div>
   </section>
@@ -265,7 +186,6 @@
         <p class="lead pt-1">What my people say!</p>
       </div>
 
-      <!-- START THE CAROUSEL CONTENT  -->
       <div class="row align-items-center">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
@@ -273,7 +193,7 @@
               <div class="reviews_card">
                 <p class="lh-lg">
                   <i class="fas fa-quote-left"></i>
-                  haha yes card 1
+                  No reviews yet. Be the first!
                   <i class="fas fa-quote-right"></i>
                 <div class="ratings p-1">
                   <i class="fas fa-star"></i>
@@ -285,66 +205,22 @@
                 </p>
               </div>
               <div class="reviews_picture">
-                <img src="assets/images/KingCh1ll.png" alt="client-1 picture" class="rounded-circle img-fluid">
+                <img src="assets/images/KingCh1ll.png" class="rounded-circle img-fluid">
               </div>
               <div class="reviews_name">
-                <h3>person</h3>
-                <p class="fw-light">rank</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="reviews_card">
-                <p class="lh-lg">
-                  <i class="fas fa-quote-left"></i>
-                  haha yes card 2
-                  <i class="fas fa-quote-right"></i>
-                <div class="ratings p-1">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                </p>
-              </div>
-              <div class="reviews_picture">
-                <img src="assets/images/KingCh1ll.png" alt="client-3 picture" class="rounded-circle img-fluid">
-              </div>
-              <div class="reviews_name">
-                <h3>person 2</h3>
-                <p class="fw-light">role 2</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="reviews_card">
-                <p class="lh-lg">
-                  <i class="fas fa-quote-left"></i>
-                  haha yes card 3
-                  <i class="fas fa-quote-right"></i>
-                <div class="ratings p-1">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                </p>
-              </div>
-              <div class="reviews_picture">
-                <img src="assets/images/KingCh1ll.png" alt="client-3 picture" class="rounded-circle img-fluid">
-              </div>
-              <div class="reviews_name">
-                <h3>person 3</h3>
-                <p class="fw-light">role 3</p>
+                <h3>Person</h3>
+                <p class="fw-light">Rank</p>
               </div>
             </div>
           </div>
           <div class="text-center">
-            <button class="btn btn-outline-light fas fa-long-arrow-alt-left" type="button"
-              data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <button class="btn btn-outline-light" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev">
+              <i class="fas fa-arrow-left"></i>
             </button>
-            <button class="btn btn-outline-light fas fa-long-arrow-alt-right" type="button"
-              data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <button class="btn btn-outline-light" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next">
+              <i class="fas fa-arrow-right"></i>
             </button>
           </div>
         </div>
@@ -355,6 +231,38 @@
         d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
       </path>
     </svg>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="portfolio aos-init">
+    <div class="container">
+      <div class="row text-center mt-5">
+        <h1 class="display-3 fw-bold" data-aos="fade-up">Latest Work</h1>
+        <div class="heading-line" data-aos="fade-up"></div>
+        <p class="lead" data-aos="fade-up">KingCh1ll's latest creations. Hover your mouse over any card below to see
+          more information.</p>
+      </div>
+      <div class="row mt-5 mb-4 g-3 text-center">
+        <div class="col-md-12">
+          <button class="btn btn-outline-primary" type="button">All</button>
+          <button class="btn btn-outline-primary" type="button">Websites</button>
+          <button class="btn btn-outline-primary" type="button">Npm Packages</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="portfolio-box shadow" data-aos="fade-up">
+            <img src="assets/images/dev.svg" alt="Ch1ll.tk" class="img-fluid">
+            <div class="portfolio-info">
+              <div class="caption">
+                <h4 data-aos="fade-up">Ch1ll.dev</h4>
+                <p data-aos="fade-up">Web Development</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- FAQ -->
@@ -391,114 +299,29 @@
     </div>
   </section>
 
-  <!-- Portfolio -->
-  <section id="portfolio" class="portfolio aos-init">
-    <div class="container">
-      <div class="row text-center mt-5">
-        <h1 class="display-3 fw-bold" data-aos="fade-up">Latest Work</h1>
-        <div class="heading-line" data-aos="fade-up"></div>
-        <p class="lead" data-aos="fade-up">KingCh1ll's latest creations. Hover your mouse over any card below to see
-          more information.</p>
-      </div>
-      <div class="row mt-5 mb-4 g-3 text-center">
-        <div class="col-md-12">
-          <button class="btn btn-outline-primary" type="button">All</button>
-          <button class="btn btn-outline-primary" type="button">Websites</button>
-          <button class="btn btn-outline-primary" type="button">Npm Packages</button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <div class="portfolio-box shadow" data-aos="fade-up">
-            <img src="assets/images/dev.svg" alt="portfolio 1 image" title="portfolio 1 picture"
-              class="img-fluid">
-            <div class="portfolio-info">
-              <div class="caption">
-                <h4 data-aos="fade-up">Ch1ll.dev</h4>
-                <p data-aos="fade-up">Web Development</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Footer -->
-  <footer class="footer">
+  <div class="footer-sm" style="background-color: black;">
     <div class="container">
-      <div class="row">
-        <!-- Phone Number -->
-        <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
-          <div class="contact-box_icon">
-            <i class="fas fa-phone-alt"></i>
-          </div>
-          <div class="contact-box_info">
-            <a href="#" class="contact-box_info_title">+1 11111</a>
-            <p class="contact-box_info_subtitle"> Mon-Fri 9am-6pm</p>
-          </div>
-        </div>
-
-        <!-- Email -->
-        <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
-          <div class="contact-box_icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail-opened" viewBox="0 0 24 24"
-              stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <polyline points="3 9 12 15 21 9 12 3 3 9" />
-              <path d="M21 9v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
-              <line x1="3" y1="19" x2="9" y2="13" />
-              <line x1="15" y1="13" x2="21" y2="19" />
-            </svg>
-          </div>
-          <div class="contact-box_info">
-            <a href="#" class="contact-box_info_title">info@company.com</a>
-            <p class="contact-box_info_subtitle">Online support</p>
-          </div>
-        </div>
-
-        <!-- Location -->
-        <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
-          <div class="contact-box_icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" viewBox="0 0 24 24"
-              stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <line x1="18" y1="6" x2="18" y2="6.01" />
-              <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
-              <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
-              <line x1="9" y1="4" x2="9" y2="17" />
-              <line x1="15" y1="15" x2="15" y2="20" />
-            </svg>
-          </div>
-          <div class="contact-box_info">
-            <a href="#" class="contact-box_info_title">New York, USA</a>
-            <p class="contact-box_info_subtitle">NY 10012, US</p>
-          </div>
+      <div class="row py-4 text-center text-white">
+        <div class="col-lg-5 col-md-6 mb-4 mb-md-0">Connect with me!</div>
+        <div class="col-lg-7 col-md-6">
+          <!-- <a href="#"><i class="fab fa-facebook"></i></a> -->
+          <a href="https://twitter.com/KingCh1ll"><i class="fab fa-twitter"></i></a>
+          <a href="https://github.com/KingCh1ll"><i class="fab fa-github"></i></a>
+          <!-- <a href="https://linkedin.com/KingCh1ll"><i class="fab fa-linkedin"></i></a> -->
+          <a href="https://instagram.com/RealKingCh1ll"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="footer-sm" style="background-color: black;">
-      <div class="container">
-        <div class="row py-4 text-center text-white">
-          <div class="col-lg-5 col-md-6 mb-4 mb-md-0">Connect with us!</div>
-          <div class="col-lg-7 col-md-6">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
+  <footer class="footer">
     <div class="container mt-5">
       <div class="row text-white justify-content-center mt-3 pb-3">
         <div class="col-12 col-sm-6 col-lg-6 mx-auto">
           <h5 class="text-capitalize fw-bold">KingCh1ll</h5>
           <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
-          <p class="lh-lg">Testing</p>
+          <p class="lh-lg">I'm a front-end web developer with over a year of experience. Although my strong suit is using Bootstrap, some of my websites are just HTML5, CSS3 & JavaScript. I love to push myself to improve my code, be a role model and work hard with determination.</p>
         </div>
         <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
           <h5 class="text-capitalize fw-bold">Products</h5>
@@ -523,11 +346,16 @@
     <div class="footer-bottom pt-5 pb-5">
       <div class="container">
         <div class="row text-center text-white">
-          <div class="footer-bottom_copyright">Copyright 2021 <a href="#">KingCh1ll</a>. All rights reserved.</div>
+          <div class="footer-bottom_copyright">© 2021 <a href="#top">KingCh1ll</a>. Illustrations by <a
+              href="https://storyset.com/technology">Storyset</a> and <a href="https://undraw.co/">Undraw</a></div>
         </div>
       </div>
     </div>
   </footer>
+
+  <a href="#" class="back-to-top shadow btn-primary rounded-circle" id="back-to-top">
+    <i class="fa fa-angle-up"></i>
+  </a>
 
   <script>
     if ("serviceWorker" in navigator) {
@@ -545,18 +373,18 @@
               "Service-Worker": "script",
             },
           }).then(response => {
-              const contentType = response.headers.get("content-type");
+            const contentType = response.headers.get("content-type");
 
-              if (response.status === 404 || (contentType !== null && contentType.indexOf("javascript") === -1)) {
-                navigator.serviceWorker.ready.then(registration => {
-                  registration.unregister().then(() => {
-                    window.location.reload();
-                  });
+            if (response.status === 404 || (contentType !== null && contentType.indexOf("javascript") === -1)) {
+              navigator.serviceWorker.ready.then(registration => {
+                registration.unregister().then(() => {
+                  window.location.reload();
                 });
-              } else {
-                registerValidSW(swUrl);
-              }
-            }).catch(err => console.log(`⛔ | Failed to connect. Please check your network, or be forced to run in offline mode (only when avalible). This could be an error on our behalf. ${err}`));
+              });
+            } else {
+              registerValidSW(swUrl);
+            }
+          }).catch(err => console.log(`⛔ | Failed to connect. Please check your network, or be forced to run in offline mode (only when avalible). This could be an error on our behalf. ${err}`));
 
           navigator.serviceWorker.ready.then(() => console.log(`⚙ | Service Worker online.`));
         } else {
@@ -603,19 +431,19 @@
   <script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script>
   <script src="https://unpkg.com/aos/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9/dist/sweetalert2.min.js"></script>
-  
+
   <!-- Handler -->
   <script src="assets/js/handle.js"></script>
-  
+
   <script async src="https://k040055fpjgg.statuspage.io/embed/script.js"></script>
-  
+
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-performance.js"></script>
-  
+
   <script src="assets/js/glightbox.min.js"></script>
-  
+
   <script type="text/javascript">
     const lightbox = GLightbox({
       'touchNavigation': true,
@@ -624,22 +452,22 @@
       'source': 'youtube', //vimeo, youtube or local
       'width': 900,
       'autoPlayVideos': 'true',
-  });
+    });
   </script>
-  
+
   <script>
-      var firebaseConfig = {
-          apiKey: "AIzaSyCJGFpyJXW9LmDNnVuGNHTMWb98_XGPY1c",
-          authDomain: "ch1ll-c1fd6.firebaseapp.com",
-          projectId: "ch1ll-c1fd6",
-          storageBucket: "ch1ll-c1fd6.appspot.com",
-          messagingSenderId: "164676715021",
-          appId: "1:164676715021:web:48e32d8ede13a125d1cb44",
-          measurementId: "G-NQXSX9MD2F"
-      };
-      firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
-      firebase.performance();
+    var firebaseConfig = {
+      apiKey: "AIzaSyCJGFpyJXW9LmDNnVuGNHTMWb98_XGPY1c",
+      authDomain: "ch1ll-c1fd6.firebaseapp.com",
+      projectId: "ch1ll-c1fd6",
+      storageBucket: "ch1ll-c1fd6.appspot.com",
+      messagingSenderId: "164676715021",
+      appId: "1:164676715021:web:48e32d8ede13a125d1cb44",
+      measurementId: "G-NQXSX9MD2F"
+    };
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    firebase.performance();
   </script>
 </body>
 

@@ -1,47 +1,68 @@
-@use '../config' as *;
+@use "../config" as *;
 
 .btn-rounded {
-  position: relative;
-  padding: 0.8375rem 4.375rem 0.8375rem 1.25rem;
-  font-weight: 700;
-  border: 0.1rem solid rgba($white, 0.6);
-  color: $white;
-  display: block;
-  margin: 10px;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  outline: 0;
-
-  &:hover {
-    background: $white;
-    color: $primary;
+    position: relative;
+    padding: 0.8375rem 4.375rem 0.8375rem 1.25rem;
+    font-weight: 700;
+    border: 0.1rem solid rgba($white, 0.6);
+    color: $white;
+    display: block;
+    margin: 10px;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-align: center;
     text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     outline: 0;
-  }
 
-  span {
-    position: absolute;
-    background-color: $primary;
-    width: 2.5rem;
-    height: 2.5rem;
-    top: 50%;
-    right: 5px;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    transition-duration: 1.5s;
-
-    i {
-      color: $white;
-      font-size: 25px;
-      line-height: 40px;
+    &:hover {
+        background: $white;
+        color: $primary;
+        text-decoration: none;
+        outline: 0;
     }
-  }
+
+    span {
+        position: absolute;
+        background-color: $primary;
+        width: 2.5rem;
+        height: 2.5rem;
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        transition-duration: 1.5s;
+
+        i {
+            color: $white;
+            font-size: 25px;
+            line-height: 40px;
+        }
+    }
+}
+
+.blue-button {
+    font-size: 20px !important;
+    padding: 0.75rem 0.75rem 1.5rem 1.5rem;
+    margin: 10px;
+    margin-top: 3rem;
+    background-color: rgba(79, 70, 229, var(--bg-opacity));
+    transition-duration: 300ms;
+    color: #fff;
+    border-radius: 0.6rem;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+        var(--tw-ring-shadow, 0 0 #0000),  0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+    text-decoration: none;
+    --bg-opacity: 1;
+    &:hover {
+        --bg-opacity: 1;
+        background-color: rgba(99, 102, 241, var(--bg-opacity));
+    }
 }

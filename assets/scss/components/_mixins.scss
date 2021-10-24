@@ -2,18 +2,18 @@
 @use "../config" as *;
 
 @mixin gradient {
-  background: linear-gradient($primary, $secondary);
+    background: linear-gradient($primary, $secondary);
 }
 
 @mixin center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 // Smooth Transition
 @mixin smoothTransition {
-  transition-property: all;
-  transition-duration: 1s;
+    transition-property: all;
+    transition-duration: 1s;
 }

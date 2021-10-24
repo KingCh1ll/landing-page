@@ -1,40 +1,40 @@
-@use '../config' as *;
+@use "../config" as *;
 
 .services {
-  position: relative;
-  padding: 1rem 0;
+    position: relative;
+    padding: 1rem 0;
 
-  &_content {
-    padding: 1rem;
-    margin-top: 0;
+    &_content {
+        padding: 1rem;
+        margin-top: 0;
 
-    p {
-      font-size: 0.8rem;
+        p {
+            font-size: 0.8rem;
 
-      @include media-breakpoint-up(lg) {
-        font-size: 1rem;
-      }
+            @include media-breakpoint-up(lg) {
+                font-size: 1rem;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 1rem;
+        }
     }
 
     @include media-breakpoint-up(lg) {
-      margin-top: 1rem;
+        margin-top: 5rem;
     }
-  }
 
-  @include media-breakpoint-up(lg) {
-    margin-top: 5rem;
-  }
+    .icon {
+        font-size: 1.5rem;
+        color: $primary;
 
-  .icon {
-    font-size: 1.5rem;
-    color: $primary;
-
-    @include media-breakpoint-up(lg) {
-      font-size: 2.5rem;
+        @include media-breakpoint-up(lg) {
+            font-size: 2.5rem;
+        }
     }
-  }
 
-  &_pic {
-    max-width: 100%;
-  }
+    &_pic {
+        max-width: 100%;
+    }
 }

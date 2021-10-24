@@ -1,128 +1,128 @@
-@use '../config' as *;
-@use '../components/mixins' as *;
+@use "../config" as *;
+@use "../components/mixins" as *;
 
 .footer {
-  padding-top: 1rem;
-  background-color: $primary;
+    padding-top: 1rem;
+    background-color: $primary;
 }
 
 .contact-box {
-  position: relative;
+    position: relative;
 
-  &_icon {
-    width: 2rem;
-    stroke: $primary;
-    padding-top: .5rem;
+    &_icon {
+        width: 2rem;
+        stroke: $primary;
+        padding-top: 0.5rem;
 
-    i {
-      height: 100%;
-      width: 100%;
+        i {
+            height: 100%;
+            width: 100%;
+        }
+
+        @include media-breakpoint-up(sm) {
+            width: 4rem;
+        }
     }
 
-    @include media-breakpoint-up(sm) {
-      width: 4rem;
+    &_info {
+        padding: 0.4rem;
+        font-weight: 600;
+
+        &_title {
+            color: $secondary;
+            text-decoration: none;
+            font-size: 1rem;
+
+            @include media-breakpoint-up(sm) {
+                font-size: 1.4rem;
+            }
+        }
+
+        &_subtitle {
+            color: lightgrey;
+            text-decoration: none;
+            font-size: 0.8rem;
+
+            @include media-breakpoint-up(sm) {
+                font-size: 1rem;
+            }
+        }
     }
-  }
-
-  &_info {
-    padding: .4rem;
-    font-weight: 600;
-
-    &_title {
-      color: $secondary;
-      text-decoration: none;
-      font-size: 1rem;
-
-      @include media-breakpoint-up(sm){
-        font-size: 1.4rem;
-      }
-    }
-
-    &_subtitle {
-      color: lightgrey;
-      text-decoration: none;
-      font-size: .8rem;
-
-      @include media-breakpoint-up(sm){
-        font-size: 1rem;
-      }
-    }
-  }
 }
 
 .footer-sm {
-  a {
-    color: $secondary;
+    a {
+        color: $secondary;
 
-    i {
-      font-size: 1rem;
-      margin-left: 1rem;
+        i {
+            font-size: 1rem;
+            margin-left: 1rem;
 
-      @include media-breakpoint-up(sm){
-        font-size: 1.6rem;
-      }
+            @include media-breakpoint-up(sm) {
+                font-size: 1.6rem;
+            }
+        }
+
+        img {
+            margin-left: 1rem;
+        }
+
+        &:hover {
+            color: $secondary;
+        }
     }
-
-    img {
-      margin-left: 1rem;
-    }
-
-    &:hover {
-      color: $secondary;
-    }
-  }
 }
 
 .campany-list {
-  display: block;
-  position: relative;
-  list-style-type: none;
+    display: block;
+    position: relative;
+    list-style-type: none;
 
-  li {
-    margin-bottom: .5rem;
-    text-decoration: none;
+    li {
+        margin-bottom: 0.5rem;
+        text-decoration: none;
 
-    a {
-      color: $white;
-      text-decoration: none;
+        a {
+            color: $white;
+            text-decoration: none;
 
-      &:hover {
-        color: $primary;
-      }
+            &:hover {
+                color: $primary;
+            }
+        }
     }
-  }
 }
 
 .footer-bottom {
-  background-color: $black;
+    background-color: $black;
 
-  &_copyright {
-    color: lightgrey;
-    font-weight: 400;
+    &_copyright {
+        color: lightgrey;
+        font-weight: 400;
 
-    a {
-      color: lightgrey;
-      text-decoration: none;
+        a {
+            color: lightgrey;
+            text-decoration: none;
 
-      &:hover {
-        color: $primary;
-        text-decoration: underline;
-      }
+            &:hover {
+                color: $primary;
+                text-decoration: underline;
+            }
+        }
     }
-  }
 }
 
 .back-to-top {
-  position: fixed;
-  width: 3rem;
-  height: 3rem;
-  right: 1.875rem;
-  bottom: 1.875rem;
-  z-index: 9999;
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    right: 1.875rem;
+    bottom: 1.875rem;
+    z-index: 9999;
 
-  i {
-    color: $white;
-    font-size: 1rem;
-    @include center;
-  }
+    i {
+        color: $white;
+        font-size: 1rem;
+        @include center;
+    }
 }

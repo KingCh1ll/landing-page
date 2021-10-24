@@ -3,7 +3,7 @@
  * Copyright 2021 KingCh1ll
  * All rights reserved.
  */
- 
+
 // Varibles
 $primary: #009cff; // #4169e1;
 $secondary: #d9f7ff; // #222428;
@@ -25,10 +25,10 @@ $accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/>  <path d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>");
 
 // Bootstrap
-@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 // AOS.js
-@import '../../node_modules/aos/src/sass/aos.scss';
+@import "../../node_modules/aos/src/sass/aos.scss";
 
 // Sweet Alert
-@import '../../node_modules/sweetalert2/src/sweetalert2.scss';
+@import "../../node_modules/sweetalert2/src/sweetalert2.scss";

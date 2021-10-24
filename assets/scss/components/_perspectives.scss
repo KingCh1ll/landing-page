@@ -16,8 +16,7 @@
 }
 
 .img-perspective:hover {
-    transform: perspective(800px) rotateY(-15deg) translateY(-50px)
-        rotateX(10deg) scale(1);
+    transform: perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
 }
 
 .img-perspective-reverse {
@@ -26,17 +25,14 @@
 }
 
 .img-perspective-reverse:hover {
-    transform: perspective(800px) rotateY(15deg) translateY(-50px)
-        rotateX(10deg) scale(1);
+    transform: perspective(800px) rotateY(15deg) translateY(-50px) rotateX(10deg) scale(1);
 }
 
 @keyframes perspective {
     0% {
-        transform: perspective(800px) rotateY(-25deg) scale(0.9) rotateX(10deg)
-            translateY(20px);
+        transform: perspective(800px) rotateY(-25deg) scale(0.9) rotateX(10deg) translateY(20px);
     }
     100% {
-        transform: perspective(800px) rotateY(-25deg) scale(0.9) rotateX(10deg)
-            translateY(-20px);
+        transform: perspective(800px) rotateY(-25deg) scale(0.9) rotateX(10deg) translateY(-20px);
     }
 }

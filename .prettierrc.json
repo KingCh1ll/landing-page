@@ -1,18 +1,5 @@
 {
-  "tabWidth": 4,
-  "overrides": [
-    {
-      "files": [".prettierrc.json"],
-      "options": {
-        "tabWidth": 4
-      }
-    },
-    {
-      "files": ["*.json"],
-      "options": {
-        "tabWidth": 2
-      }
-    }
-  ],
-  "endOfLine": "lf"
+    "tabWidth": 4,
+    "printWidth": 123004390,
+    "endOfLine": "lf"
 }

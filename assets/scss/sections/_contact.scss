@@ -1,6 +1,5 @@
-@use '../config' as *;
-@use '../components/mixins' as *;
-
+@use "../config" as *;
+@use "../components/mixins" as *;
 
 .contact {
     padding: 4rem 0;
@@ -29,7 +28,7 @@
     }
 }
 
-// FORM CONTENT 
+// FORM CONTENT
 .form {
     padding: 3rem;
 

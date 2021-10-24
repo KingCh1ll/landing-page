@@ -1,13 +1,9 @@
-/*
-KingCh1ll
-Handle.js
-*/
-
-let scroll = new SmoothScroll('a[href*="#"]');
-let online = true;
+// KingCh1ll //
+// 10/24/2021 //
 
 $(window).load(async () => {
-  let Popup = Swal.mixin({
+  const scroll = new SmoothScroll('a[href*="#"]');
+  const Popup = Swal.mixin({
     toast: true,
     position: "top-end",
     showConfirmButton: false,
@@ -26,12 +22,6 @@ $(window).load(async () => {
       text: `An error occured. Please contact a support member with the following error. ${err.message}`,
     });
   });
-
-  let iframes = document.getElementsByTagName("iframe");
-
-  for (let iframe of iframes) {
-    iframe.setAttribute("sandbox", "allow-popups allow-forms");
-  }
 });
 
 $(document).ready(() => {

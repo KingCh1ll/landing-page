@@ -1,0 +1,6 @@
+{
+    "ignorePatterns": [
+        "handle.js",
+        "sw.js"
+    ]
+}

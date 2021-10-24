@@ -1,24 +1,24 @@
-@use "../config" as *;
+@use '../config' as *;
 
 .menu {
-    display: flex;
-    list-style: none;
-    padding: 1rem 0 0;
-    flex-direction: row;
-    background: $primary;
+  display: flex;
+  list-style: none;
+  padding: 1rem 0 0;
+  flex-direction: row;
+  background: $primary;
 
-    li {
-        padding: 0 0.7rem;
+  li {
+    padding: 0 0.7rem;
 
-        a {
-            color: $white;
-            padding: 0 0.7rem;
-            text-transform: capitalize;
-            font-weight: 600;
-        }
-
-        &:hover {
-            color: $white;
-        }
+    a {
+      color: $white;
+      padding: 0 0.7rem;
+      text-transform: capitalize;
+      font-weight: 600;
     }
+
+    &:hover {
+      color: $white;
+    }
+  }
 }

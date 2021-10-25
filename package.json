@@ -30,7 +30,7 @@
         "sweetalert2": "^11.1.9"
     },
     "devDependencies": {
-        "eslint": "^8.0.1",
+        "eslint": "^8.1.0",
         "eslint-plugin-import": "^2.25.2",
         "npm": "^8.1.1",
         "prettier": "2.4.1",

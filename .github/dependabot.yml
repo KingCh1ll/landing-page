@@ -13,8 +13,6 @@ updates:
     commit-message:
       prefix: "Github Actions"
       include: "scope"
-    reviewers:
-      - KingCh1ll
 
   - package-ecosystem: "npm"
     directory: "/"

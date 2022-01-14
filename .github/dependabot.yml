@@ -25,5 +25,3 @@ updates:
     commit-message:
       prefix: "npm"
       include: "scope"
-    reviewers:
-      - KingCh1ll

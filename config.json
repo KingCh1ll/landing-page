@@ -1,0 +1,20 @@
+{
+  "client_ID": "926233662935138325",
+  "guild_ID": "875048404592525352",
+  "projects": [
+    {
+      "name": "Ch1ll Studio",
+      "image": "https://www.ch1lls.tk/assets/images/Ch1llStudios.png",
+      "desc": "We make low priced/free products that will help build the world into a better place.",
+      "link": "https://www.ch1lls.tk/",
+      "role": "Founder"
+    },
+    {
+      "name": "SparkV",
+      "image": "https://www.sparkv.tk/assets/images/SparkV.WebP",
+      "desc": "SparkV is the most POWERFUL multipurpose Discord bot with NO PAYWALL! Start powering your Discord server without spending a dime today!",
+      "link": "https://www.sparkv.tk/",
+      "role": "Developer"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+<!-- Footer -->
+<div class="footer-sm" style="background-color: var(--bs-secondary)">
+  <div class="container">
+    <div class="row py-4 text-center text-white">
+      <h5 class="col-lg-5 col-md-6 mb-4 mb-md-0 fw-bold">Connect with me!</h5>
+
+      <div class="col-lg-7 col-md-6">
+        <!-- <a href="#"><i class="fab fa-facebook"></i></a> -->
+        <a href="/socials/twitter">
+          <i class="fab fa-twitter" style="color: var(--bs-white);"></i>
+        </a>
+        <a href="/socials/github">
+          <i class="fab fa-github" style="color: var(--bs-white);"></i>
+        </a>
+        <a href="/socials/discord">
+          <i class="fab fa-discord" style="color: var(--bs-white);"></i>
+        </a>
+        <!-- <a href="https://linkedin.com/KingCh1ll"><i class="fab fa-linkedin"></i></a> -->
+        <!-- <a href="https://instagram.com/KingCh1ll"><i class="fab fa-instagram"></i></a> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container mt-5">
+    <div class="row text-white justify-content-center mt-3 pb-3">
+      <div class="col-12 col-sm-6 col-lg-6 mx-auto">
+        <h5 class="text-capitalize fw-bold text-center"><%- title %></h5>
+        <hr class="mb-2 justify-content-center"></hr>
+        <p class="lh-lg"><%- desc %></p>
+      </div>
+      <% Object.entries(footerTable).forEach((footerTableItem) => { %>
+        <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
+          <h5 class="text-capitalize fw-bold"><%- footerTableItem[0] %></h5>
+          <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+          <ul class="list-inline campany-list">
+            <% Object.entries(footerTableItem[1]).forEach((footerTTItem) => { %>
+              <li><a href="<%- footerTTItem[1].href %>"><%- footerTTItem[0] %></a></li>
+            <% }) %>
+          </ul>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+
+  <div class="footer-bottom pt-5 pb-5" style="background: var(--bs-secondary)">
+    <div class="container">
+        <div class="row text-center text-white">
+          <p class="footer-bottom_copyright text-white fw-bold">© 2021 <a href="https://ch1ll.tk/">KingCh1ll</a>.</p>
+      </div>
+    </div>
+  </div>
+</footer>

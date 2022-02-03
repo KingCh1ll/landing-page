@@ -1,0 +1,31 @@
+@use "../config" as *;
+
+.menu {
+  display: flex;
+  list-style: none;
+
+  flex-direction: row;
+  background: $primary;
+
+  li {
+    a {
+      color: $white;
+      text-transform: capitalize;
+      font-weight: 600;
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .ss-icons {
+    flex-direction: row;
+  }
+
+  @media only screen and (max-width: 950px) {
+    .ss-icons .nav-item {
+      padding-right: .05em;
+    }
+  }
+}

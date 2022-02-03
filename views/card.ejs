@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("components/head", {
+    title: "KingCh1ll",
+    desc: "I'm a Roblox game developer (2.1 Years), Discord bot developer (1.3 Years), and a full stack web developer (1 Year). I love to make friends and play Roblox."
+  }) %>
+</head>
+
+<body style="font-family: Fira Sans, sans-serif;" data-aos-easing="ease" data-aos-duration="400">
+  <noscript>To use this website, you need JavaScript enabled.</noscript>
+
+  <%- include("components/navbar", {
+    title: "KingCh1ll",
+    logoURL: "/assets/images/KingCh1ll.WebP",
+    navItems: {
+      User: {
+        type: "link",
+        href: "#user"
+      },
+      Trust: {
+        type: "link",
+        href: "#companies"
+      },
+      About: {
+        type: "link",
+        href: "#about"
+      },
+      Projects: {
+        type: "link",
+        href: "#projects"
+      }
+    },
+    buttons: {
+      Twitter: {
+        href: "https://twitter.com/KingCh1ll",
+        icon: "fab fa-twitter",
+        color: "#00acee"
+      },
+      GitHub: {
+        href: "https://github.com/KingCh1ll",
+        icon: "fab fa-github",
+        color: "#212529"
+      },
+      Discord: {
+        href: "https://discord.com/users/571811686617710592",
+        icon: "fab fa-discord",
+        color: "#5865F2"
+      }
+    }
+  }) %>
+
+  <section id="welcome" class="hero pb-5" style="padding-left: 10px;padding-right: 10px;padding-top: 6rem;">
+    <div class="row pb-5 mx-auto text-white" style="background: var(--bs-secondary);border-radius: 10px;max-width: 800px;border: 5px solid yellow;">
+      <div class="display col-5 mx-auto text-center" style="background: transparent;border-radius: 10px;width: 340px;height: 450px;overflow: hidden;padding: 30px 10px;position: relative;" id="user">
+        <div class="display_avatar animate__animated animate__fadeInUp" style="background: var(--bs-dark);border-radius: 10px;">
+          <div style="z-index: 1;width: 315px;height: 220px;position: absolute;opacity: .3;transform: scale(1);background: url(https://cdn.discordapp.com/avatars/<%- userdata.id %>/<%- userdata.avatar %>.png?size=512) center center / cover no-repeat;filter: blur(2px);"></div>
+      
+          <img class="card-img-top" src="https://cdn.discordapp.com/avatars/<%- userdata.id %>/<%- userdata.avatar %>.png?size=512" style="z-index: 2;border-radius: 50%;height: 150px;width: 150px;margin: 36px auto 36px;box-shadow: 0px 8px 13px rgb(0 0 0 / 50%);position: relative;border: 5px solid <%- userdata.status.state.color %>;" draggable="false">
+        </div>
+    
+        <div class="display_user" style="padding: 12px 0 0 0;font-family: Rubik, sans-serif;">
+          <h1 class="fw-bold animate__animated animate__flip">KingCh1ll</h1>
+          <p class="text-break animate__animated animate__zoomInUp"><%- userdata.status.emote ? userdata.status.emote : null %> <%- userdata.status.text %></p>
+        </div>
+
+        <div class="display_user_socials row mx-auto pb-4 justify-content-center animate__animated animate__tada">
+          <button type="button" link="https://twitter.com/KingCh1ll" class="social col btn text-white fw-bold m-1" style="max-height: 42px;max-width: 44px;background: #00acee">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <button type="button" link="https://github.com/KingCh1ll" class="social col btn btn-primary text-white fw-bold m-1" style="max-height: 42px;max-width: 44px;background: #212529">
+            <i class="fab fa-github"></i>
+          </a>
+          <button type="button" link="https://discord.com/users/571811686617710592" class="social col btn btn-primary text-white fw-bold m-1" style="max-height: 42px;max-width: 44px;background: #5865F2">
+            <i class="fab fa-discord"></i>
+          </a>
+        </div>
+      </div>
+      <div class="my-5 footer-sm" id="companies" style="background-color: var(--bs-primary);">
+        <div class="container">
+          <div class="row py-4 text-center text-white">
+            <h4 class="col-lg-5 col-md-6 mb-4 mb-md-0 animate__animated animate__fadeInUp">Trusted By</h4>
+            <div class="col-lg-7 col-md-6">
+              <a><img class="animate__animated animate__fadeInUp" src="assets/images/ch1ll_studio_icon.WebP" alt="Ch1ll Studio" style="border-radius: 10px;" height="48" width="48"></a>
+              <a><img class="animate__animated animate__fadeInUp" src="assets/images/discord_bots_icon.WebP" alt="Discord Bots" style="border-radius: 10px;" height="48" width="48"></a>
+              <a><img class="animate__animated animate__fadeInUp" src="assets/images/AssistantsCenter.webp" alt="Assistants Center" style="border-radius: 10px;" height="48" width="48"></a>
+              <a><img class="animate__animated animate__fadeInUp" src="assets/images/infinity_bot_list_icon.WebP" alt="Infinity Bot List" style="border-radius: 10px;" height="48" width="48"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div class="row mx-auto pt-5 justify-content-center text-center" style="font-family: Rubik, sans-serif">
+        <div id="about" class="col-5 m-3 aos-init aos-animate" style="background: var(--bs-primary);border-radius: 10px;width: 500px;position: relative;padding: 20px 20px 20px 12px;" data-aos="flip-up">
+          <h1 style="padding: 10px;font-size: 28px;">👋🏻 | About Me</h1>
+          <p style="padding: 10px;">Hi! I'm a developer that loves making stuff. I enjoy making Roblox games for my friends to play. Sometimes I release them for the public.</p>
+
+          <h3 style="padding: 10px;font-size: 20px;">📋 Experience 📋</h3>
+          <p>
+            <li>Roblox Studio (Scripting/Building/Ui) for 3.5 Years.</li>
+            <li>Bot Development (JavaScript) for 2 Years.</li>
+            <li>Web Development (HTML/CSS) for 1.5 Years.</li>
+          </p>
+        </div>
+      </div>
+
+      <!-- Current Activity -->
+      <% if (userdata?.activities[0]) { %>
+        <div class="row mx-auto pt-5 justify-content-center text-center" style="font-family: Rubik, sans-serif">
+          <div class="row p-3 text-center justify-content-center">
+            <% userdata.activities.forEach(active => { %>
+              <div id="activity" class="col-5 card mb-3 aos-init aos-animate" style="background: var(--bs-primary);border-radius: 10px;width: 500px;position: relative;padding: 20px 20px 20px 12px;font-family: Rubik, sans-serif;" data-aos="flip-up">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img class="bd-placeholder-img img-fluid" src="<%- active.assets.large.image %>" style="z-index: 2;border-radius: 10%;height: 150px;width: 150px;margin: 36px auto 36px;box-shadow: 0px 8px 13px rgb(0 0 0 / 50%);position: relative;" data-bs-toggle="tooltip" data-bs-placement="top" title="<%- active.assets.large.text %>">
+                    <img src="<%- active.assets.small.image %>" style="z-index: 3;border-radius: 50%;height: 30px;width: 30px;position: absolute;bottom: 189px;left: 150px;" data-bs-toggle="tooltip" data-bs-placement="top" title="<%- active.assets.small.text %>">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title"><%- active.name %></h5>
+                      <p class="card-text"><%- active.state %></p>
+                      <p class="card-text"><%- active.details %></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% }) %>
+          </div>
+        </div>
+      <% } %>
+
+      <!-- Projects -->
+      <div class="row mx-auto pt-5 justify-content-center text-center" style="font-family: Rubik, sans-serif">
+        <% userdata.projects.forEach(project => { %>
+          <div id="projects" class="col-5 card mb-3 aos-init aos-animate" style="background: var(--bs-primary);border-radius: 10px;width: 500px;position: relative;padding: 20px 20px 20px 12px;font-family: Rubik, sans-serif;" data-aos="flip-up">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img class="bd-placeholder-img img-fluid" src="<%- project.image %>" style="z-index: 2;border-radius: 50%;height: 150px;width: 150px;margin: 36px auto 36px;box-shadow: 0px 8px 13px rgb(0 0 0 / 50%);position: relative;">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title"><%- project.name %></h5>
+                  <p class="card-text">
+                    <span><%- project.desc %></span>
+                  </p>
+
+                  <div class="card-text">
+                    <button link="<%- project.link %>" class="social btn btn-secondary text-white fw-bold">View</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <a href="#" class="back-to-top shadow btn-primary rounded-circle" id="back-to-top">
+    <i class="fa fa-angle-up"></i>
+  </a>
+  
+  <%- include("components/footer", {
+    title: "KingCh1ll",
+    desc: "I'm a Roblox game developer (3.5 Years), Discord bot developer (2.3 Years), and a full stack web developer (2 Years). I love to make friends and play Roblox.",
+    footerTable: {
+      Work: {
+        "SparkV": {
+          href: "https://www.sparkv.tk/"
+        },
+        "Ch1ll Studio's Website": {
+          href: "https://www.ch1lls.tk/"
+        }
+      }
+    }
+  }) %>
+
+  <%- include("components/scripts") %>
+
+  <script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+  </script>
+</body>

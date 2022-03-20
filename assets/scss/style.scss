@@ -4,39 +4,25 @@
 @use "components/buttons";
 @use "components/mixins";
 @use "components/text";
+@use "components/dropdowns";
+@use "components/icons";
 
 //-- Sections --//
 @use "sections/navbar";
-@use "sections/hero";
-@use "sections/services";
-@use "sections/reviews";
+@use "sections/portfolio";
 @use "sections/footer";
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body {
-  font-family: "Fira Sans", sans-serif
-}
-
-// a {
-//   color: lightblue;
-//   transition-duration: 1s
-// }
-
-// a:hover {
-//     color: yellow;
-//     transition-duration: 1s
-// }
-
 ::-webkit-scrollbar {
-  width: 10px;
-  background: $primary;
+    width: 10px;
+    background: $primary;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $secondary;
+    background: $secondary;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: $secondary;
+    background: $secondary;
 }

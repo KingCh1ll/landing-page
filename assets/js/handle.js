@@ -7,24 +7,50 @@ let scroll = new SmoothScroll("a[href*=\"#\"]");
 let online = true;
 
 $(window).load(async () => {
-	let Popup = Swal.mixin({
+	const Popup = Swal.mixin({
 		toast: true,
 		position: "top-end",
 		showConfirmButton: false,
-		timer: 3000,
+		timer: 3 * 1000,
 		timerProgressBar: true,
 		didOpen: (popup) => {
 			popup.addEventListener("mouseenter", Swal.stopTimer);
 			popup.addEventListener("mouseleave", Swal.resumeTimer);
 		},
+		showClass: {
+			popup: "animate__animated animate__fadeInDown",
+		},
+		hideClass: {
+			popup: "animate__animated animate__fadeOutUp",
+		},
 	});
 
+	function updateStatus() {
+		if (navigator.onLine === true) {
+			Popup.fire({
+				icon: "success",
+				title: "Back Online",
+				text: `You're back online!`,
+			});
+		} else {
+			Popup.fire({
+				icon: "error",
+				title: "Uh oh!",
+				text: `You're offline!`,
+			});
+		}
+	}
+
+	window.addEventListener("online", updateStatus);
+	window.addEventListener("offline", updateStatus);
+
 	window.addEventListener("error", (err) => {
-		Popup.fire({
-			icon: "error",
-			title: "Uh oh!",
-			text: `An error occured. Please contact a support member with the following error. ${err.message}`,
-		});
+		Swal.fire({
+			icon: 'error',
+			title: 'Error',
+			text: err.message,
+			footer: "<a href=\"/support\">Contact Support</a>"
+		})
 	});
 
 	let iframes = document.getElementsByTagName("iframe");
@@ -35,17 +61,6 @@ $(window).load(async () => {
 });
 
 $(document).ready(() => {
-	let scrollSpy = new bootstrap.ScrollSpy(document.body, {
-		target: "#navbar-example",
-	});
-
-	let dataSpyList = [].slice.call(
-		document.querySelectorAll("[data-bs-spy=\"scroll\"]")
-	);
-	dataSpyList.forEach((dataSpyEl) => {
-		bootstrap.ScrollSpy.getInstance(dataSpyEl).refresh();
-	});
-
 	let iframes = document.getElementsByTagName("iframe");
 
 	for (let iframe of iframes) {
@@ -53,36 +68,38 @@ $(document).ready(() => {
 	}
 
 	AOS.init({
-		once: false,
-		startEvent: "load",
+		// once: false,
 		duration: "600",
 	});
 
-	$(document).on("click", ".social", async function () {
-		await Swal.fire({
-			title: "Whoa there!",
-			text: `Are you sure you want to go to ${$(this).attr("link")}?`,
-			icon: "warning",
-			showCancelButton: true,
-			confirmButtonText: "Yep!",
-			preConfirm: async (name) => {
-        window.location = $(this).attr("link");
-			},
-		});
-	});
+	console.log(
+		"%cWHOA THERE!",
+		"color: #314ef5; font-weight: bold;; font-size: 50px"
+	);
+	console.log(
+		"%cIf someone told you to paste something here, it's VERY likely you're being scammed.",
+		"color: white; font-size: 20px"
+	);
+	console.log(
+		"%cBe careful!",
+		"color: red; font-size: 25px"
+	);
+
+	$("#load").fadeOut()
 
 	$(".counter").each(function () {
-		$(".counter").animate(
-			{
-				Counter: this.text(),
-			},
-			{
-				duration: 2000,
+		$(this)
+			.prop("Counter", 0)
+			.animate({
+				Counter: $(this).text(),
+			}, {
+				duration: 4000,
 				easing: "swing",
-				step: function () {
-					this.text(`${Math.ceil(this.Counter)}+`);
+				step: function (now) {
+					now = Number(Math.ceil(now)).toLocaleString('en');
+
+					$(this).text(now);
 				},
-			}
-		);
+			});
 	});
 });

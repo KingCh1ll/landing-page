@@ -1,0 +1,74 @@
+//-- Dropdowns --//
+@use "../config" as *;
+
+.dropdown-menu {
+  background: $primary;
+
+  li {
+    a {
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+      color: rgba(255, 255, 255, 0.55) !important;
+    }
+
+    a:hover {
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+      color: $white !important;
+    }
+  }
+
+  li:hover {
+    a {
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+      color: $white !important;
+    }
+  }
+
+  .dropdown-item:hover {
+    border-radius: 5px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    color: $white !important;
+    background-color: transparent;
+  }
+
+  .dropdown-item:not(:last-child) {
+    border-bottom: 1px solid #111b35;
+  }
+}
+
+// Profile Dropdown //
+.user-dropdown {
+  align-self: center;
+  padding: 0 5px 0 0;
+  border-radius: 8px;
+  margin-left: 22px;
+  margin-right: 5px;
+
+  .dropdown-toggle {
+    padding: 0 20px 0 16px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .dropdown-menu .dropdown-item {
+    line-height: 1.8;
+    padding: 0;
+
+    a {
+      display: block;
+      color: #ebedf2;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 9px 14px;
+      text-decoration: none;
+      text-align: center;
+
+      i {
+        width: 17px;
+        margin-right: 7px;
+        height: 17px;
+        color: white;
+        font-size: large;
+      }
+    }
+  }
+}

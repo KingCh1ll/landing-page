@@ -4,83 +4,93 @@
 
 // HR
 hr {
-  color: $primary;
+    color: $primary;
 }
 
 // Display
 .display-2 {
-  margin: 0.5rem 0rem 0.5rem 0.5rem;
-  text-transform: capitalize;
-  font-family: "Fira Sans", sans-serif;
+    margin: 0.5rem 0rem 0.5rem 0.5rem;
+    text-transform: capitalize;
+    font-family: "Poppins", sans-serif;
 
-  &_title {
-    display: inline-block;
-    font-weight: 700;
-    font-family: "Fira Sans", sans-serif;
-    background-image: linear-gradient($secondary, $primary);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  &_desc {
-    font-size: 1rem;
-    display: block;
-    margin-top: 1.2rem;
-    text-transform: none;
-
-    @include media-breakpoint-up(lg) {
-      font-size: 1.4rem;
-      display: inline-block;
+    &_title {
+        display: inline-block;
+        font-weight: 700;
+        font-family: "Poppins", sans-serif;
+        background-image: linear-gradient($secondary, $primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
-  }
+
+    &_desc {
+        font-size: 1rem;
+        display: block;
+        margin-top: 1.2rem;
+        text-transform: none;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 1.4rem;
+            display: inline-block;
+        }
+    }
 }
 
 .display-3 {
-  font-family: "Fira Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
 
-  &_title {
-    font-family: "Fira Sans", sans-serif;
-    font-size: 1.2rem;
-    text-transform: capitalize;
-    font-weight: 600;
-    display: inline-block;
-    background-image: linear-gradient($secondary, $primary);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    &_title {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        font-weight: 600;
+        display: inline-block;
+        background-image: linear-gradient($secondary, $primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 
-    @include media-breakpoint-up(lg) {
-      font-size: 1.8rem;
+        @include media-breakpoint-up(lg) {
+            font-size: 1.8rem;
+        }
     }
-  }
 }
 
 .display-5 {
-  font-family: "Fira Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
 
-  &_title {
-    font-family: "Fira Sans", sans-serif;
-    font-size: calc(1.425rem + 2.1vw);
-    text-transform: capitalize;
-    font-weight: 300;
-    line-height: 1.2;
-    display: inline-block;
-    background-image: linear-gradient($secondary, $primary);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    &_title {
+        font-family: "Poppins", sans-serif;
+        font-size: calc(1.425rem + 2.1vw);
+        text-transform: capitalize;
+        font-weight: 300;
+        line-height: 1.2;
+        display: inline-block;
+        background-image: linear-gradient($secondary, $primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 
-    @include media-breakpoint-up(lg) {
-      font-size: 1.8rem;
+        @include media-breakpoint-up(lg) {
+            font-size: 1.8rem;
+        }
     }
-  }
 }
 
 .gradient {
-  background: linear-gradient(
-    to right,
-    rgba($primary, 0.95),
-    rgba($secondary, 0.95)
-  );
+    background: linear-gradient(
+        to right,
+        rgba($primary, 0.95),
+        rgba($secondary, 0.95)
+    );
+}
+
+.gr-blue {
+  display: inline-block;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(180deg, #5561FF 0%, #3643FC 100%, #3643FC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

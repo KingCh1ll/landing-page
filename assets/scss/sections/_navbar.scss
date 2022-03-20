@@ -1,31 +1,80 @@
 @use "../config" as *;
 
 .menu {
-  display: flex;
-  list-style: none;
-
-  flex-direction: row;
-  background: $primary;
-
-  li {
-    a {
-      color: $white;
-      text-transform: capitalize;
-      font-weight: 600;
-    }
-
-    &:hover {
-      color: $white;
-    }
-  }
-
-  .ss-icons {
+    display: flex;
+    list-style: none;
+    padding: 1rem 0 0;
     flex-direction: row;
+    background: $primary;
+
+    li {
+      position: relative;
+      margin-right: 10px;
+      padding: 14px 0;
+
+      a {
+        color: $white;
+        padding: 0 0.7rem;
+        text-transform: capitalize;
+        font-weight: 600;
+
+        i {
+          font-size: 25px;
+          vertical-align: bottom;
+          margin-inline-end: 5px;
+        }
+      }
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    /*
+    li:not(:last-child) > a {
+      border-right: 1px solid $white;
+    }
+    */
+
+    li > a {
+      display: flex;
+      padding: 0 20px 0 10px;
+      height: 100%;
+    }
+}
+
+.nav-tabs {
+  .nav-item {
+    &:hover {
+      background: #111b35;
+      border: none;
+    }
+
+    .active {
+      background: #111b35;
+      border: none;
+
+      &:hover {
+        background: #111b35;
+        border: none;
+      }
+    }
   }
 
-  @media only screen and (max-width: 950px) {
-    .ss-icons .nav-item {
-      padding-right: .05em;
+  .nav-link {
+    &:hover {
+      background: #111b35;
+      border: none;
+    }
+
+    .active {
+      background: #111b35;
+      border: none;
+
+      &:hover {
+        background: #111b35;
+        border: none;
+      }
     }
   }
 }

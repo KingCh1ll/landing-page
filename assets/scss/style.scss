@@ -1,4 +1,4 @@
-@use "./config" as *;
+@use "./config"as *;
 
 //-- Components --//
 @use "components/buttons";
@@ -8,11 +8,37 @@
 @use "components/icons";
 
 //-- Sections --//
-@use "sections/navbar";
 @use "sections/portfolio";
 @use "sections/footer";
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html,
+body {
+    font-family: Ubuntu, sans-serif;
+    background: var(--ch1ll-dark);
+}
+
+:root {
+    --ch1ll-dark: #001037;
+    --ch1ll-yellow: #dee03b;
+}
+
+::selection {
+    background-color: #002176;
+}
+
+::-moz-selection {
+    background-color: #002176;
+}
+
+a {
+    color: rgba(255, 255, 255, 0.55);
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
 
 ::-webkit-scrollbar {
     width: 10px;

@@ -1,6 +1,6 @@
 {
   "name": "ch1ll.portfolio",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "The portfolio site for KingCh1ll.",
   "main": "index.js",
   "scripts": {
@@ -18,8 +18,8 @@
     "bootstrap": "^5.1.3"
   },
   "devDependencies": {
-    "eslint": "^8.11.0",
-    "prettier": "2.6.0",
-    "sass": "^1.49.9"
+    "eslint": "^8.13.0",
+    "prettier": "2.6.2",
+    "sass": "^1.50.0"
   }
 }

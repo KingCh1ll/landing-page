@@ -1,5 +1,4 @@
 // Text //
-
 @use "../config" as *;
 
 // HR
@@ -29,7 +28,7 @@ hr {
         margin-top: 1.2rem;
         text-transform: none;
 
-        @include media-breakpoint-up(lg) {
+        @media (max-width: 1199.98px) {
             font-size: 1.4rem;
             display: inline-block;
         }
@@ -50,7 +49,7 @@ hr {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
-        @include media-breakpoint-up(lg) {
+        @media (max-width: 1199.98px) {
             font-size: 1.8rem;
         }
     }
@@ -71,26 +70,8 @@ hr {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
-        @include media-breakpoint-up(lg) {
+        @media (max-width: 1199.98px) {
             font-size: 1.8rem;
         }
     }
-}
-
-.gradient {
-    background: linear-gradient(
-        to right,
-        rgba($primary, 0.95),
-        rgba($secondary, 0.95)
-    );
-}
-
-.gr-blue {
-  display: inline-block;
-  font-weight: 700;
-  font-family: "Poppins", sans-serif;
-  background-image: linear-gradient(180deg, #5561FF 0%, #3643FC 100%, #3643FC 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }

@@ -19,6 +19,7 @@ body {
 
 :root {
     --ch1ll-dark: #001037;
+    --ch1ll-dark-light: #000d2b;
     --ch1ll-yellow: #dee03b;
 }
 
@@ -42,13 +43,13 @@ a:hover {
 
 ::-webkit-scrollbar {
     width: 10px;
-    background: $primary;
+    background: var(--ch1ll-dark);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: $secondary;
+    background: var(--ch1ll-dark-light);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: $secondary;
+    background: var(--ch1ll-dark-light);
 }

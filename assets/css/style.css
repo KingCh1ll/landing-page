@@ -362,7 +362,7 @@ hr {
 }
 
 .footer-bottom {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
 .footer-bottom_copyright {
   color: lightgrey;
@@ -397,6 +397,7 @@ body {
 
 :root {
   --ch1ll-dark: #001037;
+  --ch1ll-dark-light: #000d2b;
   --ch1ll-yellow: #dee03b;
 }
 
@@ -420,15 +421,15 @@ a:hover {
 
 ::-webkit-scrollbar {
   width: 10px;
-  background: #002584;
+  background: var(--ch1ll-dark);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cedf41;
+  background: var(--ch1ll-dark-light);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #cedf41;
+  background: var(--ch1ll-dark-light);
 }
 
 /*# sourceMappingURL=style.css.map */

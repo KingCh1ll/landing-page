@@ -117,39 +117,12 @@ export default function Homepage({ user, cards, error }) {
                                 </span>
                                 <span>
                                     <i className="fa-solid fa-link" style={{ fontSize: "medium", marginInlineEnd: "5px" }}></i>
-                                    <a href="https://www.sparkv.tk/">www.sparkv.tk</a>
+                                    <a href={card.link}>{card?.linkName ? card.linkName : card.link.split("https://")[1]}</a>
                                 </span>
                             </p>
                         </div>
                     </div>
                     ))}
-                    {/* <div className="col m-4 row aos-init aos-animate" style="max-width: 600px; background: #000a23; margin: auto; border-radius: 20px; padding: 20px 0px 0px 0px; height: 165px" data-aos="zoom-in">
-                        <div className="col-3" style="margin-left: 10px">
-                            <img src="" alt="Wumps Logo" className="img-fluid" style="border-radius: 15px" />
-                        </div>
-                        <div className="col" style="font-family: Rubik, sans-serif">
-                            <span>
-                                <span style="text-align: center; font-size: xx-large; font-weight: 600">Wumps</span>
-                                <span style="background-color: rgb(88, 101, 242); font-family: sans-serif; font-size: 14px; padding: 2px 6px 2px 6px; border-radius: 4px; margin-left: 5px">
-                                    <svg aria-label="Verified Bot" aria-hidden="false" width="16" height="16" viewBox="0 0 16 15.2">
-                                        <path d="M7.4,11.17,4,8.62,5,7.26l2,1.53L10.64,4l1.36,1Z" fill="currentColor"></path>
-                                    </svg>
-                                    BOT
-                                </span>
-                                <small style="margin-inline-start: 10px; color: grey; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Developer</small>
-                            </span>
-                            <p style="display: flex; flex-direction: column; text-align: center; margin-bottom: 0; padding-bottom: 10px">
-                                <span>
-                                    <i className="fa-solid fa-newspaper" style="font-size: medium; margin-inline-end: 5px"></i>
-                                    Wumps is a fully customizable server multipurpose Discord bot for your Discord server.
-                                </span>
-                                <span>
-                                    <i className="fa-solid fa-link" style="font-size: medium; margin-inline-end: 5px"></i>
-                                    <a href="https://discord.com/oauth2/authorize?client_id=801468894400610324&scope=bot%20applications.commands&permissions=379969" target="_blank">Invite</a>
-                                </span>
-                            </p>
-                        </div>
-                    </div> */}
                 </div>
             </div>
         </section>

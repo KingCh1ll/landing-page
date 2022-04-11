@@ -27,7 +27,7 @@ module.exports = {
       name: "Ch1ll Studio",
       image: "https://www.ch1lls.tk/assets/images/Ch1llStudios.png",
       description: "We make low priced/free products that will help build the world into a better place.",
-      link: "https://www.ch1lls.tk/",
+      link: "https://www.ch1lls.tk",
       role: "Founder"
     },
     {
@@ -35,14 +35,15 @@ module.exports = {
       bot: true,
       image: "https://www.sparkv.tk/assets/images/SparkV.webp",
       description: "A powerful multipurpose bot that features Music, Memes, AI (Chatbot) and more.",
-      link: "https://www.sparkv.tk/",
+      link: "https://www.sparkv.tk",
       role: "Founder"
     },
     {
       name: "Wumps",
       image: "https://cdn.discordapp.com/avatars/801468894400610324/458c9c3ec67745910c9c6ad2ec0ca2cc.webp?size=100",
-      description: "A powerful multipurpose bot that features Music, Memes, AI (Chatbot) and more.",
-      link: "https://www.sparkv.tk/",
+      description: "Wumps is a fully customizable server multipurpose Discord bot for your Discord server.",
+      link: "https://discord.com/oauth2/authorize?client_id=801468894400610324&scope=bot%20applications.commands&permissions=379969",
+      linkName: "Invite",
       role: "Developer"
     },
   ]

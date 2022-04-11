@@ -1,0 +1,163 @@
+/*!
+ * Ch1llest Site v1.0.0 (https://ch1llest.ch1ll.tk/)
+ * Copyright 2021 KingCh1ll
+ * All rights reserved.
+ */
+.portfolio {
+  padding: 4rem 0;
+}
+.portfolio button {
+  text-transform: capitalize;
+}
+
+.portfolio-box {
+  position: relative;
+  width: 100%;
+  height: 18.5rem;
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+  border-top: 0.5rem solid #0042ea;
+}
+.portfolio-box img {
+  width: 100%;
+  height: 100%;
+  transition-property: all;
+  transition-duration: 1s;
+}
+.portfolio-box .portfolio-info {
+  background-color: rgba(0, 37, 132, 0.75);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition-property: all;
+  transition-duration: 1s;
+}
+.portfolio-box .portfolio-info .caption {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.portfolio-box .portfolio-info .caption h4 {
+  text-transform: uppercase;
+  display: block;
+}
+.portfolio-box:hover img {
+  transform: scale(1.5);
+}
+.portfolio-box:hover .portfolio-info {
+  opacity: 1;
+  visibility: visible;
+}
+
+.footer {
+  padding-top: 1rem;
+  background-color: #002584;
+}
+
+.contact-box {
+  position: relative;
+}
+.contact-box_icon {
+  width: 2rem;
+  stroke: #002584;
+  padding-top: 0.5rem;
+}
+.contact-box_icon i {
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 767.98px) {
+  .contact-box_icon {
+    width: 4rem;
+  }
+}
+.contact-box_info {
+  padding: 0.4rem;
+  font-weight: 600;
+}
+.contact-box_info_title {
+  color: #cedf41;
+  text-decoration: none;
+  font-size: 1rem;
+}
+@media (max-width: 767.98px) {
+  .contact-box_info_title {
+    font-size: 1.4rem;
+  }
+}
+.contact-box_info_subtitle {
+  color: lightgrey;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+@media (max-width: 767.98px) {
+  .contact-box_info_subtitle {
+    font-size: 1rem;
+  }
+}
+
+.footer-sm a {
+  color: #cedf41;
+}
+.footer-sm a i {
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+@media (max-width: 767.98px) {
+  .footer-sm a i {
+    font-size: 1.6rem;
+  }
+}
+.footer-sm a img {
+  margin-left: 1rem;
+}
+
+.campany-list {
+  display: block;
+  position: relative;
+  list-style-type: none;
+}
+.campany-list li {
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+.campany-list li a {
+  text-decoration: none;
+}
+
+.footer-bottom {
+  background-color: rgb(0, 0, 0);
+}
+.footer-bottom_copyright {
+  color: lightgrey;
+  font-weight: 400;
+}
+.footer-bottom_copyright a {
+  text-decoration: none;
+}
+
+.back-to-top {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  z-index: 9999;
+}
+.back-to-top i {
+  color: #fff;
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*# sourceMappingURL=home.module.css.map */

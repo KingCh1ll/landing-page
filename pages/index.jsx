@@ -117,7 +117,7 @@ export default function Homepage({ user, cards, error }) {
                                 </span>
                                 <span>
                                     <i className="fa-solid fa-link" style={{ fontSize: "medium", marginInlineEnd: "5px" }}></i>
-                                    <a href="https://www.sparkv.tk/" target="_blank">www.sparkv.tk</a>
+                                    <a href="https://www.sparkv.tk/">www.sparkv.tk</a>
                                 </span>
                             </p>
                         </div>

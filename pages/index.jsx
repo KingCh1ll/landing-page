@@ -1,26 +1,19 @@
-import config from '../config';
-import style from '../styles/home.module.css';
-
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import Script from "next/script";
 import { HiOutlineNewspaper, HiOutlineLink, HiX, HiOutlineExclamation, HiOutlineFolder, HiOutlineMenuAlt2, HiOutlineFire, HiOutlineCode } from 'react-icons/hi';
-export default function Homepage({ user, cards, error }) {
-    const [width, setWidth] = useState();
-    useEffect(() => {
-        setInterval(() => {
-            if (window.innerWidth == width) return;
 
-            setWidth(window.innerWidth);
-        }, 400)
-    });
+import config from '../config';
+import style from '../styles/home.module.css';
+import '../public/js/handle';
 
+export default function render({ user, cards, error }) {
     return (
         <>
         <div style={{ paddingTop: "8rem", paddingBottom: "36rem" }}>
             <div style={{ color: "white", fontSize: "24px", top: "48%", left: "50%", position: "absolute", display: "inline-grid", transform: "translate(-50%, -50%)", justifyContent: "center" }}>
-                <img src="/images/users/kingch1ll.webp" height={200} width={200} alt="logo" style={{ borderRadius: "50%", border: "5px solid #ffeb3b", margin: "auto" }}/>
+                <img src={`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.webp?size=1024`} height={200} width={200} alt="logo" style={{ borderRadius: "50%", border: "5px solid #ffeb3b", margin: "auto" }}/>
                 <h2 style={{ display: "inline", textAlign: "center", paddingTop: "10px", fontWeight: "600" }}>{config.name}</h2>
                 <h2 style={{ display: "inline", textAlign: "center", fontSize: 18, padding: 10}}>{config.description}</h2>
                 <div style={{ justifyContent: "space-evenly", display: "flex", width: "250px", margin: "auto" }}>
@@ -43,7 +36,7 @@ export default function Homepage({ user, cards, error }) {
             </div>
         </div>
 
-        <section className="container-sm" id="features" style={{ paddingBottom: "100px", maxWidth: "700px;" }}>
+        <section className="container-sm" id="features" style={{ paddingBottom: "100px", maxWidth: "700px" }}>
             <div style={{ background: "#000d2b", borderRadius: "15px", padding: "30px", fontFamily: "Rubik, sans-serif" }}>
                 <h1 className="aos-init aos-animate" style={{ fontWeight: "600", color: "rgba(255, 255, 255, 1)", textAlign: "center" }} data-aos="zoom-in">👋 About Me</h1>
                 <div className="aos-init aos-animate" style={{ color: "rgba(255, 255, 255, 1)", textAlign: "center" }} data-aos="zoom-in">  
@@ -60,7 +53,7 @@ export default function Homepage({ user, cards, error }) {
             </div>
         </section>
 
-        <section className={user?.activities.length > 0 ? "container-sm" : ""} style={{ paddingBottom: "100px", maxWidth: "700px;" }}>
+        <section className={user?.activities.length > 0 ? "container-sm" : ""} style={{ paddingBottom: "100px", maxWidth: "700px" }}>
             {user?.activities.map((activity) => (
             <div style={{ background: "#000d2b", borderRadius: "15px", padding: "30px", fontFamily: "Rubik, sans-serif" }}>
                 <div className="row aos-init aos-animate" style={{ color: "rgba(255, 255, 255, 1)", maxWidth: "600px", background: "#000a23", margin: "auto", borderRadius: "20px", padding: "20px 0px 0px 0px", height: "165px" }} data-aos="zoom-in">
@@ -75,7 +68,7 @@ export default function Homepage({ user, cards, error }) {
                                     {activity.details}
                                 </span>
                                 <span>
-                                    <HiOutlineMenuAlt2  style={{ minHeight: 22, minWidth: 22, marginInlineEnd: "5px" }} />
+                                    <HiOutlineMenuAlt2 style={{ minHeight: 22, minWidth: 22, marginInlineEnd: "5px" }} />
                                     {activity.state}
                                 </span>
                             </p>
@@ -85,12 +78,12 @@ export default function Homepage({ user, cards, error }) {
             ))}
         </section>
 
-        <section className="container-sm" id="portfolio" style={{ paddingBottom: "100px", maxWidth: "700px;" }}>
+        <section className="container-sm" id="portfolio" style={{ paddingBottom: "100px", maxWidth: "700px" }}>
             <div style={{ background: "#000d2b", borderRadius: "15px", padding: "30px", fontFamily: "Rubik, sans-serif" }}>
                 <h1 style={{ fontWeight: "600", color: "rgba(255, 255, 255, 1)", textAlign: "center" }} data-aos="fade-up">🌐 Projects</h1>
                 <div className="row" style={{ color: "rgba(255, 255, 255, 1)", textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
                     <p className="aos-init aos-animate" style={{ fontSize: "17px", paddingBottom: "30px" }} data-aos="fade-up">I have many projects, including some you might know!</p>
-                    
+                        
                     {config.projects?.map(card => (
                     <div className="col m-4 row aos-init aos-animate" style={{ maxWidth: "600px", background: "#000a23", margin: "auto", borderRadius: "20px", padding: "20px 0px 0px 0px", height: "165px" }} data-aos="zoom-in">
                         <div className="col-3" style={{ marginLeft: "10px" }}>
@@ -126,11 +119,20 @@ export default function Homepage({ user, cards, error }) {
                 </div>
             </div>
         </section>
+
+        <Script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></Script>
+        {/* <Script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></Script> */}
+        <Script src="https://cdn.jsdelivr.net/npm/aos/dist/aos.js"></Script>
+
+        <Script src="/js/handle.js"></Script>
         </>
     );
 };
 
-Homepage.getInitialProps = async () => {
+// Special thanks to Luna for this code.
+// https://github.com/Luna-devv/Luna-Site/blob/main/pages/index.jsx
+// Her code helped me learn NextJS a lot.
+render.getInitialProps = async () => {
     let user = {};
     let error = false;
 

@@ -3,69 +3,15 @@ KingCh1ll
 Handle.js
 */
 
-let scroll = new SmoothScroll("a[href*=\"#\"]");
-let online = true;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import $ from 'jquery';
+import SmoothScroll from "./smoothscroll";
 
-$(window).load(async () => {
-	const Popup = Swal.mixin({
-		toast: true,
-		position: "top-end",
-		showConfirmButton: false,
-		timer: 3 * 1000,
-		timerProgressBar: true,
-		didOpen: (popup) => {
-			popup.addEventListener("mouseenter", Swal.stopTimer);
-			popup.addEventListener("mouseleave", Swal.resumeTimer);
-		},
-		showClass: {
-			popup: "animate__animated animate__fadeInDown",
-		},
-		hideClass: {
-			popup: "animate__animated animate__fadeOutUp",
-		},
-	});
-
-	function updateStatus() {
-		if (navigator.onLine === true) {
-			Popup.fire({
-				icon: "success",
-				title: "Back Online",
-				text: `You're back online!`,
-			});
-		} else {
-			Popup.fire({
-				icon: "error",
-				title: "Uh oh!",
-				text: `You're offline!`,
-			});
-		}
-	}
-
-	window.addEventListener("online", updateStatus);
-	window.addEventListener("offline", updateStatus);
-
-	window.addEventListener("error", (err) => {
-		Swal.fire({
-			icon: 'error',
-			title: 'Error',
-			text: err.message,
-			footer: "<a href=\"/support\">Contact Support</a>"
-		})
-	});
-
-	let iframes = document.getElementsByTagName("iframe");
-
-	for (let iframe of iframes) {
-		iframe.setAttribute("sandbox", "allow-popups allow-forms");
-	}
-});
+$(window).load(async () => new SmoothScroll("a[href*=\"#\"]"));
 
 $(document).ready(() => {
 	let iframes = document.getElementsByTagName("iframe");
-
-	for (let iframe of iframes) {
-		iframe.setAttribute("sandbox", "allow-popups allow-forms");
-	}
 
 	AOS.init({
 		// once: false,

@@ -2,7 +2,6 @@ import "../styles/global.css";
 
 import { useState, useEffect } from "react";
 import Head from "next/head";
-import Script from "next/script";
 
 import config from "../config";
 
@@ -38,20 +37,13 @@ export default function render({ Component, pageProps }) {
                 <div id="load" style={{ height: "100%", width: "100%", zIndex: "9999" }}>
                     <div className="container">
                         <div className="dots" style={{ width: "100%", textAlign: "center" }}>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                            <span id="dot"></span>
+                            <span id="dot"></span>
+                            <span id="dot"></span>
                         </div>
                     </div>
                 </div>
                 <Component {...pageProps} />
-                <Script src="https://code.jquery.com/jquery.js"></Script>
-                <Script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></Script>
-                <Script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></Script>
-                <Script src="https://cdn.jsdelivr.net/npm/aos/dist/aos.js"></Script>
-                <Script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></Script>
-
-                <Script src="/js/handle.js"></Script>
             </body>
         </>
     );

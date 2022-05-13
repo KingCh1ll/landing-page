@@ -10,7 +10,7 @@ import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 import config from '../config';
 
-export default function Render({ user }) {
+export default function Render() {
     const [width, setWidth] = useState()
     useEffect(() => {
         setInterval(() => {
@@ -39,6 +39,7 @@ export default function Render({ user }) {
 
                 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
                 <link rel="canonical" href={config.meta.site} />
+                <link href="https://use.fontawesome.com/releases/v6.1.0/css/all.css" rel="stylesheet" />
             </Head>
             {/* Background */}
             <div style={{ position: "fixed", height: "100%", width: "100%", zIndex: "-1" }}>
@@ -49,7 +50,7 @@ export default function Render({ user }) {
                 <div style={{ background: "#000d2b", borderRadius: "15px", padding: "30px", fontFamily: "Rubik, sans-serif" }}>
                     <div style={{ paddingTop: "1rem", paddingBottom: "3rem" }}>
                         <div style={{ color: "white", fontSize: "24px", display: "inline-grid", justifyContent: "center", width: "100%" }}>
-                            <img src={`https://cdn.discordapp.com/avatars/${user?.id}/${user?.avatar}.webp?size=1024`} height={200} width={200} alt="logo" style={{ borderRadius: "50%", border: "5px solid #ffeb3b", margin: "auto" }} />
+                            <img src={`/images/users/kingch1ll.png`} height={200} width={200} alt="logo" style={{ borderRadius: "50%", border: "5px solid #ffeb3b", margin: "auto" }} />
                             <h1 style={{ display: "inline", textAlign: "center", paddingTop: "10px", fontWeight: "600" }}>{config.name}</h1>
                             <h2 style={{ display: "inline", textAlign: "center", fontSize: 18, padding: 10 }}>{config.description}</h2>
                             <div style={{ justifyContent: "space-evenly", display: "flex", width: "250px", margin: "auto" }}>
@@ -89,7 +90,7 @@ export default function Render({ user }) {
                         </div>
                     </div>
 
-                    <div style={{ paddingTop: "1rem", paddingBottom: "3rem" }}>
+                    {/* <div style={{ paddingTop: "1rem", paddingBottom: "3rem" }}>
                         {user?.activities?.map((activity) => (
                             <div key={activity.applicationId} className="aos-init aos-animate" style={{ maxWidth: "575px", margin: "auto", color: "rgb(255, 255, 255)", background: "rgb(0, 10, 35)", margin: "auto", borderRadius: "20px", padding: "20px" }} data-aos="zoom-in">
                                 <span style={{ fontSize: "24px", fontWeight: "bold" }}>
@@ -103,7 +104,7 @@ export default function Render({ user }) {
                                             : <></>
                                         }
                                         {activity.assets.small.image ?
-                                            <img src={activity.assets.small.image} title={activity.name} alt={activity.name} className="img-fluid" style={{ position: "absolute", height: "28px", top: "62px", left: "66px", borderRadius: "6px", backgroundColor: "rgb(32, 29, 36)", borderRadius: "10px", outline: "rgb(32, 29, 36) solid 0.2rem;" }} />
+                                            <img src={activity.assets.small.image} title={activity.name} alt={activity.name} className="img-fluid" style={{ position: "absolute", height: "28px", top: "62px", left: "66px", borderRadius: "6px", backgroundColor: "rgb(32, 29, 36)", borderRadius: "10px", outline: "rgb(32, 29, 36) solid 0.2rem" }} />
                                             : <></>
                                         }
                                     </div>
@@ -120,7 +121,7 @@ export default function Render({ user }) {
                                 </div>
                             </div>
                         ))}
-                    </div>
+                    </div> */}
 
                     {config.projects?.map(card => (
                         // <div className="col m-4 row aos-init aos-animate" style={{ maxWidth: "600px", background: "#000a23", margin: "auto", borderRadius: "20px", padding: "20px 0px 0px 0px", height: "165px" }} data-aos="zoom-in">
@@ -220,32 +221,10 @@ export default function Render({ user }) {
             <Link href="#top">
                 <a className="shadow button-secondary rounded-circle" style={{ position: "fixed", width: "3rem", height: "3rem", right: "1.875rem", bottom: "1.875rem", zIndex: "9999" }}>
                     <span style={{ color: "#fff", fontSize: "1rem", position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}>
-                        <FontAwesomeIcon icon={faAngleUp} size={"lg"} />
+                        <i className="fas fa-angle-up"></i>
                     </span>
                 </a>
             </Link>
         </>
     );
-};
-
-// Special thanks to Luna for this code.
-// https://github.com/Luna-devv/Luna-Site/blob/main/pages/index.jsx
-// Her code helped me learn NextJS a lot.
-Render.getInitialProps = async () => {
-    let user = {};
-    let error = false;
-
-    if (config.api) {
-        try {
-            user = await fetch(config.api).then(res => res.json()).catch(() => { return; });
-        } catch (err) {
-            error = err;
-        }
-
-        if (user?.status !== 200 || !user?.content?.id) {
-            return user = { content: config.user, error: true }
-        }
-    }
-
-    return { user: user?.content, error: error };
 };

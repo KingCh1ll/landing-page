@@ -10,19 +10,7 @@ import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 import config from '../config';
 
-let user = {};
-async function fetchUserData() {
-    let error = false;
-    if (!config?.api) return;
-
-    const data = await fetch(config.api).then(res => res.json()).catch(() => error = true);
-    if (data?.status !== 200 || !data?.content?.id) user = { content: config.user, error: true }
-    else user = { content: data.content, error }
-}
-fetchUserData();
-setInterval(fetchUserData, 300 * 1000);
-
-export default function Render() {
+export default function Render({ user }) {
     const [width, setWidth] = useState()
     useEffect(() => {
         setInterval(() => {
@@ -51,9 +39,6 @@ export default function Render() {
 
                 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
                 <link rel="canonical" href={config.meta.site} />
-
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossOrigin="anonymous" />
-                <link href="https://use.fontawesome.com/releases/v6.1.0/css/all.css" rel="stylesheet" />
             </Head>
             {/* Background */}
             <div style={{ position: "fixed", height: "100%", width: "100%", zIndex: "-1" }}>
@@ -64,7 +49,7 @@ export default function Render() {
                 <div style={{ background: "#000d2b", borderRadius: "15px", padding: "30px", fontFamily: "Rubik, sans-serif" }}>
                     <div style={{ paddingTop: "1rem", paddingBottom: "3rem" }}>
                         <div style={{ color: "white", fontSize: "24px", display: "inline-grid", justifyContent: "center", width: "100%" }}>
-                            <img src={`https://cdn.discordapp.com/avatars/${user?.content?.id}/${user?.content?.avatar}.webp?size=1024`} height={200} width={200} alt="logo" style={{ borderRadius: "50%", border: "5px solid #ffeb3b", margin: "auto" }} />
+                            <img src={`https://cdn.discordapp.com/avatars/${user?.id}/${user?.avatar}.webp?size=1024`} height={200} width={200} alt="logo" style={{ borderRadius: "50%", border: "5px solid #ffeb3b", margin: "auto" }} />
                             <h1 style={{ display: "inline", textAlign: "center", paddingTop: "10px", fontWeight: "600" }}>{config.name}</h1>
                             <h2 style={{ display: "inline", textAlign: "center", fontSize: 18, padding: 10 }}>{config.description}</h2>
                             <div style={{ justifyContent: "space-evenly", display: "flex", width: "250px", margin: "auto" }}>
@@ -105,7 +90,7 @@ export default function Render() {
                     </div>
 
                     <div style={{ paddingTop: "1rem", paddingBottom: "3rem" }}>
-                        {user?.content?.activities?.map((activity) => (
+                        {user?.activities?.map((activity) => (
                             <div key={activity.applicationId} className="aos-init aos-animate" style={{ maxWidth: "575px", margin: "auto", color: "rgb(255, 255, 255)", background: "rgb(0, 10, 35)", margin: "auto", borderRadius: "20px", padding: "20px" }} data-aos="zoom-in">
                                 <span style={{ fontSize: "24px", fontWeight: "bold" }}>
                                     {activity.name}
@@ -241,4 +226,26 @@ export default function Render() {
             </Link>
         </>
     );
+};
+
+// Special thanks to Luna for this code.
+// https://github.com/Luna-devv/Luna-Site/blob/main/pages/index.jsx
+// Her code helped me learn NextJS a lot.
+Render.getInitialProps = async () => {
+    let user = {};
+    let error = false;
+
+    if (config.api) {
+        try {
+            user = await fetch(config.api).then(res => res.json()).catch(() => { return; });
+        } catch (err) {
+            error = err;
+        }
+
+        if (user?.status !== 200 || !user?.content?.id) {
+            return user = { content: config.user, error: true }
+        }
+    }
+
+    return { user: user?.content, error: error };
 };

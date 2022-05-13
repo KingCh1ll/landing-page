@@ -33,7 +33,7 @@ module.exports = {
     {
       name: "SparkV",
       bot: true,
-      image: "https://www.sparkv.tk/assets/images/SparkV.webp",
+      image: "https://www.sparkv.tk/images/SparkV.webp",
       description: "A powerful multipurpose bot that features Music, Memes, AI (Chatbot) and more.",
       link: "https://www.sparkv.tk",
       role: "Founder"

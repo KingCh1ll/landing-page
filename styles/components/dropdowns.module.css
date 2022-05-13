@@ -1,20 +1,7 @@
-//-- Dropdowns --//
-@use "../config" as *;
+/* Dropdowns */
 
 .dropdown-menu {
-  background: var(--sparkv-dark);
-
-  li {
-    a {
-      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-      color: rgba(255, 255, 255, 0.55) !important;
-    }
-
-    a:hover {
-      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-      color: #fff !important;
-    }
-  }
+  background: var(--ch1ll-dark);
 
   li:hover {
     a {
@@ -27,15 +14,27 @@
     border-radius: 5px;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
     color: #fff !important;
-    background-color: #111b35;
+    background-color: var(--ch1ll-dark-2);
   }
 
   .dropdown-item:not(:last-child) {
-    border-bottom: 1px solid #111b35;
+    border-bottom: 1px solid var(--ch1ll-dark-2);
   }
 }
 
-// Profile Dropdown //
+.dropdown-menu li a {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  color: rgba(255, 255, 255, 0.55) !important;
+  background-color: var(--ch1ll-dark) !important;
+}
+
+.dropdown-menu li a:hover {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  color: white !important;
+  background-color: var(--ch1ll-dark) !important;
+}
+
+/* Profile Dropdown
 .user-dropdown {
   align-self: center;
   padding: 0 5px 0 0;
@@ -71,4 +70,4 @@
       }
     }
   }
-}
+} */

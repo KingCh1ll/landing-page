@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+/*!
+ * Ch1llest Site v1.0.0 (https://ch1llest.ch1ll.tk/)
+ * Copyright 2021 KingCh1ll
+ * Some tailwind included. (https://tailwindcss.com/)
+ */
+
+:root {
+  --ch1ll-dark: #001037;
+  --ch1ll-dark-2: #111b35;
+  --ch1ll-dark-light: #000d2b;
+  --ch1ll-light: rgb(255, 255, 255, .6);
+  --ch1ll-color: #0d1014;
+  --ch1ll-color-2: rgba(255,255,255, 0.05);
+  --ch1ll-yellow: #dee03b;
+}
+
+body {
+  background: var(--ch1ll-dark) !important;
+  font-family: Satoshi-Regular, sans-serif;
+}
+
+a {
+  color: rgba(255, 255, 255, 0.55) !important;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: white !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: #0a1227;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #dee03b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #dee03b;
+}
+
+@import "./components/buttons.module.css";
+@import "./components/gradients.module.css";
+@import "./components/icons.module.css";
+@import "./components/text.module.css";
+@import "./components/dropdowns.module.css";
+
+@import "./sections/loader.module.css";
+@import "./sections/navbar.module.css";
+@import "./sections/hero.module.css";
+@import "./sections/footer.module.css";

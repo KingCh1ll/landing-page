@@ -1,6 +1,6 @@
 {
   "name": "ch1ll.portfolio",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "The portfolio site for KingCh1ll.",
   "main": "index.js",
   "scripts": {

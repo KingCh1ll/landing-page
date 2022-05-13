@@ -3,12 +3,26 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Script from "next/script";
+
 import { HiOutlineNewspaper, HiOutlineLink, HiX, HiOutlineExclamation, HiOutlineFolder, HiOutlineMenuAlt2, HiOutlineFire, HiOutlineCode } from 'react-icons/hi';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 import config from '../config';
-import style from '../styles/home.module.scss';
 
-export default function Render({ user, cards, error }) {
+let user = {};
+async function fetchUserData() {
+    let error = false;
+    if (!config?.api) return;
+
+    const data = await fetch(config.api).then(res => res.json()).catch(() => error = true);
+    if (data?.status !== 200 || !data?.content?.id) user = { content: config.user, error: true }
+    else user = { content: data.content, error }
+}
+fetchUserData();
+setInterval(fetchUserData, 300 * 1000);
+
+export default function Render() {
     const [width, setWidth] = useState()
     useEffect(() => {
         setInterval(() => {
@@ -41,12 +55,17 @@ export default function Render({ user, cards, error }) {
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossOrigin="anonymous" />
                 <link href="https://use.fontawesome.com/releases/v6.1.0/css/all.css" rel="stylesheet" />
             </Head>
-            <section className="container-sm" id="features" style={{ paddingTop: "5rem", maxWidth: "700px" }}>
+            {/* Background */}
+            <div style={{ position: "fixed", height: "100%", width: "100%", zIndex: "-1" }}>
+                <img defer src="/images/blobs.svg" alt="Cool Blob Background" style={{ height: "100%", width: "100%", opacity: ".4", WebkitMaskImage: "linear-gradient(to top, transparent 0%, #fff 100%)", objectFit: "cover" }} />
+            </div>
+
+            <section className="container-sm" id="features" style={{ padding: "5rem 0", maxWidth: "700px" }}>
                 <div style={{ background: "#000d2b", borderRadius: "15px", padding: "30px", fontFamily: "Rubik, sans-serif" }}>
                     <div style={{ paddingTop: "1rem", paddingBottom: "3rem" }}>
                         <div style={{ color: "white", fontSize: "24px", display: "inline-grid", justifyContent: "center", width: "100%" }}>
-                            <img src={`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.webp?size=1024`} height={200} width={200} alt="logo" style={{ borderRadius: "50%", border: "5px solid #ffeb3b", margin: "auto" }} />
-                            <h2 style={{ display: "inline", textAlign: "center", paddingTop: "10px", fontWeight: "600" }}>{config.name}</h2>
+                            <img src={`https://cdn.discordapp.com/avatars/${user?.content?.id}/${user?.content?.avatar}.webp?size=1024`} height={200} width={200} alt="logo" style={{ borderRadius: "50%", border: "5px solid #ffeb3b", margin: "auto" }} />
+                            <h1 style={{ display: "inline", textAlign: "center", paddingTop: "10px", fontWeight: "600" }}>{config.name}</h1>
                             <h2 style={{ display: "inline", textAlign: "center", fontSize: 18, padding: 10 }}>{config.description}</h2>
                             <div style={{ justifyContent: "space-evenly", display: "flex", width: "250px", margin: "auto" }}>
                                 <a href="https://twitter.com/KingCh1ll" style={{ color: "white" }}>
@@ -86,7 +105,7 @@ export default function Render({ user, cards, error }) {
                     </div>
 
                     <div style={{ paddingTop: "1rem", paddingBottom: "3rem" }}>
-                        {user?.activities?.map((activity) => (
+                        {user?.content?.activities?.map((activity) => (
                             <div key={activity.applicationId} className="aos-init aos-animate" style={{ maxWidth: "575px", margin: "auto", color: "rgb(255, 255, 255)", background: "rgb(0, 10, 35)", margin: "auto", borderRadius: "20px", padding: "20px" }} data-aos="zoom-in">
                                 <span style={{ fontSize: "24px", fontWeight: "bold" }}>
                                     {activity.name}
@@ -174,69 +193,52 @@ export default function Render({ user, cards, error }) {
                 </div>
             </section>
 
-            {/* <section className="container-sm" id="portfolio" style={{ paddingBottom: "100px", maxWidth: "700px" }}>
-                <div style={{ background: "#000d2b", borderRadius: "15px", padding: "30px", fontFamily: "Rubik, sans-serif" }}>
-                    <h1 style={{ fontWeight: "600", color: "rgba(255, 255, 255, 1)", textAlign: "center" }} data-aos="fade-up">🌐 Projects</h1>
-                    <div className="row" style={{ color: "rgba(255, 255, 255, 1)", textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-                        <p className="aos-init aos-animate" style={{ fontSize: "17px", paddingBottom: "30px" }} data-aos="fade-up">I have many projects, including some you might know!</p>
-
-                        {config.projects?.map(card => (
-                            <div className="col m-4 row aos-init aos-animate" style={{ maxWidth: "600px", background: "#000a23", margin: "auto", borderRadius: "20px", padding: "20px 0px 0px 0px", height: "165px" }} data-aos="zoom-in">
-                                <div className="col-3" style={{ marginLeft: "10px" }}>
-                                    <img src={card.image} alt={card.name} className="img-fluid" style={{ borderRadius: "15px" }} />
-                                </div>
-                                <div className="col" style={{ fontFamily: "Rubik, sans-serif" }}>
-                                    <span style={{ textAlign: "center", fontSize: "xx-large", fontWeight: "600" }}>
-                                        {card.name}
-                                        {card.bot === true ?
-                                            <span style={{ backgroundColor: "rgb(88, 101, 242)", fontFamily: "sans-serif", fontSize: "14px", padding: "2px 6px 2px 6px", borderRadius: "4px", marginLeft: "5px" }}>
-                                                <svg aria-label="Verified Bot" aria-hidden="false" width="16" height="16" viewBox="0 0 16 15.2">
-                                                    <path d="M7.4,11.17,4,8.62,5,7.26l2,1.53L10.64,4l1.36,1Z" fill="currentColor"></path>
-                                                </svg>
-                                                BOT
-                                            </span>
-                                            : <></>
-                                        }
-                                    </span>
-                                    <small style={{ marginInlineStart: "10px", color: "grey", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" }}>{card.role}</small>
-                                    <p style={{ display: "flex", flexDirection: "column", textSlign: "center", marginBottom: "0", paddingBottom: "10px" }}>
-                                        <span>
-                                            <HiOutlineNewspaper style={{ minHeight: 22, minWidth: 22, marginInlineEnd: "5px" }} />
-                                            {card.description}
-                                        </span>
-                                        <span>
-                                            <i className="fa-solid fa-link" style={{ fontSize: "medium", marginInlineEnd: "5px" }}></i>
-                                            <a href={card.link}>{card?.linkName ? card.linkName : card.link.split("https://")[1]}</a>
-                                        </span>
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
+            {/* Footer */}
+            <footer className="footer">
+                <div className="container mt-5">
+                    <div className="row text-white justify-content-center mt-3 pb-3">
+                        {/* Legal */}
+                        <div className="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
+                            <h5 className="text-capitalize fw-bold">Projects</h5>
+                            <hr className="bg-white d-inline-block mb-4" style={{ width: "60px", height: "2px" }} />
+                            <ul className="list-inline campany-list">
+                                <li><Link href="https://www.sparkv.tk/">SparkV</Link></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr style={{ color: "gray" }} />
+                    <div className="py-4 text-center text-white" style={{ display: "flex", justifyContent: "space-between" }}>
+                        <div style={{ textAlign: "start" }}>
+                            © 2021-2022 <Link href="https://www.ch1ll.tk/">KingCh1ll</Link>. Illustrations by <Link href="https://storyset.com/technology">Storyset</Link> and <Link href="https://undraw.co/">Undraw</Link>
+                        </div>
+                        <div style={{ justifyContent: "space-evenly", display: "flex", width: "200px" }}>
+                            <Link href="https://twitter.com/KingCh1ll" passHref>
+                                <a><i className="fab fa-twitter" style={{ fontSize: "22px" }}></i></a>
+                            </Link>
+                            <Link href="https://github.com/KingCh1ll" passHref>
+                                <a><i className="fab fa-github" style={{ fontSize: "22px" }}></i></a>
+                            </Link>
+                            <Link href="https://discord.com/users/571811686617710592" style={{ color: "white" }} passHref>
+                                <a><i className="fab fa-discord" style={{ fontSize: "22px" }}></i></a>
+                            </Link>
+                            <Link href="https://www.youtube.com/channel/UCvOB4pLdL7V4FmPdyNdfFeQ" style={{ color: "white" }} passHref>
+                                <a><i className="fab fa-youtube" style={{ fontSize: "22px" }}></i></a>
+                            </Link>
+                            <Link href="https://open.spotify.com/artist/anx4tm5z1m6lpg1ulxfbmxele" style={{ color: "white" }} passHref>
+                                <a><i className="fab fa-spotify" style={{ fontSize: "22px" }}></i></a>
+                            </Link>
+                        </div>
                     </div>
                 </div>
-            </section> */}
+            </footer>
+
+            <Link href="#top">
+                <a className="shadow button-secondary rounded-circle" style={{ position: "fixed", width: "3rem", height: "3rem", right: "1.875rem", bottom: "1.875rem", zIndex: "9999" }}>
+                    <span style={{ color: "#fff", fontSize: "1rem", position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}>
+                        <FontAwesomeIcon icon={faAngleUp} size={"lg"} />
+                    </span>
+                </a>
+            </Link>
         </>
     );
-};
-
-// Special thanks to Luna for this code.
-// https://github.com/Luna-devv/Luna-Site/blob/main/pages/index.jsx
-// Her code helped me learn NextJS a lot.
-Render.getInitialProps = async () => {
-    let user = {};
-    let error = false;
-
-    if (config.api) {
-        try {
-            user = await fetch(config.api).then(res => res.json()).catch(() => { return; });
-        } catch (err) {
-            error = err;
-        }
-
-        if (user?.status !== 200 || !user?.content?.id) {
-            return user = { content: config.user, error: true }
-        }
-    }
-
-    return { user: user?.content, error: error };
 };

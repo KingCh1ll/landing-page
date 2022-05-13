@@ -1,0 +1,39 @@
+/* Hero */
+.hero {
+    background: #0a1227;
+    padding-top: 10rem;
+    width: 100%;
+    height: 100%;
+}
+
+.hero .banner_container {
+    padding-bottom: 16.5rem !important;
+}
+
+.video-box {
+    position: relative;
+}
+
+.video-box a span i {
+    font-size: 6rem;
+    color: #dee03b;
+}
+
+.border-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6rem;
+    height: 6rem;
+    border: 0.55rem solid #fff;
+    border-radius: 50%;
+    animation: pulse 1.5s linear infinite;
+}
+
+.border-animation .boarder-1 {
+    animation-delay: 1s;
+}
+
+.border-animation .boarder-2 {
+    animation-delay: 1.5s;
+}

@@ -1,21 +1,5 @@
-#load {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--ch1ll-dark);
-    z-index: 9999;
-}
-
+/* Loader */
 .dots span {
-    width: 25px;
-    height: 25px;
-    margin: 0 5px;
-    border-radius: 50%;
-    display: inline-block;
-    background-color: var(--ch1ll-yellow);
     animation-name: dots;
     animation-duration: 2s;
     animation-iteration-count: infinite;

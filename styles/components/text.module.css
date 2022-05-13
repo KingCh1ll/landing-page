@@ -1,0 +1,76 @@
+/* Text */
+
+/* HR */
+hr {
+    color: #0a1227;
+}
+
+/* Display */
+.display-2 {
+    margin: 0.5rem 0rem 0.5rem 0.5rem;
+    text-transform: capitalize;
+    font-family: "Poppins", sans-serif;
+}
+
+.display-2 .display-2_title {
+    display: inline-block;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    background-image: linear-gradient(#dee03b, #0a1227);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.display-2 .display-2_desc {
+    font-size: 1rem;
+    display: block;
+    margin-top: 1.2rem;
+    text-transform: none;
+
+    @media (max-width: 1199.98px) {
+        font-size: 1.4rem;
+        display: inline-block;
+    }
+}
+
+.display-3 {
+    font-family: "Poppins", sans-serif;
+}
+
+.display-3 .title {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    display: inline-block;
+    background-image: linear-gradient(#dee03b, #0a1227);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media (max-width: 1199.98px) {
+        font-size: 1.8rem;
+    }
+}
+
+.display-5 {
+    font-family: "Poppins", sans-serif;
+}
+
+.display-5 .title {
+    font-family: "Poppins", sans-serif;
+    font-size: calc(1.425rem + 2.1vw);
+    text-transform: capitalize;
+    font-weight: 300;
+    line-height: 1.2;
+    display: inline-block;
+    background-image: linear-gradient(#dee03b, #0a1227);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media (max-width: 1199.98px) {
+        font-size: 1.8rem;
+    }
+}

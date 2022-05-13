@@ -1,0 +1,38 @@
+/* Gradients */
+.gradient {
+    background: linear-gradient(
+        to right,
+        rgba(#0a1227, 0.95),
+        rgba(#dee03b, 0.95)
+    );
+}
+
+.gr-blue {
+  display: inline-block;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(180deg, #5561FF 0%, #3643FC 100%, #3643FC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gr-yellow {
+  display: inline-block;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(180deg, #ffdd00 50%, #fbb034 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gr-red {
+  display: inline-block;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(0deg, #ff75a4 10%, #ff1866 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

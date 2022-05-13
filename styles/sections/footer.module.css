@@ -1,0 +1,37 @@
+/* Footer */
+.footer {
+    padding-top: 1rem;
+    background-color: #0a1227;
+}
+
+.footer-sm a {
+    color: #dee03b;
+}
+
+.footer-sm a i {
+    font-size: 1rem;
+    margin-left: 1rem;
+
+    @media (max-width: 767.98px) {
+        font-size: 1.6rem;
+    }
+}
+
+.footer-sm a img {
+    margin-left: 1rem;
+}
+
+.campany-list {
+    display: block;
+    position: relative;
+    list-style-type: none;
+}
+
+.campany-list li {
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+}
+
+.campany-list li a {
+    text-decoration: none;
+}

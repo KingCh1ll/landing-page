@@ -8,28 +8,28 @@
  */
 
 :root {
-  --ch1ll-dark: #001037;
-  --ch1ll-dark-2: #111b35;
-  --ch1ll-dark-light: #000d2b;
-  --ch1ll-light: rgb(255, 255, 255, .6);
-  --ch1ll-color: #0d1014;
-  --ch1ll-color-2: rgba(255,255,255, 0.05);
-  --ch1ll-yellow: #dee03b;
+    --ch1ll-dark: #001037;
+    --ch1ll-dark-2: #111b35;
+    --ch1ll-dark-light: #000d2b;
+    --ch1ll-light: rgb(255, 255, 255, 0.6);
+    --ch1ll-color: #0d1014;
+    --ch1ll-color-2: rgba(255, 255, 255, 0.05);
+    --ch1ll-yellow: #dee03b;
 }
 
 body {
-  background: var(--ch1ll-dark) !important;
-  font-family: Satoshi-Regular, sans-serif;
+    background: var(--ch1ll-dark) !important;
+    font-family: Satoshi-Regular, sans-serif;
 }
 
 a {
-  color: rgba(255, 255, 255, 0.55) !important;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out !important;
-  text-decoration: none !important;
+    color: rgba(255, 255, 255, 0.55) !important;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out !important;
+    text-decoration: none !important;
 }
 
 a:hover {
-  color: white !important;
+    color: white !important;
 }
 
 ::-webkit-scrollbar {
@@ -45,6 +45,7 @@ a:hover {
     background: #dee03b;
 }
 
+@import "./components/wrapper.module.css";
 @import "./components/buttons.module.css";
 @import "./components/gradients.module.css";
 @import "./components/icons.module.css";

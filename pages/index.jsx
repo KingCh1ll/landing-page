@@ -10,6 +10,10 @@ import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 import config from '../config';
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 export default function Render() {
     const [width, setWidth] = useState()
     useEffect(() => {
@@ -17,6 +21,14 @@ export default function Render() {
             if (window.innerWidth == width) return;
             setWidth(window.innerWidth);
         }, 400)
+
+        import("bootstrap/dist/js/bootstrap");
+
+        AOS.init({
+            once: false,
+            startEvent: "load",
+            duration: "600",
+        });
     });
 
     return (
@@ -41,11 +53,6 @@ export default function Render() {
                 <link rel="canonical" href={config.meta.site} />
                 <link href="https://use.fontawesome.com/releases/v6.1.0/css/all.css" rel="stylesheet" />
             </Head>
-            {/* Background */}
-            <div style={{ position: "fixed", height: "100%", width: "100%", zIndex: "-1" }}>
-                <img defer src="/images/blobs.svg" alt="Cool Blob Background" style={{ height: "100%", width: "100%", opacity: ".4", WebkitMaskImage: "linear-gradient(to top, transparent 0%, #fff 100%)", objectFit: "cover" }} />
-            </div>
-
             <section className="container-sm" id="features" style={{ padding: "5rem 0", maxWidth: "700px" }}>
                 <div style={{ background: "#000d2b", borderRadius: "15px", padding: "30px", fontFamily: "Rubik, sans-serif" }}>
                     <div style={{ paddingTop: "1rem", paddingBottom: "3rem" }}>

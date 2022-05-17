@@ -1,0 +1,95 @@
+/* Wrapper */
+
+.wrapper {
+    width: 360px;
+    border-radius: 7px;
+    padding: 25px 30px;
+    background: #fff;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+    font-family: Rubik, sans-serif;
+}
+
+.wrapper .title {
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+}
+
+textarea {
+  height: 110px;
+  padding: 8px 10px;
+  border: 1px solid #999;
+  font-size: 15px;
+  resize: none;
+  background: var(--ch1ll-dark-2);
+}
+
+form .row {
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+
+form .row label {
+  font-size: 17px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+form :where(select, button, textarea) {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+form .row textarea {
+  resize: none;
+  height: 110px;
+  font-size: 15px;
+  padding: 8px 10px;
+  border: 1px solid #999;
+}
+
+form .row textarea::-webkit-scrollbar{
+  width: 0px;
+}
+
+form .row .container{
+  height: 47px;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: center;
+  border: 1px solid #999;
+}
+
+form .row select{
+  font-size: 14px;
+  background: var(--ch1ll-dark-2);
+}
+
+form .row select::-webkit-scrollbar{
+  width: 8px;
+}
+
+form .row select::-webkit-scrollbar-track{
+  background: #fff;
+}
+
+form .row select::-webkit-scrollbar-thumb{
+  background: #888;
+  border-radius: 8px;
+  border-right: 2px solid #ffffff;
+}
+
+@media (max-width: 400px) {
+  .wrapper {
+    max-width: 345px;
+    width: 100%;
+  }
+}

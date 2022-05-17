@@ -4,7 +4,7 @@ module.exports = {
   api: "https://api.ch1ll.tk/user",
   meta: {
     title: "KingCh1ll",
-    logo: "/images/favicon.ico",
+    logo: "/favicon.ico",
     description: "I'm a Roblox game developer (2.1 Years), Discord bot developer (1.3 Years), and a full stack web developer (1 Year). I love to make friends and play Roblox.",
     site: "https://www.ch1ll.tk/",
     keywords: [

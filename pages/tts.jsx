@@ -78,16 +78,16 @@ export default function Render() {
                 <title>{config.meta.title}</title>
                 <link rel="manifest" href={config.meta.manifest} />
                 <link rel="shortcut icon" type="image/x-icon" href={config.meta.logo} />
-                <meta property="description" content={config.meta.description} />
+                <meta property="description" content={`An easy text to speech system. ${config.meta.description}`} />
                 <meta property="keywords" content={config.meta.keywords.join(", ").toLowerCase()} />
 
                 <meta name="twitter:title" content={config.meta.title} />
-                <meta name="twitter:description" content={config.meta.description} />
+                <meta name="twitter:description" content={`An easy text to speech system. ${config.meta.description}`}  />
                 <meta name="twitter:site" content={config.meta.site} />
                 <meta name="twitter:card" content="summary" />
 
                 <meta property="og:title" content={config.meta.title} />
-                <meta property="og:description" content={config.meta.description} />
+                <meta property="og:description" content={`An easy text to speech system. ${config.meta.description}`}  />
                 <meta property="og:image" content={config.meta.logo} />
 
                 <meta name="viewport" content="width=device-width,initial-scale=1.0" />

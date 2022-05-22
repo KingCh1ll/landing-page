@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "pace-js/themes/blue/pace-theme-minimal.css";
 import "../styles/global.css";
 
@@ -12,6 +14,12 @@ export default function Render({ Component, pageProps }) {
         console.log("%cPasting something here could be very dangerous!", "color: red; font-size: 25px");
 
         import("pace-js/pace.min.js");
+
+        AOS.init({
+            once: false,
+            startEvent: "load",
+            duration: "600",
+        });
     }, []);
 
     return <Component {...pageProps} />;

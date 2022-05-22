@@ -10,8 +10,6 @@ import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 import config from '../config';
 
-import AOS from "aos";
-import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Render() {
@@ -23,12 +21,6 @@ export default function Render() {
         }, 400)
 
         import("bootstrap/dist/js/bootstrap");
-
-        AOS.init({
-            once: false,
-            startEvent: "load",
-            duration: "600",
-        });
     });
 
     return (
@@ -86,11 +78,11 @@ export default function Render() {
                             <div className="aos-init aos-animate" style={{ color: "rgba(255, 255, 255, 1)", textAlign: "center" }} data-aos="zoom-in">
                                 <p className="aos-init aos-animate" style={{ fontSize: "17px" }} data-aos="zoom-in">Hi, I'm KingCh1ll! I'm a passionate <strong>Software Engineer</strong>, living in the <strong>United States</strong>! I love making <strong>websites</strong> and <strong>Discord bots</strong>.</p>
                                 <h2 className="aos-init aos-animate" style={{ fontWeight: "600", color: "rgba(255, 255, 255, 1)", textAlign: "center" }} data-aos="zoom-in">🪄 Languages</h2>
-                                <p style={{ fontSize: "17px" }}>
-                                    <li className="aos-init aos-animate" data-aos="zoom-in">JavaScript</li>
-                                    <li className="aos-init aos-animate" data-aos="zoom-in">Lua (Roblox Edition)</li>
-                                    <li className="aos-init aos-animate" data-aos="zoom-in">Html, Css, Scss</li>
-                                </p>
+                                <div style={{ fontSize: "17px", marginBottom: "1em" }}>
+                                    <p className="aos-init aos-animate" data-aos="zoom-in" style={{ marginBottom: "0" }}>• JavaScript</p>
+                                    <p className="aos-init aos-animate" data-aos="zoom-in" style={{ marginBottom: "0" }}>• Lua (Roblox Edition)</p>
+                                    <p className="aos-init aos-animate" data-aos="zoom-in" style={{ marginBottom: "0" }}>• Html, Css, Scss</p>
+                                </div>
                                 <h2 className="aos-init aos-animate" style={{ fontWeight: "600", color: "rgba(255, 255, 255, 1)", textAlign: "center" }} data-aos="zoom-in">📇 Contact</h2>
                                 <p className="aos-init aos-animate" style={{ fontSize: "17px" }} data-aos="zoom-in">If you want to contact me, you can join my <a href="https://discord.gg/PPtzT8Mu3h">Discord server</a>.</p>
                             </div>
@@ -131,27 +123,6 @@ export default function Render() {
                     </div> */}
 
                     {config.projects?.map(card => (
-                        // <div className="col m-4 row aos-init aos-animate" style={{ maxWidth: "600px", background: "#000a23", margin: "auto", borderRadius: "20px", padding: "20px 0px 0px 0px", height: "165px" }} data-aos="zoom-in">
-                        //     <div className="col-3" style={{ marginLeft: "10px" }}>
-                        //         <img src={card.image} alt={card.name} className="img-fluid" style={{ borderRadius: "15px" }} />
-                        //     </div>
-                        //     <div className="col" style={{ color: "#fff;", fontFamily: "Rubik, sans-serif" }}>
-                        //         <span style={{ textAlign: "center", fontSize: "xx-large", fontWeight: "600" }}>
-                        //             {card.name}
-                        //         </span>
-                        //         <small style={{ marginInlineStart: "10px", color: "grey", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" }}>{card.role}</small>
-                        //         <p style={{ display: "flex", flexDirection: "column", textSlign: "center", marginBottom: "0", paddingBottom: "10px" }}>
-                        //             <span>
-                        //                 <HiOutlineNewspaper style={{ minHeight: 22, minWidth: 22, marginInlineEnd: "5px" }} />
-                        //                 {card.description}
-                        //             </span>
-                        //             <span>
-                        //                 <i className="fa-solid fa-link" style={{ fontSize: "medium", marginInlineEnd: "5px" }}></i>
-                        //                 <a href={card.link}>{card?.linkName ? card.linkName : card.link.split("https://")[1]}</a>
-                        //             </span>
-                        //         </p>
-                        //     </div>
-                        // </div>
                         <div key={card.name} className="aos-init aos-animate" style={{ maxWidth: "575px", margin: "auto", color: "rgb(255, 255, 255)", background: "rgb(0, 10, 35)", margin: "15px auto 15px auto", borderRadius: "20px", padding: "20px" }} data-aos="zoom-in">
                             <span style={{ fontSize: "24px", fontWeight: "bold" }}>
                                 {card.name}

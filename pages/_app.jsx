@@ -16,7 +16,7 @@ export default function Render({ Component, pageProps }) {
         import("pace-js/pace.min.js");
 
         AOS.init({
-            once: false,
+            once: true,
             startEvent: "load",
             duration: "600",
         });

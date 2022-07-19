@@ -13,15 +13,3 @@ updates:
     commit-message:
       prefix: "Github Actions"
       include: "scope"
-
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    labels:
-      - "Dependency Update"
-    pull-request-branch-name:
-      separator: "/"
-    commit-message:
-      prefix: "npm"
-      include: "scope"

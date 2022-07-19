@@ -26,7 +26,7 @@ module.exports = {
       name: "SparkV",
       bot: true,
       image: "https://www.sparkv.tk/images/SparkV.webp",
-      description: "A powerful multipurpose bot that features Music, Memes, AI (Chatbot) and more.",
+      description: "The bot that has everything! - Leveling • Music • Memes • Moderation • Starboard • Logging • Tickets • AntiScam • Reaction Roles (/panel)",
       link: "https://www.sparkv.tk",
       role: "Founder"
     }, {

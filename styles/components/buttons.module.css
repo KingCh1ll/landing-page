@@ -59,13 +59,13 @@
 
 .button-yellow {
   background-color: transparent;
-  border-color: var(--ch1ll-yellow);
+  border-color: var(--light-yellow);
   color: white;
-  box-shadow: 0 10px 20px -10px var(--ch1ll-yellow);
+  box-shadow: 0 10px 20px -10px var(--light-yellow);
 }
 
 .button-yellow:hover {
-  background-color: var(--ch1ll-yellow);
+  background-color: var(--light-yellow);
 }
 
 .button-gray {

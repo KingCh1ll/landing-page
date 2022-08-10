@@ -1,7 +1,7 @@
 /* Dropdowns */
 
 .dropdown-menu {
-  background: var(--ch1ll-dark);
+  background: var(--dark-blue);
 
   li:hover {
     a {
@@ -14,24 +14,24 @@
     border-radius: 5px;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
     color: #fff !important;
-    background-color: var(--ch1ll-dark-2);
+    background-color: var(--dark-blue-2);
   }
 
   .dropdown-item:not(:last-child) {
-    border-bottom: 1px solid var(--ch1ll-dark-2);
+    border-bottom: 1px solid var(--dark-blue-2);
   }
 }
 
 .dropdown-menu li a {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   color: rgba(255, 255, 255, 0.55) !important;
-  background-color: var(--ch1ll-dark) !important;
+  background-color: var(--dark-blue) !important;
 }
 
 .dropdown-menu li a:hover {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   color: white !important;
-  background-color: var(--ch1ll-dark) !important;
+  background-color: var(--dark-blue) !important;
 }
 
 /* Profile Dropdown

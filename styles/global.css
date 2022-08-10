@@ -1,50 +1,142 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Rubik|Shadows+Into+Light&display=swap");
 /*!
  * Ch1llest Site v1.0.0 (https://ch1llest.ch1ll.tk/)
  * Copyright 2021 KingCh1ll
- * Some tailwind included. (https://tailwindcss.com/)
+ * Tailwind included in file as specified in comments.
  */
 
-:root {
-    --ch1ll-dark: #001037;
-    --ch1ll-dark-2: #111b35;
-    --ch1ll-dark-light: #000d2b;
-    --ch1ll-light: rgb(255, 255, 255, 0.6);
-    --ch1ll-color: #0d1014;
-    --ch1ll-color-2: rgba(255, 255, 255, 0.05);
-    --ch1ll-yellow: #dee03b;
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* Ch1ll Site - Root */
+    :root {
+        --dark-blue: #001037;
+        --dark-blue-2: #000d2b;
+        --dark-blue-3: #000a23;
+        --light-blue: #001037;
+        --light-black: #0d1014;
+        --light-black-2: rgba(255, 255, 255, 0.05);
+        --light-yellow: #dee03b;
+        --text-light: #fff;
+        --text-gray: rgba(255, 255, 255, 0.6);
+    }
+
+    body {
+        background: var(--dark-blue) !important;
+        font-family: "Satoshi-Regular, sans-serif";
+    }
+
+    /* Ch1ll Site - Custom Link Color */
+    a {
+        color: rgba(255, 255, 255, 0.55) !important;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out !important;
+        text-decoration: none !important;
+    }
+
+    a:hover {
+        color: white !important;
+    }
+
+    /* Ch1ll Site - Custom Scroll Bar
+    ::-webkit-scrollbar {
+        width: 10px;
+        background: #0a1227;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #dee03b;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #dee03b;
+    } */
+
+    /* Ch1ll Site - Headers */
+    .display-hb {
+        display: flex;
+        align-items: center;
+        position: relative;
+        white-space: nowrap;
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    .display-hb::after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 300px;
+        height: 2px;
+        margin-left: 20px;
+        background-color: #FFFFF7;
+    }
+
+    @media (max-width: 600px) {
+        .display-hb::after {
+            margin-left: 10px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .display-hb::after {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 1080px) {
+        .display-hb::after {
+            width: 200px;
+        }
+    }
+
+    /* Ch1ll Site - Projects View */
+    .portfolio-box {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 1.2rem;
+    }
+
+    .portfolio-box:hover .portfolio-info {
+        opacity: 1;
+    }
+
+    .portfolio-box:hover img {
+        opacity: .3;
+    }
+
+    .portfolio-box img {
+        transition-property: all;
+        transition-duration: 1s;
+    }
+
+    .portfolio-box img:hover {
+        transform: scale(1.5);
+    }
+
+    .portfolio-info {
+        transition: .5s ease;
+        max-width: 120px;
+        max-height: 150px;
+        opacity: 0;
+        position: absolute;
+        transform: translate(0%, -75%);
+        -ms-transform: translate(0%, -75%);
+        text-align: center;
+    }
+
+    /* .portfolio-box .portfolio-info:hover {
+        opacity: 1;
+        visibility: visible;
+        transition-property: all;
+        transition-duration: 1s;
+    } */
 }
 
-body {
-    background: var(--ch1ll-dark) !important;
-    font-family: Satoshi-Regular, sans-serif;
-}
-
-a {
-    color: rgba(255, 255, 255, 0.55) !important;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out !important;
-    text-decoration: none !important;
-}
-
-a:hover {
-    color: white !important;
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-    background: #0a1227;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #dee03b;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #dee03b;
-}
-
+/* Components
 @import "./components/wrapper.module.css";
 @import "./components/buttons.module.css";
 @import "./components/gradients.module.css";
@@ -52,7 +144,8 @@ a:hover {
 @import "./components/text.module.css";
 @import "./components/dropdowns.module.css";
 
+/* Sections 
 @import "./sections/loader.module.css";
 @import "./sections/navbar.module.css";
 @import "./sections/hero.module.css";
-@import "./sections/footer.module.css";
+@import "./sections/footer.module.css"; */

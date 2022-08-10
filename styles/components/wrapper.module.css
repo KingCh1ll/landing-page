@@ -23,7 +23,7 @@ textarea {
   border: 1px solid #999;
   font-size: 15px;
   resize: none;
-  background: var(--ch1ll-dark-2);
+  background: var(--dark-blue-2);
 }
 
 form .row {
@@ -71,7 +71,7 @@ form .row .container{
 
 form .row select{
   font-size: 14px;
-  background: var(--ch1ll-dark-2);
+  background: var(--dark-blue-2);
 }
 
 form .row select::-webkit-scrollbar{

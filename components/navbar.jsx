@@ -9,7 +9,6 @@ import config from "../config";
 import { chakra, Box, Flex, HStack, VStack, Text, IconButton, Button, Stack, Collapse, Icon, Link, Popover, PopoverTrigger, PopoverContent, Modal, ModalOverlay, ModalContent, FormControl, InputGroup, FormLabel, InputLeftElement, InputRightElement, Input, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Menu, MenuButton, Avatar, MenuList, Center, MenuDivider, MenuItem, useColorModeValue, useBreakpointValue, useDisclosure, useColorMode, Container, Heading, TextUnderline, Spinner, FormErrorMessage } from "@chakra-ui/react";
 import style from "../styles/sections/navbar.module.css";
 
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon, LockIcon, } from "@chakra-ui/icons";
 import { BsSun, BsMoonStarsFill } from "react-icons/bs";
 import { FaLock, FaUserEdit, FaUserAlt } from "react-icons/fa";

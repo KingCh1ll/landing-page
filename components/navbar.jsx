@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import NextLink from "next/link";
 import NextImage from "next/image";
-import $ from 'jquery';
 
 import config from "../config";
 

@@ -7,10 +7,9 @@ import NextImage from "next/image";
 import config from '../config';
 
 import { chakra, Box, Flex, Wrap, HStack, VStack, Text, VisuallyHidden, IconButton, Button, Stack, Collapse, SimpleGrid, Icon, Link, Popover, PopoverTrigger, PopoverContent, Modal, ModalOverlay, ModalContent, FormControl, InputGroup, FormLabel, InputLeftElement, InputRightElement, Input, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Menu, MenuButton, Avatar, MenuList, Center, MenuDivider, MenuItem, useColorModeValue, useBreakpointValue, useDisclosure, useColorMode, Container, Heading, TextUnderline, Spinner, FormErrorMessage } from "@chakra-ui/react";
-import { ToastContainer, toast } from "react-toastify";
 
 import Header from "../components/head";
-import Sidebar from "../components/sidebar";
+import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 
 import { FaFolder } from "react-icons/fa";
@@ -24,52 +23,70 @@ const CSearch = chakra(BsSearch);
 const CFolder = chakra(FaFolder);
 const CLink = chakra(FiExternalLink);
 
-const MainPage = ({ router, width, tag, setTag }) => {
-    return (<>
-        <VStack spacing={"6"}>
-            { /* Tags */}
-            <Wrap className={"bg-[#000d2b] justify-center max-w-[575px] m-auto p-[20px] pb-4 rounded-2xl"}>
-                <Button bg={"blue.400"} _hover={{ bg: "blue.500" }} onClick={() => setTag("all")}>All</Button>
-                <Button bg={"blue.400"} _hover={{ bg: "blue.500" }} onClick={() => setTag("web")}>Web Apps</Button>
-                <Button bg={"purple.400"} _hover={{ bg: "purple.500" }} onClick={() => setTag("game")}>Games</Button>
-                <Button bg={"gray.400"} _hover={{ bg: "gray.500" }} onClick={() => setTag("bot")}>Discord Bots</Button>
-            </Wrap>
-
-            { /* Projects */}
-            <Wrap justify={"center"} className={"bg-[#000d2b] m-w-[1000px] p-[20px] rounded-2xl"}>
-                {config.projects?.map(card => (
-                    <Box key={card.name} margin={"auto"} bg={"rgb(0, 10, 35)"} w={width <= 1080 ? "350px" : "300px"} className={`flex flex-col rounded-2xl${tag !== "all" ? (tag === card.tag ? "" : " hidden") : ""}`}>
-                        <Flex className={"p-4"}>
-                            <span className={"w-full"}><NextImage src={card.image} width={"75px"} height={"75px"} alt={card.name} className={"rounded-xl"} /></span>
-                            <span className={"w-10"}><Button onClick={() => router.push(card.link)}><CLink w={"4"} h={"4"} /></Button></span>
-                        </Flex>
-                        <VStack className={"h-full p-4"} maxH={"full"}>
-                            <span className={"w-full text-lg font-semibold"}>
-                                {card.name} {card.bot === true ? (
-                                    <span style={{ backgroundColor: "rgb(88, 101, 242)", fontFamily: "sans-serif", fontSize: "14px", padding: "2px 6px 2px 6px", borderRadius: "4px", marginLeft: "5px" }}>
-                                        <svg aria-label="Verified Bot" aria-hidden="false" width="16" height="16" viewBox="0 0 16 15.2" style={{ display: "initial" }}>
-                                            <path d="M7.4,11.17,4,8.62,5,7.26l2,1.53L10.64,4l1.36,1Z" fill="currentColor"></path>
-                                        </svg>
-                                        BOT
-                                    </span>
-                            ) : null}</span>
-                            <p className={"text-[15px] h-full"}>{card.description}</p>
-                            <p className={"w-full text-end"} style={{ marginInlineStart: "10px", marginTop: "35px", color: "grey", fontSize: "small" }}>{card.role}</p>
-                        </VStack>
-                    </Box>
-                ))}
-            </Wrap>
-        </VStack>
-    </>)
-}
-
 export default function Render() {
     const router = useRouter();
+
+    const alpha100 = useColorModeValue("blackAlpha.100", "whiteAlpha.100");
+    const alpha200 = useColorModeValue("blackAlpha.200", "whiteAlpha.200");
+
+    const [tag, setTag] = useState("all");
+    const [width, setWidth] = useState(1000);
+    useEffect(() => {
+        setInterval(() => {
+            if (window.innerWidth == width) return;
+            setWidth(window.innerWidth);
+        }, 400)
+    }, [width]);
 
     return (<>
         <Head><Header /></Head>
 
-        <Sidebar MainPage={MainPage} />
+        <Container maxW={"3xl"} padding={"0 40px"}>
+            <Navbar name={"KingCh1ll"} logo={"/images/users/kingch1ll.webp"} user={null} />
+
+            <VStack maxW={"3xl"} paddingBottom={"10rem"} fontFamily={"Rubik, sans-serif;"} spacing={6} margin={"auto"} id={"projects"}>
+                <Text as={"h2"} fontWeight={"bold"} textAlign={"center"} className={"display-hb"}>3. 📂 Projects</Text>
+                { /* Tags */}
+                <Wrap className={"justify-center max-w-[575px] m-left p-[20px] pb-4 rounded-2xl"}>
+                    <Button bg={"blue.400"} _hover={{ bg: "blue.500" }} onClick={() => setTag("all")}>All</Button>
+                    <Button bg={"blue.400"} _hover={{ bg: "blue.500" }} onClick={() => setTag("web")}>Web Apps</Button>
+                    <Button bg={"purple.400"} _hover={{ bg: "purple.500" }} onClick={() => setTag("game")}>Games</Button>
+                    <Button bg={"gray.400"} _hover={{ bg: "gray.500" }} onClick={() => setTag("bot")}>Discord Bots</Button>
+                </Wrap>
+
+                { /* Projects */}
+                <Wrap justify={"center"} className={"max-w-[700px] p-[20px] rounded-2xl"}>
+                    {config.projects?.map(card => (
+                        <Box key={card.name} margin={"auto"} bg={"#000d2b"} w={width <= 1080 ? "350px" : "300px"} className={`flex flex-col rounded-2xl${tag !== "all" ? (tag === card.tag ? "" : " hidden") : ""}`}>
+                            <Flex className={"p-4"}>
+                                <span className={"w-full"}><NextImage src={card.image} width={"75px"} height={"75px"} alt={card.name} className={"rounded-xl"} /></span>
+                                <span className={"w-10"}>
+                                    <chakra.button bg={alpha100} rounded={"full"} w={8} h={8}
+                                        cursor={"pointer"} as={"a"} href={card.link} display={"inline-flex"} alignItems={"center"}
+                                        justifyContent={"center"} transition={"background 0.3s ease"} _hover={{ bg: alpha200 }}>
+                                        <VisuallyHidden>Link</VisuallyHidden>
+                                        <CLink />
+                                    </chakra.button>
+                                </span>
+                            </Flex>
+                            <VStack className={"h-full p-4"} maxH={"full"}>
+                                <span className={"w-full text-lg font-semibold"}>
+                                    {card.name} {card.bot === true ? (
+                                        <span style={{ backgroundColor: "rgb(88, 101, 242)", fontFamily: "sans-serif", fontSize: "14px", padding: "2px 6px 2px 6px", borderRadius: "4px", marginLeft: "5px" }}>
+                                            <svg aria-label="Verified Bot" aria-hidden="false" width="16" height="16" viewBox="0 0 16 15.2" style={{ display: "initial" }}>
+                                                <path d="M7.4,11.17,4,8.62,5,7.26l2,1.53L10.64,4l1.36,1Z" fill="currentColor"></path>
+                                            </svg>
+                                            BOT
+                                        </span>
+                                    ) : null}</span>
+                                <p className={"text-[15px] h-full"}>{card.description}</p>
+                                <p className={"w-full text-end"} style={{ marginInlineStart: "10px", marginTop: "35px", color: "grey", fontSize: "small" }}>{card.role}</p>
+                            </VStack>
+                        </Box>
+                    ))}
+                </Wrap>
+            </VStack>
+        </Container>
 
         {/* <section className="container-sm" id="features" style={{ padding: "5rem 0", maxWidth: "700px" }}>
             <div style={{ background: "#000d2b", borderRadius: "15px", padding: "30px", fontFamily: "Rubik, sans-serif" }}>

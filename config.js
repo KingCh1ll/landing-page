@@ -1,6 +1,16 @@
 module.exports = {
   name: "KingCh1ll",
-  description: "\"Code is only the best if you pour your heart into it.\"",
+  shortDesc: "I'm a passionate <strong>Software Engineer</strong>, making <strong>websites</strong> and <strong>Discord bots</strong>. I'm also a former <a href=\"https://roblox.com\"><strong>Roblox</strong></a> game dev.",
+  sections: {
+    about: {
+      image: "",
+      text: "Hi, I'm KingCh1ll! I'm a passionate <strong>Software Engineer</strong>, living in the <strong>United States</strong>. I love making <strong>websites</strong> and <strong>Discord bots</strong>. I also used to make games on the platform <a href=\"https://roblox.com\">Roblox</a>. In my free time I like to code, chat with friends, play my guitar, or go on runs.<br/><strong>I first started coding in 2019</strong>, when I learned about <strong>Roblox Studio</strong>. <strong>Roblox Studio</strong> is the way to make games on the <strong>Roblox platform</strong>. I instantly <strong>fell in love</strong> with making games. Although I came quickly to realize I <strong>didn't love building</strong> the games, I <strong>loved coding</strong> them!",
+    },
+    skills: {
+      image: "",
+      text: "",
+    }
+  },
   meta: {
     title: "KingCh1ll",
     logo: "/favicon.ico",
@@ -24,14 +34,19 @@ module.exports = {
     ]
   },
   navItems: [{
-    label: "Features",
-    href: "#features",
+    label: "Home",
+    children: [{
+      label: `About`,
+      subLabel: "Wait a minute... who's KingCh1ll?",
+      href: "/#about",
+    }, {
+      label: `Skills`,
+      subLabel: "What is KingCh1ll good in?",
+      href: "/#skills",
+    }]
   }, {
     label: "Projects",
     href: "/projects",
-  }, {
-    label: "Skills",
-    href: "/skills",
   }, {
     label: "More",
     children: [{

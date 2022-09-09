@@ -31,7 +31,7 @@ export default function Head({ name, description, logo }) {
                     <SocialButton label={"Spotify"} href={"https://open.spotify.com/artist/anx4tm5z1m6lpg1ulxfbmxele"}><FaSpotify /></SocialButton>
                 </div>
             </div>
-            <span className={"w-full text-center text-gray"}>Made with <AiOutlineHeart fill={"red"} style={{ display: "initial" }} /> by KingCh1ll</span>
+            <span className={"w-full text-center text-gray"}>Made with <AiOutlineHeart fill={"red"} style={{ display: "initial" }} /> by <a href={"https://www.ch1ll.tk/"}>KingCh1ll</a></span>
         </footer>
     );
 }

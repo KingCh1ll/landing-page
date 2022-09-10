@@ -27,7 +27,7 @@ export default function Head({ name }) {
       <meta name="twitter:description" content={config.meta.description} />
       <meta name="twitter:image" content={config.meta.logo} />
       <meta name="twitter:creator" content="KingCh1ll" />
-      <meta name="twitter:site" content="https://www.sparkv.tk/" />
+      <meta name="twitter:site" content="https://www.ch1ll.tk/" />
       <meta name="twitter:card" content="summary" />
 
       <meta name="og:title" content={config.meta.title} />
@@ -36,7 +36,7 @@ export default function Head({ name }) {
       <meta property="og:locale" content="en_US" />
 
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="canonical" href="https://www.sparkv.tk/" />
+      <link rel="canonical" href="https://www.ch1ll.tk/" />
     </>
   );
 }

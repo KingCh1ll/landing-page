@@ -19,7 +19,7 @@ export default function Render() {
     return (<>
         <Head><Header name={`${config.name} | 500 (Error)`} description={`Wow, you encountered an error! Our team have been notified, and we are working on a fix. ${config.meta.description}`}></Header></Head>
         <Container maxW={"7xl"} padding={"0 40px"} fontFamily={"Rubik, sans-serif;"}>
-            <Navbar name="DisPing" logo="/favicon.ico" />
+            <Navbar name="DisPing" logo="/images/kingch1ll.png" />
 
             <Container className={"w-full h-full flex flex-col items-center justify-center mt-8 p-[20px] pb-16 text-center m-[7% 0]"} id="home">
                 <NextImage defer src={`https://http.cat/500`} alt={`Error Code 500`} width={"400"} height={"250"} style={{ borderRadius: "15px" }} />

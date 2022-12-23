@@ -18,7 +18,7 @@ const SocialButton = ({ children, label, href }) => {
     );
 };
 
-export default function Head({ name, description, logo }) {
+export default function Head() {
     return (
         <footer className={"flex flex-col py-5 px-3 w-full"} style={{ fontFamily: "Rubik" }}>
             <div className={"w-full"}>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>KingCh1ll</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans|Rubik|Shadows+Into+Light&display=swap");
+
+        /* Ch1ll Site - Root */
+        :root {
+            --dark-blue: #001037;
+            --dark-blue-2: #000d2b;
+            --dark-blue-3: #000a23;
+            --light-blue: #001037;
+            --light-black: #0d1014;
+            --light-black-2: rgba(255, 255, 255, 0.05);
+            --light-yellow: #dee03b;
+            --text-light: #fff;
+            --text-gray: rgba(255, 255, 255, 0.6);
+        }
+
+        body {
+            background: var(--dark-blue) !important;
+            font-family: "Satoshi-Regular, sans-serif";
+        }
+
+        /* Ch1ll Site - Custom Link Color */
+        a {
+            color: rgba(255, 255, 255, 0.55) !important;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out !important;
+            text-decoration: none !important;
+        }
+
+        a:hover {
+            color: white !important;
+        }
+
+        /* Ch1ll Site - Headers */
+        .display-hb {
+            display: flex;
+            align-items: center;
+            position: relative;
+            white-space: nowrap;
+            font-size: 1.5rem;
+            width: 100%;
+        }
+
+        .display-hb::after {
+            content: "";
+            display: block;
+            position: relative;
+            width: 300px;
+            height: 2px;
+            margin-left: 20px;
+            background-color: #FFFFF7;
+        }
+
+        @media (max-width: 600px) {
+            .display-hb::after { margin-left: 10px; }
+        }
+
+        @media (max-width: 768px) {
+            .display-hb::after { width: 100%; }
+        }
+
+        @media (max-width: 1080px) {
+            .display-hb::after { width: 200px; }
+        }
+
+        /* Container */
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            font-family: "Rubik";
+        }
+
+        .container .title {
+            color: white;
+            font-size: 4em;
+            line-height: 1.1;
+            white-space: nowrap;
+            transition: all 400ms ease;
+        }
+
+        /* Animations */
+        .ani-pulse {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            opacity: 0;
+            border: 3px solid white;
+            border-radius: 40px;
+            -webkit-animation: pulse 1s ease-out;
+            -webkit-animation-iteration-count: infinite;
+        }
+
+        @-webkit-keyframes pulse {
+            0% { transform: scale(1.4, 1.4); opacity: 0.0; }
+            50% { opacity: 1.0; }
+            100% { transform: scale(2.3, 2.3); opacity: 0.0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="container title">KingCh1ll</h1>
+        <div></div>
+    </div>
+</body>
+</html>

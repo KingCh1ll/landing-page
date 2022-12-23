@@ -3,10 +3,10 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
-import config from "../config";
+import config from "../../config";
 
-import Header from "../components/head";
-import Navbar from "../components/navbar";
+import Header from "../../components/head";
+import Navbar from "../../components/navbar";
 import { Container, Heading } from "@chakra-ui/react";
 
 const terms = [{

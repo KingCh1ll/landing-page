@@ -38,7 +38,7 @@ export default function Render() {
         <Head><Header name={"DisPing"} /></Head>
 
         <Container maxW={"7xl"} padding={"0 40px"} fontFamily={"Rubik, sans-serif;"}>
-            <Navbar name={"KingCh1ll"} logo={"/images/users/kingch1ll.webp"} service={{ name: "SparkV", logo: "/images/sparkv.png" }} />
+            <Navbar name={config.name} logo={config.logo} service={{ name: "SparkV", logo: "/images/sparkv.png" }} />
 
             <Container maxW={"7xl"} fontFamily={"Rubik, sans-serif;"}>
                 <Stack align={"center"} spacing={{ base: 8, md: 10 }} pt={"10px"} pb={"60px"} direction={{ base: "column", md: "row" }}>

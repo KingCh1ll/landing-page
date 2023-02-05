@@ -18,14 +18,14 @@ export default function Head({ name }) {
 
     <meta name="image" content={config.meta.logo} />
     <meta name="description" content={config.meta.description} />
-    <meta name="author" content={"KingCh1ll"} />
+    <meta name="author" content={"Ch1llDev"} />
     <meta name="keywords" content={config.meta.keywords.join(", ").toLowerCase()} />
     <meta name="robots" content={"all"} />
 
     <meta name="twitter:title" content={config.meta.title} />
     <meta name="twitter:description" content={config.meta.description} />
     <meta name="twitter:image" content={config.meta.logo} />
-    <meta name="twitter:creator" content={"KingCh1ll"} />
+    <meta name="twitter:creator" content={"Ch1llDev"} />
     <meta name="twitter:site" content={"https://www.ch1ll.tk/"} />
     <meta name="twitter:card" content={"summary"} />
 

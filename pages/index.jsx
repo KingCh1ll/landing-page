@@ -45,7 +45,7 @@ export default function Render() {
         <Head><Header /></Head>
  
         <Container maxW={"8xl"} padding={"0 40px"} fontFamily={"Rubik, sans-serif;"}>
-            <Navbar name={"KingCh1ll"} logo={"/images/users/kingch1ll.webp"} user={null} />
+            <Navbar name={config.name} logo={config.logo} user={null} />
 
             {/* Hero */}
             <Container className={"h-screen w-screen pb-[15rem]"} id={"hero"} fontFamily={"Rubik, sans-serif;"}>

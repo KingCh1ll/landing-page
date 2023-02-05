@@ -29,7 +29,7 @@ export default function Render({ Component, pageProps }) {
                     <div className={`fixed w-full h-full bg-[#020b16] top-0 left-0 ${loaded === true ? "opacity-0" : "opacity-1"} transition-opacity duration-500`} style={{ zIndex: "100000" }}>
                         <div className={"fixed flex justify-center w-full h-full"}>
                             <div className={"top-[45%] w-[75px] h-[75px] ani-pulse"}></div>
-                            <img className={"absolute top-[50%] left-[50%] w-[100px] h-[100px] rounded-full"} style={{ transform: "translate(-50%, -50%)" }} src={config.logo} alt={"KingCh1ll Loading Logo"} />
+                            <img className={"absolute top-[50%] left-[50%] w-[100px] h-[100px] rounded-full"} style={{ transform: "translate(-50%, -50%)" }} src={config.logo} alt={"Ch1llDev Loading Logo"} />
                         </div>
                     </div>
                 ) : <></>}

@@ -10,7 +10,7 @@ import Navbar from "../../components/navbar";
 import { Container, Heading } from "@chakra-ui/react";
 
 const terms = [{
-    text: `By using DisPing (the \"service\"), you agree that you have read and accepted to our terms of service. If you have any questions or concerns regarding DisPing's policy, you can email me here: <a href="mailto:kingch1ll012@gmail.com">kingch1ll012@gmail.com</a>`
+    text: `By using DisPing (the \"service\"), you agree that you have read and accepted to our terms of service. If you have any questions or concerns regarding DisPing's policy, you can email me here: <a href="mailto:support@ch1ll.dev">support@ch1ll.dev</a>`
 }, {
     header: "1. ⚙️ General"
 }, {

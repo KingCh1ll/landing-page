@@ -1,18 +1,21 @@
 module.exports = {
-  name: "KingCh1ll",
+  name: "Ch1llDev",
   shortDesc: "Passionate Software Engineer & Website Developer, living in the United States.",
-  logo: "/images/users/kingch1ll.webp",
+  logo: "/images/logo.png",
   client_ID: "1027401268227997778",
   invites: {
     disping: "https://discord.com/oauth2/authorize?scope=bot%20applications.commands&client_id=884525761694933073&permissions=294074575990&redirect_uri=https%3A%2F%2Fwww.ch1ll.tk%2Fapi%2Fauth%2Fcallback%2Fdiscord",
     sparkv: "https://discord.com/oauth2/authorize?client_id=1027401268227997778&scope=bot+applications.commands&response_type=code&redirect_uri=https://www.sparkv.tk/api/callback&permissions=294074575990"
   },
   meta: {
-    title: "KingCh1ll",
+    title: "Ch1llDev",
     logo: "/favicon.ico",
-    description: "A passionate Software Engineer & Website Developer, living in the United States.",
-    site: "https://www.ch1ll.tk/",
+    description: "Ch1llDev is a passionate software engineer and website developer, living in the United States.",
+    site: "https://ch1ll.dev/",
     keywords: [
+      "Ch1llDev",
+      "ch1lldev",
+      "dev",
       "KingCh1ll",
       "King",
       "Ch1ll",
@@ -89,10 +92,10 @@ module.exports = {
       label: "TypeScript"
     }]
   }, {
-    name: "Ch1ll.tk",
+    name: "Ch1ll.dev",
     image: "/images/users/kingch1ll.png",
-    description: "A website made to showoff KingCh1ll's many creations, which happens to be this website!",
-    link: "https://www.ch1ll.tk",
+    description: "A website made to showoff Ch1llDev's many creations, which happens to be this website!",
+    link: "https://ch1ll.dev",
     tags: [{
       color: "green",
       label: "Website"

@@ -19,7 +19,7 @@ export default function Render() {
     return (<>
         <Head><Header name={`${config.name} | 404`} description={`We couldn't find that page on our server. ${config.meta.description}`}></Header></Head>
         <Container maxW={"7xl"} padding={"0 40px"} fontFamily={"Rubik, sans-serif;"}>
-            <Navbar name="KingCh1ll" logo="/images/kingch1ll.png" />
+            <Navbar name={config.name} logo={config.logo} />
 
             <Container className={"w-full h-full flex flex-col items-center justify-center mt-8 p-[20px] pb-16 text-center m-[7% 0]"} id="home">
                 <NextImage defer src={"/images/404.svg"} alt={"DisPing"} width={"450"} height={"250"} style={{ borderRadius: "15px" }} />

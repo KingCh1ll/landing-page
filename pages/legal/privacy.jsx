@@ -10,7 +10,7 @@ import Navbar from "../../components/navbar";
 import { Container, Heading } from "@chakra-ui/react";
 
 const terms = [{
-    text: `By using any of KingCh1ll's Services (the \"services\"), you agree that you have read and accepted to our privacy policy. If you have any questions or concerns regarding KingCh1ll's policy, you can email KingCh1ll here: <a href="mailto:kingch1ll012@gmail.com">kingch1ll012@gmail.com</a>`
+    text: `By using any of Ch1llDev's Services (the \"services\"), you agree that you have read and accepted to our privacy policy. If you have any questions or concerns regarding Ch1llDev's policy, you can email Ch1llDev here: <a href="mailto:support@ch1ll.dev">support@ch1ll.dev</a>`
 }, {
     header: "1. ⚙️ General"
 }, {
@@ -22,11 +22,11 @@ const terms = [{
 }, {
     header: "3. 🔒 Security"
 }, {
-    text: "DisPing stores your data safely and securly in a Mongodb database. The Mongodb account that manages the data constantly changes passwords every month. Also, the server DisPing runs on is not accessible outside of KingCh1ll's home network. Attacking the server is just not possible."
+    text: "DisPing stores your data safely and securly in a Mongodb database. The Mongodb account that manages the data constantly changes passwords every month. Also, the server DisPing runs on is not accessible outside of Ch1llDev's home network. Attacking the server is just not possible."
 }, {
     header: "3. ⏰ Duration & Deletion"
 }, {
-    text: "DisPing stores your data until it is no longer needed, or the terms of service has been terminated. If you would like your data to be deleted, please contact KingCh1ll via email as seen above. You can also join <a href=\"https://discord.com/invite/PPtzT8Mu3h\">KingCh1ll's Discord server</a>, and request your data to be deleted."
+    text: "DisPing stores your data until it is no longer needed, or the terms of service has been terminated. If you would like your data to be deleted, please contact Ch1llDev via email as seen above. You can also join <a href=\"https://discord.com/invite/PPtzT8Mu3h\">Ch1llDev's Discord server</a>, and request your data to be deleted."
 }]
 
 export default function Render() {

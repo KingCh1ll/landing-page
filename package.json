@@ -1,7 +1,7 @@
 {
   "name": "ch1ll.dev",
   "version": "6.0.0",
-  "description": "The portfolio site for KingCh1ll.",
+  "description": "The portfolio site for Ch1llDev.",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
@@ -11,7 +11,7 @@
     "lint": "next lint"
   },
   "keywords": [],
-  "author": "KingCh1ll",
+  "author": "Ch1llDev",
   "license": "ISC",
   "dependencies": {
     "@chakra-ui/icons": "^2.0.14",

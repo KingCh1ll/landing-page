@@ -1,15 +1,9 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
-import Script from "next/script";
 
-import { Button, Select, Input, FormControl, FormLabel, Textarea } from '@chakra-ui/react';
-
-import { HiOutlineNewspaper, HiOutlineLink, HiX, HiOutlineExclamation, HiOutlineFolder, HiOutlineMenuAlt2, HiOutlineFire, HiOutlineCode } from 'react-icons/hi';
+import { Button, Select, FormControl, FormLabel, Textarea } from '@chakra-ui/react';
 
 import config from '../../config';
-import { Container } from 'postcss';
 
 export default function Render() {
     const [width, setWidth] = useState();

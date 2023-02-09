@@ -3,6 +3,7 @@ import DiscordProvider from "next-auth/providers/discord";
 import config from "../../../config";
 
 export default (req, res) => NextAuth(req, res, {
+    site: process.env.NEXTAUTH_URL,
     providers: [{
         id: "discord",
         name: "Discord",
@@ -50,6 +51,6 @@ export default (req, res) => NextAuth(req, res, {
             session.guilds = token.guilds ?? [];
 
             return Promise.resolve(session);
-        },
+        }
     },
 });

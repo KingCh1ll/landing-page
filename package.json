@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "style": "sass styles/scss:styles --watch",
     "start": "next start -p 5000",
     "lint": "next lint"
   },
@@ -26,9 +25,6 @@
     "react-responsive-carousel": "^3.2.23"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.14",
-    "prettier": "^2.8.1",
-    "tailwindcss": "^3.2.4"
+    "prettier": "^2.8.1"
   }
 }

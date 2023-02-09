@@ -21,10 +21,10 @@ export default function Render() {
         <Container maxW={"7xl"} padding={"0 40px"} fontFamily={"Rubik, sans-serif;"}>
             <Navbar name={config.name} logo={config.logo} />
 
-            <Container className={"w-full h-full flex flex-col items-center justify-center mt-8 p-[20px] pb-16 text-center m-[7% 0]"} id="home">
+            <Container style={{ width: "100%", height: "100%", textAlign: "center", display: "flex", flexDirection: "column", textAlign: "center", alignItems: "center", justifyContent: "center", marginTop: "2rem", padding: "20px", paddingBottom: "4rem" }} id="home">
                 <NextImage defer src={"/images/404.svg"} alt={"DisPing"} width={"450"} height={"250"} style={{ borderRadius: "15px" }} />
                 <Text style={{ color: "rgb(255, 255, 255, 0.6)", fontSize: "17.5px", textAlign: "center", marginTop: "20px", marginBottom: "50px", fontWeight: "600" }}>Wait a second... where are we? I think we're lost.</Text>
-                <Button leftIcon={<FaHome />} onClick={() => router.push("/")} className={"rounded-sm"}>Home</Button>
+                <Button leftIcon={<FaHome />} onClick={() => router.push("/")} style={{ borderRadius: "0.125rem" }}>Home</Button>
             </Container>
 
             <Footer />

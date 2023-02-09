@@ -38,7 +38,7 @@ export default function Render() {
         <Head><Header name={"DisPing"} /></Head>
 
         <Container maxW={"7xl"} padding={"0 40px"} fontFamily={"Rubik, sans-serif;"}>
-            <Navbar name={config.name} logo={config.logo} service={{ name: "SparkV", logo: "/images/sparkv.png" }} />
+            <Navbar name={config.name} logo={config.logo} service={{ name: "SparkV", logo: "/images/sparkv.png", add: config.invites.sparkv }} />
 
             <Container maxW={"7xl"} fontFamily={"Rubik, sans-serif;"}>
                 <Stack align={"center"} spacing={{ base: 8, md: 10 }} pt={"10px"} pb={"60px"} direction={{ base: "column", md: "row" }}>
@@ -53,7 +53,7 @@ export default function Render() {
                             </Text>
                         </Heading>
                         <Text color={"#fff9"} fontSize={"20px"} fontFamily={"Satoshi-Regular, sans-serif"} textAlign={"center"}>
-                        Create the best Discord server with Discord's #1 Multipurpose Discord bot.
+                            Create the best Discord server with Discord's #1 Multipurpose Discord bot.
                         </Text>
                         <Stack justifyContent={"center"} spacing={{ base: 4, sm: 6 }} direction={{ base: "column", sm: "row" }}>
                             <Button rounded={"full"} size={"lg"} color={"white"} fontWeight={"normal"} px={6} colorScheme={"blue"} bg={"blue.400"} _hover={{ bg: "blue.500" }} onClick={() => router.push("/invite")}>

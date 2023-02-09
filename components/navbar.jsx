@@ -61,7 +61,7 @@ export default function Navbar({ name, logo, service }) {
             <Flex flex={{ base: 1, md: "auto" }} justify={{ base: "start", md: "start" }}>
               <Stack as={"a"} direction={"row"} alignItems={"center"} spacing={{ base: 2, sm: 4 }}>
                 <NextLink href={"/"} passHref>
-                  <NextImage src={logo} width={48} height={48} className={"rounded-full"} />
+                  <NextImage src={logo} width={48} height={48} style={{ cursor: "pointer", borderRadius: "100%" }} />
                 </NextLink>
                 <Heading fontSize={"2xl"} display={{ base: "none", sm: "block" }} color={"white"} fontFamily={"Rubik"}>{name}</Heading>
               </Stack>
@@ -87,7 +87,7 @@ export default function Navbar({ name, logo, service }) {
                             <PopoverContent border={0} boxShadow={"xl"} bg={popoverContentBgColor} p={4} rounded={"xl"} minW={"sm"} zIndex={999999}>
                               <Stack>
                                 {navItem.children.map((child) => (
-                                  <Box onClick={() => router.push(child.href)} className={"block cursor-pointer rounded-md"} role={"group"} p={2} _hover={{ bg: navDropdownBGColor }}>
+                                  <Box onClick={() => router.push(child.href)} role={"group"} p={2} _hover={{ bg: navDropdownBGColor }} style={{ display: "block", cursor: "pointer", borderRadius: "10px" }}>
                                     <Stack direction={"row"} align={"center"}>
                                       <Stack>
                                         <Box>
@@ -144,18 +144,18 @@ export default function Navbar({ name, logo, service }) {
             <Flex flex={{ base: 1, md: "auto" }} justify={{ base: "start", md: "start" }}>
               <Stack as={"a"} direction={"row"} alignItems={"center"} spacing={{ base: 2, sm: 4 }}>
                 <NextLink href={"/"} passHref>
-                  <NextImage src={service.logo} width={48} height={48} className={"rounded-full"} />
+                  <NextImage src={service.logo} width={48} height={48} style={{ cursor: "pointer", borderRadius: "100%" }} />
                 </NextLink>
                 <Heading fontSize={"2xl"} display={{ base: "none", sm: "block" }} color={"white"} fontFamily={"Rubik"}>{service.name}</Heading>
               </Stack>
             </Flex>
 
-            <Button size={"md"} bg={"blue.400"} color={"white"} _hover={{ bg: "blue.500" }} onClick={() => router.push(config.invites[service.name.toLowerCase()])}>Get Started</Button>
+            <Button size={"md"} bg={"blue.400"} color={"white"} _hover={{ bg: "blue.500" }} onClick={() => router.push(service.add)}>Get Started</Button>
           </Container>
         </Flex>
       </Box>
     </>) : (
-      <Box className="navbar" bg={"1A202C"} padding={"5px"} position={"sticky"} top={"1rem"} zIndex={"100"} transition={"all 0.4s ease 0s"}>
+      <Box className={"navbar"} bg={"1A202C"} padding={"5px"} position={"sticky"} top={"1rem"} zIndex={"100"} transition={"all 0.4s ease 0s"}>
         <Flex w={"95%"} h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Container as={Flex} maxW={"7xl"} align={"center"}>
             { /* Hamburger */}
@@ -167,7 +167,7 @@ export default function Navbar({ name, logo, service }) {
             <Flex flex={{ base: 1, md: "auto" }} justify={{ base: "start", md: "start" }}>
               <Stack as={"a"} direction={"row"} alignItems={"center"} spacing={{ base: 2, sm: 4 }}>
                 <NextLink href={"/"} passHref>
-                  <NextImage src={logo} width={48} height={48} className={"rounded-full"} />
+                  <NextImage src={logo} width={48} height={48} style={{ cursor: "pointer", borderRadius: "100%" }} />
                 </NextLink>
                 <Heading fontSize={"2xl"} display={{ base: "none", sm: "block" }} color={"white"}>{name}</Heading>
               </Stack>
@@ -192,7 +192,7 @@ export default function Navbar({ name, logo, service }) {
                             <PopoverContent border={0} boxShadow={"xl"} bg={popoverContentBgColor} p={4} rounded={"xl"} minW={"sm"}>
                               <Stack>
                                 {navItem.children.map((child) => (
-                                  <Box onClick={() => router.push(child.href)} className={"block cursor-pointer rounded-md"} role={"group"} p={2} _hover={{ bg: navDropdownBGColor }}>
+                                  <Box onClick={() => router.push(child.href)} role={"group"} p={2} _hover={{ bg: navDropdownBGColor }} style={{ display: "block", cursor: "pointer", borderRadius: "10px" }}>
                                     <Stack direction={"row"} align={"center"}>
                                       <Stack>
                                         <Box>

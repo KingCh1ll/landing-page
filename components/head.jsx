@@ -5,7 +5,7 @@ import config from '../config';
 
 export default function Head({ name }) {
   return (<>
-    <title>{`${`${name} | ` ?? ""}${config.meta.title}`}</title>
+    <title>{`${name ? `${name} | ` : ""}${config.meta.title}`}</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2" />

@@ -22,11 +22,11 @@ const terms = [{
 }, {
     header: "3. 🔒 Security"
 }, {
-    text: "DisPing stores your data safely and securly in a Mongodb database. The Mongodb account that manages the data constantly changes passwords every month. Also, the server DisPing runs on is not accessible outside of Ch1llDev's home network. Attacking the server is just not possible."
+    text: "DisPing stores your data safely and securly in a Mongodb database. The Mongodb account that manages the data constantly changes passwords every month."
 }, {
     header: "3. ⏰ Duration & Deletion"
 }, {
-    text: "DisPing stores your data until it is no longer needed, or the terms of service has been terminated. If you would like your data to be deleted, please contact Ch1llDev via email as seen above. You can also join <a href=\"https://discord.com/invite/PPtzT8Mu3h\">Ch1llDev's Discord server</a>, and request your data to be deleted."
+    text: "DisPing stores your data until it is no longer needed, or the terms of service has been terminated. If you would like your data to be deleted, please contact Ch1llDev via email as seen above. You can also join <a href=\"https://discord.gg/PPtzT8Mu3h\">Ch1llDev's Discord server</a>, and request your data to be deleted."
 }]
 
 export default function Render() {

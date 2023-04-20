@@ -9,7 +9,6 @@ import CreateTag from "./(components)/tag";
 import css from "./home.module.css";
 
 export default function Render() {
-    console.log("working")
     return (<>
         <Navbar />
 

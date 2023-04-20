@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    font-family: Rubik;
+    padding: 1.25rem 0.75rem
+}
+
+.footer .socials {
+    display: flex;
+    flex-direction: row;
+    max-width: 250px;
+    width: 100%;
+    margin: auto;
+    justify-content: space-evenly;
+    padding-bottom: 0.5rem
+}
+
+.footer span {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    display: block
+}

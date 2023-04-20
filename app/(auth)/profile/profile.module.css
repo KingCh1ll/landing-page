@@ -1,0 +1,44 @@
+.container {
+    overflow-x: hidden !important;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    animation: fadein 2000ms;
+    overflow-x: hidden;
+    transition-duration: 200ms;
+}
+
+.banner .user {
+    width: 790px;
+    height: 316px;
+    border-radius: 0.2rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.banner .top {
+    position: absolute;
+    z-index: 2;
+    width: 790px;
+    height: 316px;
+}
+
+.profile {
+    height: 8.64rem;
+    border-radius: 0.8rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+    padding: 0.3rem;
+    position: absolute;
+    left: 1rem;
+}
+
+.user {
+    position: relative;
+    z-index: 3;
+    margin-top: 4.6rem;
+    display: flex;
+}

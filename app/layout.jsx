@@ -11,19 +11,13 @@ export const metadata = {
         default: "ch1ll.dev",
         template: "%s | ch1ll.dev",
     },
-    description: {
-        default: config.meta.description,
-        template: `%s ${config.meta.description}`,
-    },
+    description: config.meta.description,
     openGraph: {
         title: {
             default: "ch1ll.dev",
             template: "%s | ch1ll.dev",
         },
-        description: {
-            default: config.meta.description,
-            template: `%s ${config.meta.description}`,
-        },
+        description: config.meta.description,
         url: config.meta.site,
         siteName: config.meta.siteName,
         image: config.meta.logo,
@@ -41,6 +35,15 @@ export const metadata = {
             rel: 'apple-touch-icon-precomposed',
             url: '/apple-touch-icon-precomposed.png',
         }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: {
+            default: "ch1ll.dev",
+            template: "%s | ch1ll.dev",
+        },
+        description: config.meta.description,
+        creator: config.meta.title
     },
     keywords: config.meta.keywords,
     authors: [{ name: config.name }],

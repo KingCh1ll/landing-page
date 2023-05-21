@@ -11,7 +11,21 @@
     margin: auto;
     vertical-align: middle;
     padding: 150px 0;
-    font-family: Rubik,sans-serif;
+    font-family: Rubik, sans-serif;
+}
+
+.container p {
+    text-align: center;
+}
+
+.container code {
+    background: var(--dark-blue-3);
+    padding: 15px;
+    border-radius: 5px;
+    position: relative;
+    align-content: center;
+    text-align: center;
+    margin: auto;
 }
 
 .container h2 {

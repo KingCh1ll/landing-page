@@ -10,10 +10,6 @@ import config from "../config";
 
 import Navbar from "./(components)/navbar";
 
-export const metadata = {
-    name: "500 Error",
-    description: "Wow, you encountered an error! Please try again later."
-};
 export default function Render() {
     return (
         <>

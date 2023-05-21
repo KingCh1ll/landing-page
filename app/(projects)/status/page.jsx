@@ -6,7 +6,7 @@ import { formatDistanceToNow } from "date-fns";
 
 import { FaCheckCircle, FaExclamationTriangle } from "react-icons/fa";
 
-import { chakra, Box, Container, VStack, HStack, Text, useColorModeValue, Tag, Skeleton, TagLeftIcon, TagLabel, SkeletonText, Wrap, WrapItem } from "@chakra-ui/react";
+import { chakra, Box, Container, VStack, HStack, Text, useColorModeValue, Tag, Skeleton, TagLeftIcon, TagLabel, SkeletonText, Wrap, WrapItem, Heading } from "@chakra-ui/react";
 
 import config from "../../../config";
 import Navbar from "../../(components)/navbar";
@@ -46,11 +46,11 @@ export default function Render() {
 
   const ClusterInfo = ({ cluster }) => {
     return (<div>
-      <h3 style={{ fontSize: "20px" }}>Cluster {cluster.clusterId + 1}</h3>
+      <h3 style={{ fontSize: "20px" }}>Cluster {cluster.id + 1}</h3>
       <p>Guilds: {cluster.totalGuilds}</p>
-      <p>Shards: {Math.min(cluster.shardIds)} - {Math.max(cluster.shardIds)}</p>
+      <p>Shards: {Math.min(cluster.shards) + 1} - {Math.max(cluster.shards) + 1}</p>
       <p>Ping: {cluster.ping}</p>
-      <p>Uptime: {formatDistanceToNow(new Date(cluster.uptime), { addSuffix: true })}</p>
+      <p>Uptime: {formatDistanceToNow(new Date(cluster.uptime) / 1000, { addSuffix: true })}</p>
     </div>)
   }
 
@@ -79,23 +79,9 @@ export default function Render() {
       </HStack>
     </HStack>
 
-    {/* clusters */}
-    <Wrap as={HStack} gap={4} maxW={"full"} pb={"8rem"}>
+    {/* Clusters */}
+    <Wrap as={HStack} gap={4} maxW={"full"} pb={"8rem"} justifyContent={"center"}>
       {!data ? (<>
-        <Skeleton width={"45px"} height={"45px"} />
-        <Skeleton width={"45px"} height={"45px"} />
-        <Skeleton width={"45px"} height={"45px"} />
-        <Skeleton width={"45px"} height={"45px"} />
-        <Skeleton width={"45px"} height={"45px"} />
-        <Skeleton width={"45px"} height={"45px"} />
-        <Skeleton width={"45px"} height={"45px"} />
-        <Skeleton width={"45px"} height={"45px"} />
-        <Skeleton width={"45px"} height={"45px"} />
-        <Skeleton width={"45px"} height={"45px"} />
-        <Skeleton width={"45px"} height={"45px"} />
-        <Skeleton width={"45px"} height={"45px"} />
-        <Skeleton width={"45px"} height={"45px"} />
-        <Skeleton width={"45px"} height={"45px"} />
         <Skeleton width={"45px"} height={"45px"} />
         <Skeleton width={"45px"} height={"45px"} />
         <Skeleton width={"45px"} height={"45px"} />
@@ -108,16 +94,18 @@ export default function Render() {
         <Skeleton width={"45px"} height={"45px"} />
       </>) : (<>
         {data && data.map(cluster => (<>
-          <Tooltip color={"primary"} content={<ClusterInfo cluster={cluster} />}>
-            <Box padding={"10px"} w={"45px"} h={"45px"} rounded={"lg"} textAlign={"center"} style={{ background: "var(--dark-blue-3)" }}>
-              <Text color={status_colors[cluster.status]} maxW={"300px"} className={"w-full mt-3 mb-5 text-2xl font-bold"} width={"100%"} height={"100%"}>
-                {cluster.clusterId + 1}
-              </Text>
-            </Box>
-          </Tooltip>
+          <Box padding={"10px"} w={"250px"} h={"250px"} rounded={"lg"} textAlign={"center"} style={{ background: "var(--dark-blue-2)" }}>
+            <Heading>Cluster {cluster.id}</Heading>
+            {cluster.shards.map(n => <Tooltip color={"primary"} content={<ClusterInfo cluster={n} />}>
+              <Box padding={"10px"} w={"45px"} h={"45px"} rounded={"lg"} textAlign={"center"} style={{ background: "var(--dark-blue-3)" }}>
+                <Text color={status_colors[cluster.status]} maxW={"300px"} className={"w-full mt-3 mb-5 text-2xl font-bold"} width={"100%"} height={"100%"}>
+                  {cluster.id + 1}
+                </Text>
+              </Box>
+            </Tooltip>)}
+          </Box>
         </>))}
       </>)}
     </Wrap>
-  </>
-  );
+  </>);
 };

@@ -49,6 +49,7 @@ export const metadata = {
     authors: [{ name: config.name }],
     creator: config.name,
     publisher: config.name,
+    manifest: "/site.webmanifest",
     robots: {
         index: true,
         follow: true,

@@ -1,5 +1,3 @@
-import formData from "form-data";
-
 import config from "../../config";
 
 export default async (req, res) => {
@@ -13,7 +11,7 @@ export default async (req, res) => {
     body.append("client_id", config.client_ID)
     body.append("client_secret", process.env.SECRET)
     body.append("grant_type", "authorization_code")
-    body.append("redirect_uri", "http://localhost:3000/login")
+    body.append("redirect_uri", config.url ?? "https://ch1ll.dev/login")
     body.append("code", code);
 
     const token = await fetch("https://discordapp.com/api/oauth2/token", {
@@ -26,19 +24,26 @@ export default async (req, res) => {
     const profile = await fetch("https://discord.com/api/v9/users/@me", { headers: { 'Authorization': `Bearer ${token.access_token}` } }).then(res => res.json()).catch(() => null);
     if (!profile) return res.status(500).send({ status: 500, message: "No profile returned from Discord. Please try again later." });
 
+    const botGuilds = await fetch(`${config?.apis?.disping}/guild/guilds`, { headers: { 'Authorization': process.env.TOKEN } }).then(res => res.json()).catch(() => null);
+    if (!botGuilds) return res.status(500).send({ status: 500, message: "Bot guilds not returned. The bot may be down. Please try again later." });
+
     const guilds = await fetch("https://discord.com/api/users/@me/guilds", { headers: { 'Authorization': `Bearer ${token.access_token}` } }).then(res => res.json())
         .then(data => data.filter(g => (g.permissions_new & 0x20) != 0).map(g => ({ name: g.name, id: g.id, icon: g.icon, owner: g.owner, perms: g.permissions_new })))
-        .catch(err => null);
+        .catch(() => null);
     if (!guilds) return res.status(500).send({ status: 500, message: "Guilds not returned from Discord. Please try again later." });
-    profile.guilds = guilds;
 
-    const newSession = await fetch(`${config.api}/session`, { 
+    profile.guilds = guilds.map(g => {
+        if (botGuilds.some(bg => bg.id === g.id)) g.inServer = true;
+        else g.inServer = false;
+
+        return g;
+    });
+
+    const newSession = await fetch(`${config?.apis?.disping}/session`, { 
         method: "POST",
-        headers: {
-            id: profile.id
-        }
-     }).then(data => data.json()).catch(err => null);
-     console.log(newSession)
+        headers: { id: profile.id }
+    }).then(data => data.json()).catch(() => null);
+
     if (newSession?.status !== 200) return res.status(500).send({ token: null, profile: null, customId: null });
     // const guildId = req.query.guild_id;
     // const state = req.query.state;
@@ -81,7 +86,7 @@ export default async (req, res) => {
 
 //                let guilds = await fetch("https://discord.com/api/users/@me/guilds", {
 //                     headers: { Authorization: "Bearer " + token.accessToken }
-//                 }).then(res => res.json()).catch(err => null);
+//                 }).then(res => res.json()).catch(() => null);
 //                 if (guilds) token.guilds = guilds.filter(g => (g.permissions_new & 0x20) != 0).map(g => { return { name: g.name, id: g.id, icon: g.icon, owner: g.owner, perms: g.permissions_new } })
 //             }
 

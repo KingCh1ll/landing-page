@@ -67,9 +67,9 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
     return (
-        <html lang={"en"}>
+        <html lang={"en"} data-theme={"dark"} style={{ colorScheme: "dark" }}>
             <head />
-            <body>
+            <body className={"chakra-ui-dark"}>
                 <NextImage src="/images/blobs.svg" alt="Blob Background" priority={true} fill style={{ zIndex: -1, height: "100%", width: "100%", opacity: ".4", WebkitMaskImage: "linear-gradient(to top, transparent 0%, #fff 100%)", objectFit: "cover", objectPosition: "center" }} />
                 <Modules>{children}</Modules>
             </body>

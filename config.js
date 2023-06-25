@@ -2,15 +2,28 @@ module.exports = {
   name: "Ch1llDev",
   logo: "/logo.png",
   client_ID: "848685407189336075",
-  api: "https://api.ch1ll.dev",
-  login: "https://discord.com/oauth2/authorize?response_type=code&client_id=848685407189336075&scope=identify%20guilds%20email&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Flogin&prompt=none",
+  // url: "http://localhost:3000/login",
+  login: "https://discord.com/oauth2/authorize?response_type=code&client_id=848685407189336075&scope=identify%20guilds%20email&redirect_uri={url}&prompt=none",
+  apis: {
+    main: "https://api.ch1ll.dev",
+    disping: "https://api.disping.tk/"
+  },
+  default: {
+    content: {
+      youtube: "{role} **{username}** {postTypeWithGrammar} **{title}**\n{link}",
+      twitter: "{role} **{username}** just posted a new tweet!\n{link}",
+      twitch: "{role} **{username}** just went live!\n{link}",
+      reddit: "{role} **{username}** just posted **{title}** in **{subreddit}**\n{link}",
+      spotify: "{role} **{username}** just released **{title}** on Spotify!\n{link}"
+    }
+  },
   invites: {
     disping: "https://discord.com/oauth2/authorize?client_id=1027401268227997778&scope=bot+identify+guilds+email&permissions=274878262336&response_type=code&redirect_uri=https%3A%2F%2Fch1ll.dev%2Fapi%2Fauth%2Fcallback%2Fdiscord",
     sparkv: "https://discord.com/oauth2/authorize?client_id=884525761694933073&scope=bot+applications.commands&permissions=294074575990&response_type=code&redirect_uri=https://www.sparkv.tk/api/callback"
   },
   theme: {
     initialColorMode: "dark",
-    useSystemColorMode: false
+    useSystemColorMode: false,
   },
   meta: {
     title: "Ch1llDev",
@@ -50,7 +63,7 @@ module.exports = {
     href: "/status"
   }, {
     label: "Projects",
-    href: "/#projects",
+    href: "#projects",
     children: [{
       label: "SparkV",
       subLabel: "The ultimate multipurpose bot! (Music/Memes/Utility/Logging/Auto Mod)",
@@ -61,6 +74,10 @@ module.exports = {
       subLabel: "Start integrating your socials to Discord. The easy way. That's DisPing.",
       image: "/images/disping.png",
       href: "/disping"
+    }, {
+      label: "View More",
+      subLabel: "Click here to view more projects.",
+      href: "/projects"
     }]
   }, {
     label: "More",
@@ -85,6 +102,8 @@ module.exports = {
   projects: [{
     name: "Ch1ll.dev",
     image: "/images/users/ch1lldev.png",
+    banner: "/images/ch1ll_site.png",
+    showcase: true,
     description: "A website made to showoff Ch1llDev's many creations, which happens to be this website!",
     link: "https://ch1ll.dev",
     linkName: "ch1ll.dev",
@@ -96,13 +115,28 @@ module.exports = {
       label: "NextJs"
     }]
   }, {
-    name: "SparkV",
+    name: "DisPing",
+    image: "/images/disping.png",
+    banner: "/images/disping_site.png",
+    description: "Start integrating your socials to Discord. The easy way. That's DisPing.",
+    link: "/disping",
+    linkName: "disping.tk",
     bot: true,
+    tags: [{
+      color: "blue",
+      label: "Discord Bot"
+    }, {
+      color: "teal",
+      label: "TypeScript"
+    }]
+  }, {
+    name: "SparkV",
     image: "/images/sparkv.png",
     thumbnail: "/images/sites/sparkv.png",
     description: "The ultimate multipurpose bot! (Music/Memes/Utility/Logging/Auto Mod)",
     link: "/sparkv/",
-    linkName: "sparkV.tk",
+    linkName: "sparkv.tk",
+    bot: true,
     tags: [{
       color: "blue",
       label: "Discord Bot"
@@ -112,20 +146,6 @@ module.exports = {
     }, {
       color: "teal",
       label: "NextJs"
-    }]
-  }, {
-    name: "DisPing",
-    bot: true,
-    image: "/images/disping.png",
-    description: "Start integrating your socials to Discord. The easy way. That's DisPing.",
-    link: "/disping",
-    linkName: "disping.tk",
-    tags: [{
-      color: "blue",
-      label: "Discord Bot"
-    }, {
-      color: "teal",
-      label: "TypeScript"
     }]
   }, {
     name: "Freeze Tag Escape",

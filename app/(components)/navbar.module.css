@@ -43,7 +43,7 @@
   color: #fff;
 }
 
-.navbar li > .navbar a {
+.navbar li>.navbar a {
   display: flex;
   padding: 0 20px 0 10px;
   height: 100%;
@@ -114,18 +114,18 @@
 } */
 
 .navbar-no-scroll {
-    margin-top: 10px;
-    -webkit-transition: 0.4s all;
-    transition: 0.4s all;
+  margin-top: 10px;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
 }
 
 .navbar-scroll {
-    margin-top: 10px;
-    padding: 8px 0px;
-    margin-inline-start: 24px;
-    margin-inline-end: 24px;
-    background: var(--dark-blue);
-    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
-    border-radius: 12px;
-    transition: all 0.4s ease 0s;
+  margin-top: 10px;
+  padding: 8px 0px;
+  margin-inline-start: 24px;
+  margin-inline-end: 24px;
+  background: var(--dark-blue);
+  box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
+  border-radius: 12px;
+  transition: all 0.4s ease 0s;
 }

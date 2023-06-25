@@ -17,6 +17,10 @@
     --text-gray: rgba(255, 255, 255, 0.6);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--dark-blue) !important;
     font-family: Satoshi-Regular, sans-serif !important;
@@ -151,13 +155,7 @@ a:hover {
 
 /* Animations */
 .transition-opacity {
-    transition-property: opacity;
+    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
-}
-
-@keyframes shine {
-    100% {
-        left: 125%;
-    }
 }

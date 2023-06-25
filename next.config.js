@@ -9,5 +9,12 @@ module.exports = {
       "cdn.discordapp.com",
       "http.cat"
     ]
+  },
+  async redirects() {
+    return [{
+      source: "/discord",
+      destination: "https://discord.gg/PPtzT8Mu3h",
+      permanent: true
+    }]
   }
 }

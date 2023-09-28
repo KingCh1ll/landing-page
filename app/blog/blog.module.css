@@ -1,0 +1,80 @@
+
+/*
+    Ch1ll Blogs
+    https://ch1ll.dev/blog
+    - 9/25/2023 -
+*/
+
+.blogs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: auto;
+    font-family: Rubik, sans-serif;
+}
+
+.blogs h2 { max-width: 72rem; font-weight: 700; text-align: center; }
+.blogs .wrap {
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80rem;
+    align-items: center;
+    padding-bottom: 8rem;
+    justify-content: center;
+    overflow-wrap: break-word;
+}
+
+.blogs p {
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+}
+
+.blogs .wrap .blog {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background: #000d2b;
+    width: 425px;
+    height: 350px;
+    padding: 5px;
+    border-radius: 1.25rem;
+}
+
+.blogs .wrap .showcase {
+    display: flex;
+    align-items: flex-start;
+    background: #000d2b;
+    width: 625px;
+    padding: 5px;
+    border-radius: 1.25rem;
+}
+
+.blogs .wrap div .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 750px) {
+    .blogs .container .shine-box {
+        width: 275px;
+    }
+
+    .blogs .wrap div {
+        width: 375px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .blogs .wrap div {
+        width: 300px;
+    }
+}

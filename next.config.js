@@ -1,19 +1,17 @@
 module.exports = {
-  experimental: {
-    appDir: true
-  },
-  images: {
-    domains: [
-      "tr.rbxcdn.com",
-      "t1.rbxcdn.com",
-      "cdn.discordapp.com",
-      "http.cat"
-    ]
-  },
+  images: { domains: ["http.cat"] },
   async redirects() {
     return [{
       source: "/discord",
       destination: "https://discord.gg/PPtzT8Mu3h",
+      permanent: true
+    }, {
+      source: "/disping",
+      destination: "https://disping.xyz",
+      permanent: true
+    }, {
+      source: "/sparkv",
+      destination: "https://sparkv.tk/",
       permanent: true
     }]
   }

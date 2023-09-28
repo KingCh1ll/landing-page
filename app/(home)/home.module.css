@@ -1,0 +1,224 @@
+/*!
+ * Ch1ll.dev v1 (https://ch1ll.dev/)
+ */
+
+/* Container */
+.hero {
+    width: 100%;
+    height: 90vh;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
+    max-width: var(--chakra-sizes-8xl);
+    font-family: Rubik, sans-serif;
+    padding: 6rem 0;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.hero .container .header {
+    line-height: 1.33;
+    font-weight: 600;
+    font-size: 3.75rem;
+    text-align: center;
+    font-family: Shadows Into Light;
+}
+
+.hero .text {
+    color: #fff9;
+    font-size: 18px;
+    margin: 10px auto;
+    max-width: 650px;
+    text-align: center;
+    font-family: Satoshi-Regular, sans-serif;
+}
+
+/* Side Text */
+.sideText {
+    position: absolute;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    white-space: nowrap;
+    text-transform: uppercase;
+    top: 40rem;
+    left: -1rem;
+    font-size: 12px;
+    font-weight: 700;
+    transform: rotate(-90deg);
+    cursor: pointer;
+    /* padding: 20px 20px 20px 60px; */
+    /* margin-left: -60px; */
+}
+
+/* About */
+.about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: auto;
+    font-family: Rubik, sans-serif;
+    padding-bottom: 8rem;
+}
+
+.about h2 { max-width: 72rem; font-weight: 700; }
+.about .info {
+    transition: transform .25s ease; 
+    background: var(--secondary);
+    align-self: flex-start;
+    border-radius: 10px;
+    max-width: 650px;
+    padding: 20px;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.about .info:hover {
+    transform: scale(1.025);
+}
+
+.about h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.about .skills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    overflow: hidden;
+    gap: 1rem;
+    max-width: 100%;
+}
+
+.about .skills .skill {
+    width: max-content;
+    height: 50px;
+    padding: 10px;
+    justify-content: center;
+    background: var(--tertiary);
+}
+
+.about .skills .skill img { transition: transform .25s ease; margin: auto; }
+.about .skills .skill img:hover { transform: scale(1.25); }
+
+.about .info h3 { max-width: 600px; }
+.about .info p { padding-bottom: 22px; }
+
+@media screen and (max-width: 500px) {
+    .about .info {
+        width: 300px
+    }
+
+    .about .box {
+        width: 300px
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .about .grid {
+        /* grid-template-columns: repeat(1, 1fr); */
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+        gap: 1rem;
+        max-width: 100%;
+    }
+}
+
+/* Showcase */
+.showcases {
+    font-family: Rubik, sans-serif;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    margin: auto;
+}
+
+.showcases h2 { max-width: 72rem; font-weight: 700; }
+.showcases .wrap {
+    gap: 2rem;
+    display: flex;
+    max-width: 80rem;
+    align-items: center;
+    padding-bottom: 8rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.showcase {
+    transition: transform .25s ease;
+    background: #000d2b;
+    align-items: flex-start;
+    border-radius: 1.25rem;
+    display: flex;
+    width: 625px;
+    padding: 5px;
+}
+
+.showcase:hover { transform: scale(1.025); }
+.showcases .showcase .container {
+    flex-direction: column;
+    align-items: center;
+    max-height: 100%;
+    padding: 1rem;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* Wave */
+.wave:hover {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    10% {
+        transform: rotate(14deg)
+    }
+
+    20% {
+        transform: rotate(-8deg)
+    }
+
+    30% {
+        transform: rotate(14deg)
+    }
+
+    40% {
+        transform: rotate(-4deg)
+    }
+
+    50% {
+        transform: rotate(10deg)
+    }
+
+    60% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
+}

@@ -124,7 +124,7 @@
   padding: 8px 0px;
   margin-inline-start: 24px;
   margin-inline-end: 24px;
-  background: var(--dark-blue);
+  background: var(--primary);
   box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
   border-radius: 12px;
   transition: all 0.4s ease 0s;

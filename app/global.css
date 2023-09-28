@@ -1,19 +1,30 @@
 /*!
  * Ch1ll.dev v1.0.0 (https://ch1ll.dev/)
- * Copyright 2021-2023 KingCh1ll. All rights reserved.
  * Google Fonts included. All rights go to their respective owners.
  */
 
 /* Ch1ll Site - Root */
+[data-theme=dark] {
+    --primary: #001037;
+    --secondary: #000d2b;
+    --tertiary: #000a23;
+}
+
+[data-theme=green] {
+    --primary: #00A881;
+    --secondary: #008264;
+    --tertiary: #005C46;
+}
+
+[data-theme=red] {
+    --primary: #5f0a17;
+    --secondary: #9C081D;
+    --tertiary: #670514;
+}
+
 :root {
-    --dark-blue: #001037;
-    --dark-blue-2: #000d2b;
-    --dark-blue-3: #000a23;
-    --light-blue: #001037;
     --light-black: #0d1014;
     --light-black-2: rgba(255, 255, 255, 0.05);
-    --light-yellow: #dee03b;
-    --text-light: #fff;
     --text-gray: rgba(255, 255, 255, 0.6);
 }
 
@@ -22,8 +33,9 @@ html {
 }
 
 body {
-    background: var(--dark-blue) !important;
+    background: var(--primary) !important;
     font-family: Satoshi-Regular, sans-serif !important;
+    height: 100%;
     overflow-x: hidden;
 }
 
@@ -158,4 +170,43 @@ a:hover {
     transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
+}
+
+/* Image Shine */
+.shine-box {
+    margin: 2.5% auto;
+}
+
+.shine {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.shine span {
+    position: absolute;
+    top: 0;
+    left: -110%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: .5s;
+    transform: skewX(10deg);
+}
+
+.shine:hover {
+    box-shadow: 0 30px 35px rgba(0, 0, 0, 0.7);
+}
+
+.shine:hover span {
+    left: 110%;
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
 }

@@ -16,7 +16,7 @@ COPY --from=build --chown=nextuser:nextuser /app/.next/standalone ./
 COPY --from=build --chown=nextuser:nextuser /app/.next/static ./.next/static
 USER nextuser
 
-EXPOSE 5002
-ENV HOST=0.0.0.0 PORT=5002 NODE_ENV=production
+EXPOSE 5200
+ENV HOST=0.0.0.0 PORT=5200 NODE_ENV=production
 
 CMD ["dumb-init", "node", "server.js"]

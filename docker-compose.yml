@@ -6,7 +6,7 @@ services:
     pull_policy: build
     # restart: unless-stopped
     ports:
-      - 5000:3000
+      - 5200:5200
     build:
       context: .
       dockerfile: Dockerfile

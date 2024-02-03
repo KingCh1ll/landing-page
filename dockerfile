@@ -4,9 +4,8 @@ RUN apk add --no-cache libc6-compat
 # Install
 WORKDIR /app
 COPY . .
-COPY package.json ./
-RUN npm install yarn
-RUN yarn install --check-files
+COPY package.json yarn.lock ./
+RUN npm install
 RUN npm run build
 
 # Build

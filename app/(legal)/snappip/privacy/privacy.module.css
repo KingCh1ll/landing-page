@@ -1,0 +1,24 @@
+.container {
+    background: var("--dark-blue-3");
+    padding: 50px 10px;
+}
+
+.container h1 {
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: #fff
+}
+
+.title {
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.container p {
+    margin: 10px 0;
+}

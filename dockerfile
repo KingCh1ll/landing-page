@@ -1,13 +1,15 @@
-FROM node:20.11.0 AS build
+FROM node:18-alpine AS build
 RUN apk add --no-cache libc6-compat
 
+# Install
 WORKDIR /app
+COPY . .
 COPY package.json ./
 RUN npm install
-COPY . .
 RUN npm run build
 
-FROM node:20.11.0
+# Build
+FROM node:18-alpine
 RUN apk update && apk upgrade && apk add dumb-init && adduser -D nextuser 
 
 WORKDIR /app
@@ -16,7 +18,7 @@ COPY --from=build --chown=nextuser:nextuser /app/.next/standalone ./
 COPY --from=build --chown=nextuser:nextuser /app/.next/static ./.next/static
 USER nextuser
 
+# Deploy
 EXPOSE 5200
 ENV HOST=0.0.0.0 PORT=5200 NODE_ENV=production
-
 CMD ["dumb-init", "node", "server.js"]

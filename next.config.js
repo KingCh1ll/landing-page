@@ -1,4 +1,5 @@
 module.exports = {
+  output: "standalone",
   images: { domains: ["http.cat"] },
   async redirects() {
     return [{

@@ -15,21 +15,21 @@
   "license": "ISC",
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
-    "@chakra-ui/react": "^2.8.1",
+    "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "canvas": "^2.11.2",
-    "framer-motion": "^10",
-    "next": "^13.4.7",
+    "framer-motion": "^11",
+    "next": "^14.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.11.0",
-    "sharp": "^0.32.6"
+    "react-icons": "^5.0.1",
+    "sharp": "^0.32"
   },
   "devDependencies": {
-    "@types/node": "^20.7.1",
-    "@types/react": "^18.2.23",
-    "@types/react-dom": "^18.2.8",
-    "typescript": "^5.2.2"
+    "@types/node": "^20.11.16",
+    "@types/react": "^18.2.52",
+    "@types/react-dom": "^18.2.18",
+    "typescript": "^5.3.3"
   }
 }

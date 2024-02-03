@@ -1,15 +1,16 @@
-FROM node:18-alpine AS build
+FROM node:20-alpine AS build
 RUN apk add --no-cache libc6-compat
 
 # Install
 WORKDIR /app
 COPY . .
 COPY package.json ./
-RUN npm install --force
+RUN npm install yarn
+RUN yarn install --check-files
 RUN npm run build
 
 # Build
-FROM node:18-alpine
+FROM node:20-alpine
 RUN apk update && apk upgrade && apk add dumb-init && adduser -D nextuser 
 
 WORKDIR /app

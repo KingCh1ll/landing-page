@@ -1,0 +1,12 @@
+version: "3"
+services:
+  ch1ll.dev:
+    container_name: ch1ll.dev
+    network_mode: bridge
+    pull_policy: build
+    # restart: unless-stopped
+    ports:
+      - 5000:3000
+    build:
+      context: .
+      dockerfile: Dockerfile

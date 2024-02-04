@@ -1,5 +1,5 @@
-FROM node:20-alpine as build
-RUN apk add --no-cache libc6-compat
+FROM node:20-alpine
+RUN apk update && apk upgrade && apk add dumb-init && adduser -D nextuser 
 
 # Install
 WORKDIR /app
@@ -8,15 +8,11 @@ COPY package.json yarn.lock ./
 RUN npm install
 RUN npm run build
 
-# Build
-FROM node:20-alpine
-RUN apk update && apk upgrade && apk add dumb-init && adduser -D nextuser 
-
 WORKDIR /app
-COPY --from=build --chown=nextuser:nextuser /app/public ./public
-COPY --from=build --chown=nextuser:nextuser /app/.next/standalone ./
-COPY --from=build --chown=nextuser:nextuser /app/.next/static ./.next/static
 USER nextuser
+COPY --chown=nextuser:nextuser /app/public ./public
+COPY --chown=nextuser:nextuser /app/.next/standalone ./
+COPY --chown=nextuser:nextuser /app/.next/static ./.next/static
 
 # Deploy
 EXPOSE 5200

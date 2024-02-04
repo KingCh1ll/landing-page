@@ -8,11 +8,9 @@ COPY package.json yarn.lock ./
 RUN npm install
 RUN npm run build
 
-WORKDIR /app
 USER nextuser
-COPY --chown=nextuser:nextuser /app/public ./public
-COPY --chown=nextuser:nextuser /app/.next/standalone ./
-COPY --chown=nextuser:nextuser /app/.next/static ./.next/static
+# COPY --chown=nextuser:nextuser /app/public ./public
+# COPY --chown=nextuser:nextuser /app/.next/standalone ./
 
 # Deploy
 EXPOSE 5200

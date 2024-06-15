@@ -43,10 +43,9 @@ export default function Render() {
                 </div>
                 <div style={{ display: "flex", gap: "8px" }}>
                     <SocialButton label={"YouTube"} href={"https://www.youtube.com/@Ch1llDev"}><FaYoutube /></SocialButton>
-                    <SocialButton label={"Twitter"} href={"https://twitter.com/kingch1ll"}><FaTwitter /></SocialButton>
+                    <SocialButton label={"Twitter"} href={"https://twitter.com/byteswiper"}><FaTwitter /></SocialButton>
                     <SocialButton label={"Discord"} href={"https://discord.gg/PPtzT8Mu3h"}><FaDiscord /></SocialButton>
                     <SocialButton label={"GitHub"} href={"https://github.com/kingch1ll"}><FaGithub /></SocialButton>
-                    <SocialButton label={"Spotify"} href={"https://open.spotify.com/artist/anx4tm5z1m6lpg1ulxfbmxele"}><FaSpotify /></SocialButton>
                 </div>
             </div>
             <a href={"#about"} className={css["sideText"]}>
